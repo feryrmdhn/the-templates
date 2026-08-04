@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Templates</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="_assets/scss/app.css">
+</head>
+
+<body class="opening-show" style="cursor: default !important;">
+
+    <img src="_assets/img/decoration/leafs-1-top-left.png" class="decoration" id="body-decoration-1" alt=""
+        data-aos="fade-down-right" data-aos-offset="-50" data-aos-duration="1200">
+    <img src="_assets/img/decoration/leafs-1-bottom-right.png" class="decoration" id="body-decoration-2" alt=""
+        data-aos="fade-up-left" data-aos-offset="-50" data-aos-duration="1200">
+
+    <section id="opening">
+        <div class="container" data-aos-duration="1200">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-auto col-sm-7 col-md-6 col-lg-5 mb-8 mb-lg-0" data-aos="fade-in"
+                    data-aos-duration="1200">
+                    <div class="img-wrapper-spouse mx-auto mb-4">
+                        <div class="img-wrapper">
+                            <img id="opening-photo" src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md col-lg-4 pl-md-8 pl-lg-0 offset-lg-1 text-center text-md-start">
+                    <h6 class="mb-2">Kepada, <span id="guest"></span></h6>
+                    <h6>Kami mengundang Anda ke Acara Pernikahan kami</h6>
+                    <h1 class="font-type-secondary fw-bold my-4">
+                        <span id="groom-name-opening"></span><br>&<br><span id="bride-name-opening"></span>
+                    </h1>
+                    <h6 class="mb-8" id="save-the-date"></h6>
+                    <button id="btn-open-opening" class="btn btn-sm btn-primary">BUKA UNDANGAN</button>
+                </div>
+            </div>
+        </div>
+
+        <img src="_assets/img/decoration/leafs-1-top-left.png" class="decoration" id="opening-decoration-1" alt=""
+            data-aos="fade-down-right" data-aos-offset="-50" data-aos-duration="1200">
+        <img src="_assets/img/decoration/leafs-1-bottom-right.png" class="decoration" id="opening-decoration-2" alt=""
+            data-aos="fade-up-left" data-aos-offset="-50" data-aos-duration="1200">
+    </section>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false"
+        data-bs-interval="false">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+                <section id="section-1">
+                    <div class="container-xl text-dark">
+                        <div class="row gx-md-5 gx-lg-0">
+                            <div class="col-md order-2 order-md-1 pl-lg-10">
+                                <h6 class="mb-6 px-4">Assalamu'alaikum Warahmatullahi Wabarakatuh</h6>
+                                <h6 class="text-height-2 mb-6 px-4">
+                                    Dengan memohon rahmat dan ridho Allah Subhanahu Wataala, serta diiringi shalawat dan
+                                    salam pada baginda Rasulullah, kami bermaksud menyelenggarakan acara pernikahan yang
+                                    Insya Allah akan dilaksanakan pada:
+                                </h6>
+                                <div class="row px-4">
+                                    <div class="col-lg-6 mb-6">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto"><img src="_assets/img/icons/calendar.svg"
+                                                    class="w-2rem" alt=""></div>
+                                            <div class="col">
+                                                <div class="text-spacing-default mb-1">HARI DAN TANGGAL</div>
+                                                <div class="fw-light" id="event-date"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-6">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto"><img src="_assets/img/icons/clock.svg" class="w-2rem"
+                                                    alt=""></div>
+                                            <div class="col">
+                                                <div class="text-spacing-default mb-1">WAKTU</div>
+                                                <div class="fw-light" id="event-time"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-6">
+                                        <div class="row align-items-center">
+                                            <div class="col-auto"><img src="_assets/img/icons/pin.svg" class="w-2rem"
+                                                    alt=""></div>
+                                            <div class="col">
+                                                <div class="text-spacing-default mb-1">LOKASI</div>
+                                                <div class="fw-light" id="event-venue"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h6 class="text-height-2 mb-10 px-4">
+                                    Kami berterima kasih sebesar-besarnya apabila Bapak/Ibu, Saudara/i berkenan hadir
+                                    untuk memberikan doa restu untuk kedua mempelai.
+                                </h6>
+
+
+                            </div>
+                            <div class="col-md-5 order-1 order-md-2 mb-6 mb-md-0">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-8 col-sm-6">
+                                        <div class="row">
+                                            <div class="col-6 col-md-12">
+                                                <div class="img-wrapper img-wrapper-1 mb-5" data-aos="zoom-in"
+                                                    data-aos-duration="1200">
+                                                    <img id="story-photo-1" src="" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-6 col-md-12">
+                                                <div class="img-wrapper img-wrapper-2" data-aos="zoom-in"
+                                                    data-aos-delay="200" data-aos-duration="1200">
+                                                    <img id="story-photo-2" src="" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-sm-3 col-md-6">
+                                        <div class="img-wrapper img-wrapper-3" data-aos="zoom-in" data-aos-delay="100"
+                                            data-aos-duration="1200">
+                                            <img id="story-photo-3" src="" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-item">
+                <section id="section-2">
+                    <div class="container-xxl position-relative overflow-hidden">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5 pt-10 py-lg-12">
+                                <div class="card bg-transparent">
+                                    <div class="card-body p-5">
+                                        <h3 class="font-type-secondary mb-4">RSVP</h3>
+                                        <form id="rsvp-form" action="">
+                                            <div class="mb-5">
+                                                <input type="text" name="name" class="form-control"
+                                                    placeholder="Nama Lengkap Anda">
+                                            </div>
+                                            <div class="mb-5">
+                                                <input type="text" class="form-control"
+                                                    placeholder="Nomor WhatsApp atau HP Anda">
+                                            </div>
+                                            <div class="mb-5">
+                                                <div class="form-check mb-2">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault1">
+                                                    <label class="form-check-label" for="flexRadioDefault1">Ya, saya
+                                                        akan hadir</label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                        id="flexRadioDefault2">
+                                                    <label class="form-check-label" for="flexRadioDefault2">Tidak, saya
+                                                        tidak bisa hadir</label>
+                                                </div>
+                                            </div>
+                                            <div class="mb-5">
+                                                <textarea name="message" class="form-control" rows="3"
+                                                    placeholder="Berikan doa dan pesan untuk mempelai"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Kirim Ucapan</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 mt-3 mt-lg-0">
+                                <div id="section-2-list-group">
+                                    <ul id="wishes-list" class="list-group list-group-flush"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-item">
+                <section id="section-3">
+                    <div class="container-xxl">
+                        <h3 class="font-type-secondary fw-bold text-center mb-8">Galeri</h3>
+                        <div id="tinyslider-wrapper">
+                            <div id="tinyslider-container-gallery"></div>
+                            <div id="tinyslider-controls-gallery">
+                                <button class="btn btn-white p-0 rounded-0">
+                                    <img src="_assets/img/icons/prev.svg" class="w-8rem" alt="">
+                                </button>
+                                <button class="btn btn-white p-0 rounded-0">
+                                    <img src="_assets/img/icons/next.svg" class="w-8rem" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="payment-section" style="display:none;" class="container mt-8 text-center">
+                        <div class="text-spacing-default mb-5">AMPLOP DIGITAL</div>
+                        <div id="payment-list" class="d-flex justify-content-center flex-wrap gap-3"></div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="carousel-item">
+                <section id="section-4">
+                    <div class="container py-1">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-auto col-sm-7 col-md-6 col-lg-5 mb-8 mb-lg-0" data-aos="fade-in"
+                                data-aos-duration="1200">
+                                <div class="img-wrapper-spouse mx-auto mb-4">
+                                    <div class="img-wrapper">
+                                        <img id="closing-photo" src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 offset-lg-1 text-center">
+                                <div class="text-md fw-light" id="quote"></div>
+                                <img src="_assets/img/decoration/closing-decoration.png" alt=""
+                                    class="w-16rem w-sm-18rem w-lg-24rem my-4 my-lg-6">
+                                <h5 class="fw-light mb-4">Terimakasih atas doa restunya</h5>
+                                <h3 class="font-type-secondary fw-bold" id="closing-couple"></h3>
+
+                                <p class="tenant-label">Digital Invitation by</p>
+                                <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo"
+                                    class="tenant-logo" />
+                                <div id="tenant-social" class="tenant-social"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="btn-group-action" class="btn-group btn-group-action">
+        <div class="btn-group-action-container">
+            <div class="carousel-indicator">
+                <button data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="btn btn-action">
+                    <img src="_assets/img/icons/home.svg" alt="" class="w-2rem mb-1">
+                    <div class="mt-1">Home</div>
+                </button>
+                <button data-bs-target="#carouselExampleFade" data-bs-slide-to="1" class="btn btn-action">
+                    <img src="_assets/img/icons/rsvp.svg" alt="" class="w-2rem mb-1">
+                    <div class="mt-1">RSVP</div>
+                </button>
+                <button data-bs-target="#carouselExampleFade" data-bs-slide-to="2" class="btn btn-action">
+                    <img src="_assets/img/icons/image.svg" alt="" class="w-2rem mb-1">
+                    <div class="mt-1">Galeri</div>
+                </button>
+                <button data-bs-target="#carouselExampleFade" data-bs-slide-to="3" class="btn btn-action">
+                    <img src="_assets/img/icons/heart.svg" alt="" class="w-2rem mb-1">
+                    <div class="mt-1">Quote</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <button id="btn-play" class="btn btn-icon btn-icon-page btn-play">
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
+
+    <audio controls id="audio" class="d-none">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.min.js"
+        integrity="sha512-Pkcph1V1x3OJMZd1RJhG4cnsW+rTAT7fp1X2FlYF9+yZjm+zu8BbcpBqw8FpspmFMZcOr29TavH6CUBIz3bzYw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/_shared/var2.js"></script>
+    <script src="/_shared/api.js"></script>
+
+    <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

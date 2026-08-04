@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 60" width="120" height="60" fill="none">
+  <g filter="url(#cloudShadow)">
+    <path d="M28 48 a14 14 0 0 1 -2 -27.8 a20 20 0 0 1 38.5 -5 a16 16 0 0 1 27 11.5 a11 11 0 0 1 1.5 21.3 Z" fill="#FFFFFF"/>
+  </g>
+  <defs>
+    <filter id="cloudShadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#7EC8E3" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+</svg>

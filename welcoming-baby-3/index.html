@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Website Templates</title>
+
+  <meta name="description"
+    content="Undangan digital baby welcoming dengan tema dreamy night sky, bulan sabit, dan bintang." />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="_assets/img/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="_assets/img/favicon/favicon-16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Quicksand:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <link rel="stylesheet" href="_assets/scss/app.css" />
+</head>
+
+<body class="no-scroll">
+
+  <section id="opening">
+    <div class="opening-stars"></div>
+    <div class="confetti-container"></div>
+
+    <svg class="floating-moon-lg" viewBox="0 0 100 100">
+      <defs>
+        <radialGradient id="mg1" cx="50%" cy="50%">
+          <stop offset="0%" stop-color="#FFF4D6" />
+          <stop offset="60%" stop-color="#F9D77E" />
+          <stop offset="100%" stop-color="#F6C560" stop-opacity=".3" />
+        </radialGradient>
+      </defs>
+      <circle cx="50" cy="50" r="42" fill="url(#mg1)" />
+      <path d="M62 22a35 35 0 1 0 0 56A28 28 0 0 1 62 22z" fill="#FFF4D6" />
+      <circle cx="46" cy="46" r="1.8" fill="#6B5B95" />
+      <circle cx="56" cy="46" r="1.8" fill="#6B5B95" />
+      <path d="M46 55 Q51 60 56 55" stroke="#6B5B95" stroke-width="1.6" fill="none" stroke-linecap="round" />
+    </svg>
+
+    <svg class="floating-baby-moon" viewBox="0 0 100 80">
+      <path d="M15 55 Q25 20 55 22 Q88 24 80 60 Q70 74 45 72 Q20 70 15 55 Z" fill="#FFF4D6" stroke="#F6C560"
+        stroke-width="1.5" />
+      <ellipse cx="46" cy="46" rx="18" ry="14" fill="#E8B8D4" />
+      <circle cx="46" cy="42" r="10" fill="#FFCDB2" />
+      <path d="M38 32 Q46 24 54 32 L54 40 L38 40 Z" fill="#6B5B95" />
+      <circle cx="54" cy="30" r="2.5" fill="#FFF4D6" />
+    </svg>
+
+    <div class="shooting-star" style="top:20%;left:0;"></div>
+    <div class="shooting-star" style="top:35%;left:0;"></div>
+    <div class="shooting-star" style="top:55%;left:0;"></div>
+
+    <div class="opening-inner">
+      <div style="font-size:3rem;color:var(--secondary);animation:twinkle 2s infinite;">✦</div>
+      <div class="welcome-text">Welcome Little Star</div>
+      <div class="baby-name" id="baby-name"></div>
+      <p>Kepada Yth., <span id="guest"></span></p>
+      <p>Kami mengundang anda pada: <span id="event-date-short"></span></p>
+      <button class="btn-open" id="btn-open-opening"><i class="fa-solid fa-moon"></i> Buka Undangan</button>
+    </div>
+    <div class="scroll-hint">✦ ✦ ✦</div>
+  </section>
+
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#top">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="38" fill="#FFF4D6" />
+          <path d="M62 22a35 35 0 1 0 0 56A28 28 0 0 1 62 22z" fill="#F6C560" />
+        </svg>
+        <span id="brand-name">Little Star</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+        aria-controls="navMain" aria-expanded="false" aria-label="Buka menu navigasi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMain">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#acara">Acara</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hadiah">Hadiah</a></li>
+          <li class="nav-item"><a class="nav-link" href="#harapan">Harapan</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="profil" class="section-light">
+      <div class="container" data-aos="fade-up">
+        <div style="text-align:center;font-size:3rem;color:var(--secondary);">✦</div>
+        <h2 class="section-title">Bintang Kecil Kami</h2>
+        <div class="divider-stars"><span class="line"></span><i class="fa-solid fa-star"></i><span class="line"></span>
+        </div>
+
+        <div class="baby-photo-wrap" data-aos="zoom-in">
+          <img class="baby-photo" id="baby-photo" src="" alt="Baby" loading="lazy" />
+          <i class="fa-solid fa-star frame-star s1"></i>
+          <i class="fa-solid fa-star frame-star s2"></i>
+          <i class="fa-solid fa-star frame-star s3"></i>
+          <i class="fa-solid fa-star frame-star s4"></i>
+          <i class="fa-solid fa-star frame-star s5"></i>
+          <i class="fa-solid fa-star frame-star s6"></i>
+        </div>
+
+        <div class="baby-name-2" id="baby-name-2"></div>
+
+        <div class="info-card" data-aos="fade-up">
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-calendar-days"></i></div>
+            <div>
+              <div class="label">Tanggal Lahir</div>
+              <div class="value" id="baby-birthdate">—</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <div class="label">Waktu Lahir</div>
+              <div class="value" id="baby-birthtime">—</div>
+            </div>
+          </div>
+          <div class="info-item" style="grid-column:1/-1;">
+            <div class="info-icon"><i class="fa-solid fa-moon"></i></div>
+            <div>
+              <div class="label">Jenis Kelamin</div>
+              <div class="value" id="baby-gender">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="parents-block">
+          <div class="divider-stars"><span class="line"></span><i class="fa-solid fa-star"></i><span
+              class="line"></span></div>
+          <p class="intro">Dengan penuh sukacita, kami menyambut bintang kecil kami</p>
+          <div class="parents-grid">
+            <div class="parent-card" data-aos="fade-right">
+              <div class="label">Ayah</div>
+              <div class="name" id="father-name">—</div>
+            </div>
+            <div class="amp">&amp;</div>
+            <div class="parent-card" data-aos="fade-left">
+              <div class="label">Ibu</div>
+              <div class="name" id="mother-name">—</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="acara" class="section-dark">
+      <div class="event-stars"></div>
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Rasa Hormat &amp; Bahagia</h2>
+        <p class="section-sub">Kami mengundang kehadiran Bapak/Ibu/Saudara/i</p>
+
+        <div class="event-card" data-aos="zoom-in">
+          <div class="event-row"><i class="fa-solid fa-calendar-days"></i>
+            <div>
+              <div class="k">Hari, Tanggal</div>
+              <div class="v"><span id="event-day"></span>, <span id="event-date"></span></div>
+            </div>
+          </div>
+          <div class="event-row"><i class="fa-solid fa-clock"></i>
+            <div>
+              <div class="k">Waktu</div>
+              <div class="v" id="event-time"></div>
+            </div>
+          </div>
+          <div class="event-row"><i class="fa-solid fa-location-dot"></i>
+            <div>
+              <div class="k">Tempat</div>
+              <div class="v" id="event-venue"></div>
+            </div>
+          </div>
+          <div class="event-row"><i class="fa-solid fa-map-pin"></i>
+            <div>
+              <div class="k">Alamat</div>
+              <div class="v" id="event-address"></div>
+            </div>
+          </div>
+
+          <div class="map-wrap" data-aos="fade-up">
+            <iframe id="gmap_canvas" src="" title="Peta lokasi acara" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div style="text-align:center;">
+            <a href="#" class="btn-map" id="btn-open-maps" target="_blank" rel="noopener"><i
+                class="fa-solid fa-map-location-dot"></i> Buka Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="section-light">
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Bintang Harapan</h2>
+        <p class="section-sub" style="color:var(--dark-500);">Kirimkan doa &amp; harapan terbaik Anda untuk si kecil</p>
+
+        <div class="row g-4">
+          <div class="col-lg-7" data-aos="fade-right">
+            <div class="rsvp-card">
+              <form id="rsvp-form" novalidate>
+                <div class="mb-3">
+                  <label class="form-label" for="rsvp-name"><i class="fa-solid fa-user"></i> Nama Anda</label>
+                  <input type="text" class="form-control" id="rsvp-name" name="name" placeholder="Nama lengkap"
+                    required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="rsvp-phone"><i class="fa-solid fa-phone"></i> WhatsApp / HP</label>
+                  <input type="tel" class="form-control" id="rsvp-phone" name="phone" placeholder="08xxxxxxx" />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="rsvp-attendance"><i class="fa-solid fa-circle-check"></i> Konfirmasi
+                    Kehadiran</label>
+                  <select class="form-select" id="rsvp-attendance" name="attendance">
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak Hadir">Mohon maaf tidak bisa hadir</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label class="form-label" for="rsvp-message"><i class="fa-solid fa-star"></i> Doa &amp;
+                    Harapan</label>
+                  <textarea class="form-control" id="rsvp-message" name="message" rows="4"
+                    placeholder="Tuliskan doa &amp; harapan untuk si kecil..." required></textarea>
+                </div>
+                <button type="submit" class="btn-send"><i class="fa-solid fa-star"></i> Kirim Doa</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="wishes-card">
+              <h4
+                style="text-align:center;font-family:'Dancing Script',cursive;font-size:2.8rem;color:var(--night);margin-bottom:1.5rem;">
+                Doa & Harapan</h4>
+              <div id="wishes-list" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hadiah" class="section-dark">
+      <div class="gift-stars"></div>
+      <div class="container" data-aos="fade-up">
+        <h2 class="section-title">Hadiah Bintang</h2>
+        <p class="section-sub">Dukungan &amp; doa Anda adalah bintang pemandu bagi si kecil</p>
+        <div class="payment-grid" id="payment-list"></div>
+      </div>
+    </section>
+
+    <section id="harapan" class="section-dark">
+      <div class="closing-stars"></div>
+      <div class="container" data-aos="fade-up">
+        <div
+          style="text-align:center;font-size:5rem;filter:drop-shadow(0 0 15px rgba(246,197,96,.5));margin-bottom:2rem;">
+          <svg style="width:8rem;height:8rem;" viewBox="0 0 100 100">
+            <defs>
+              <radialGradient id="mg2" cx="50%" cy="50%">
+                <stop offset="0%" stop-color="#FFF4D6" />
+                <stop offset="100%" stop-color="#F6C560" stop-opacity=".3" />
+              </radialGradient>
+            </defs>
+            <circle cx="50" cy="50" r="42" fill="url(#mg2)" />
+            <path d="M62 22a35 35 0 1 0 0 56A28 28 0 0 1 62 22z" fill="#FFF4D6" />
+          </svg>
+        </div>
+        <h2 class="section-title">Mimpi Indah, Bintang Kecil</h2>
+        <div class="divider-stars"><span class="line"></span><i class="fa-solid fa-star"></i><span class="line"></span>
+        </div>
+
+        <div class="prayer-card" data-aos="zoom-in">
+          <i class="fa-solid fa-quote-left quote-icon"></i>
+          <p id="prayer-quote"></p>
+          <div class="divider-stars"><span class="line"></span><i class="fa-solid fa-star"></i><span
+              class="line"></span></div>
+          <span id="prayer-name"></span>
+        </div>
+
+        <div class="closing-text">
+          <p>Terima kasih atas ucapan &amp; doa terbaik Bapak/Ibu/Saudara/i</p>
+          <span id="family-name"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand-mini">
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="38" fill="#FFF4D6" />
+        <path d="M62 22a35 35 0 1 0 0 56A28 28 0 0 1 62 22z" fill="#F6C560" />
+      </svg>
+    </div>
+    <div class="copy">Made with <i class="fa-solid fa-heart" style="color:#F6C560;"></i> under the moonlight for our
+      little star</div>
+    <div class="credit">© <span id="year"></span> · <span id="platform-name"></span></div>
+  </footer>
+
+  <button class="fab" id="btn-audio" aria-label="Toggle audio"><i class="fa-solid fa-volume-xmark"></i></button>
+  <button class="fab" id="btn-scroll-top" aria-label="Scroll top"><i class="fa-solid fa-chevron-up"></i></button>
+  <audio id="audio" loop preload="none"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script src="/_shared/var6.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

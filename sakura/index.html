@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Website Templates</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Quicksand:wght@300;400;500;600;700&family=Sacramento&display=swap"
+    rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <link rel="stylesheet" href="_assets/scss/app.css" />
+</head>
+
+<body class="opening-show">
+
+  <div class="sakura-overlay" id="sakuraOverlay"></div>
+
+  <section id="opening" class="opening-screen">
+    <div class="opening-bg">
+      <svg class="opening-branch" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true"></svg>
+    </div>
+    <div class="opening-deco" id="opening-deco"></div>
+    <div class="opening-content text-center">
+      <p class="eyebrow">You Are Invited</p>
+      <h1 class="couple-names">
+        <span id="open-groom">Haru Tanaka</span>
+        <span class="amp-sep"><span></span><i class="fa-solid fa-fan"></i><span></span></span>
+        <span id="open-bride">Sora Akari</span>
+      </h1>
+      <p class="wedding-date" id="openDate">—</p>
+      <p class="guest-name">Kepada Yth.<br><strong id="guestName">Tamu Undangan</strong></p>
+      <button class="btn-open" id="btnOpen" type="button"><span>Buka Undangan</span> <i
+          class="fa-solid fa-envelope-open"></i></button>
+      <div class="scroll-indicator"><span></span></div>
+    </div>
+  </section>
+
+  <nav class="nav-mc" id="navMc">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="#hero" class="brand" id="navBrand">H &amp; S</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-list" id="navList">
+        <li><a href="#couple">Pasangan</a></li>
+        <li><a href="#story">Cerita</a></li>
+        <li><a href="#events">Lokasi</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#gift">Hadiah</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="soft-particles" id="softParticlesHero"></div>
+
+    <div class="container hero-inner text-center" data-aos="fade-up">
+      <p class="eyebrow">Pernikahan</p>
+      <div class="ring-icon"><i class="fa-solid fa-spa"></i></div>
+      <h1 class="hero-names">
+        <span id="hero-groom">—</span>
+        <span class="hero-amp">&amp;</span>
+        <span id="hero-bride">—</span>
+      </h1>
+      <p class="hero-tag" id="heroTagline"><em>"Mekar bersamamu, sepanjang musim."</em></p>
+      <p class="hero-date" id="heroDate">—</p>
+
+      <div class="countdown glass" id="countdown" aria-label="Countdown">
+        <div><strong id="cdD">00</strong><span>Hari</span></div>
+        <div><strong id="cdH">00</strong><span>Jam</span></div>
+        <div><strong id="cdM">00</strong><span>Menit</span></div>
+        <div><strong id="cdS">00</strong><span>Detik</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="couple" class="couple-section">
+    <div class="container">
+      <div class="section-head text-center" data-aos="fade-up">
+        <p class="script">The Couple</p>
+        <h2>Mempelai</h2>
+        <div class="ornament"><i class="fa-solid fa-fan"></i></div>
+      </div>
+
+      <div class="row g-4 align-items-center couple-grid">
+        <div class="col-md-5" data-aos="fade-right">
+          <div class="couple-card">
+            <div class="hex"><i class="fa-solid fa-user-tie"></i></div>
+            <h3 id="coupleGroom">—</h3>
+            <p class="role">The Groom</p>
+            <span class="divider"></span>
+            <p class="parents">Putra dari<br><strong id="groomParents">—</strong></p>
+          </div>
+        </div>
+        <div class="col-md-2 text-center" data-aos="zoom-in">
+          <div class="amp-big">&amp;</div>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <div class="couple-card">
+            <div class="hex"><i class="fa-solid fa-user"></i></div>
+            <h3 id="coupleBride">—</h3>
+            <p class="role">The Bride</p>
+            <span class="divider"></span>
+            <p class="parents">Putri dari<br><strong id="brideParents">—</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="story-section">
+    <div class="container">
+      <div class="section-head text-center" data-aos="fade-up">
+        <p class="script">Our Story</p>
+        <h2>Kisah Cinta Kami</h2>
+        <p class="subtitle">Seperti sakura yang mekar — singkat namun penuh keindahan.</p>
+      </div>
+
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <section id="events" class="events-section">
+    <div class="container">
+      <div class="section-head text-center" data-aos="fade-up">
+        <p class="script">Save The Date</p>
+        <h2>Lokasi Acara</h2>
+        <p class="subtitle">Dengan penuh sukacita, kami mengundang Anda hadir.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="event-card">
+            <div class="event-icon"><i class="fa-solid fa-torii-gate"></i></div>
+            <h3>Akad Nikah</h3>
+            <p class="evt-date" id="akadDate">—</p>
+            <p class="evt-time" id="akadTime">—</p>
+            <p class="venue"><strong id="akadVenue">—</strong></p>
+            <p class="address" id="akadAddress">—</p>
+            <div class="map-wrap">
+              <iframe id="akadMap" loading="lazy" title="Lokasi Akad"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="event-card">
+            <div class="event-icon"><i class="fa-solid fa-spa"></i></div>
+            <h3>Resepsi</h3>
+            <p class="evt-date" id="resDate">—</p>
+            <p class="evt-time" id="resTime">—</p>
+            <p class="venue"><strong id="resVenue">—</strong></p>
+            <p class="address" id="resAddress">—</p>
+            <div class="map-wrap">
+              <iframe id="resMap" loading="lazy" title="Lokasi Resepsi"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="rsvp-section">
+    <div class="container">
+      <div class="section-head text-center" data-aos="fade-up">
+        <p class="script">RSVP</p>
+        <h2>Ucapan</h2>
+        <p class="subtitle">Doa dan ucapan terbaik dari Anda berarti untuk kami.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <form id="rsvpForm" class="rsvp-form glass" novalidate>
+            <div class="mb-3">
+              <label>Nama *</label>
+              <input name="name" type="text" required maxlength="80" />
+            </div>
+            <div class="mb-3">
+              <label>WhatsApp</label>
+              <input name="phone" type="tel" maxlength="20" />
+            </div>
+            <div class="mb-3">
+              <label>Kehadiran</label>
+              <select name="attendance">
+                <option value="yes">Akan Hadir</option>
+                <option value="no">Tidak Bisa Hadir</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label>Ucapan *</label>
+              <textarea name="message" rows="4" required maxlength="500"></textarea>
+            </div>
+            <button class="btn-open w-100" type="submit"><span>Kirim Ucapan</span> <i
+                class="fa-solid fa-paper-plane"></i></button>
+          </form>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="wishes-list glass" id="wishesList"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gift" class="gift-section">
+    <div class="container">
+      <div class="section-head text-center" data-aos="fade-up">
+        <p class="script">Wedding Gift</p>
+        <h2>Amplop Digital</h2>
+        <p class="subtitle">Kehadiranmu adalah hadiah terbaik, namun jika ingin memberi tanda kasih, dapat melalui:</p>
+      </div>
+      <div class="gift-grid" id="giftGrid"></div>
+    </div>
+  </section>
+
+  <section id="closing" class="closing-section">
+    <div class="closing-bg"></div>
+    <div class="soft-particles" id="softParticlesClosing"></div>
+    <div class="container text-center closing-inner" data-aos="fade-up">
+      <p class="quote" id="closingQuote">—</p>
+      <h2 class="closing-names" id="closingNames">—</h2>
+      <div class="amp-sep"><span></span><i class="fa-solid fa-fan"></i><span></span></div>
+      <p class="credit">Made with <i class="fa-solid fa-heart"></i> by <span class="platform-name">Your
+          platform</span></p>
+    </div>
+  </section>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer class="footer-mc">
+    <div class="container text-center">
+      <p class="mb-0">&copy; <span id="year">2025</span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="fab-wrap">
+    <button class="fab" id="fabAudio" type="button" aria-label="Toggle music"><i class="fa-solid fa-music"></i></button>
+    <button class="fab" id="fabTop" type="button" aria-label="Scroll to top"><i
+        class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <div class="toast-mc" id="toastMc"></div>
+
+  <audio id="bgAudio" loop preload="none"></audio>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+  <script src="/_shared/var5.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

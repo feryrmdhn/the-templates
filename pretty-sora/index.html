@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Website Templates</title>
+
+  <meta name="description" content="Undangan pernikahan tema elegan — mewah, keemasan, dan timeless." />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+
+  <link rel="stylesheet" href="_assets/scss/app.css" />
+</head>
+
+<body id="index" class="opening-show" style="cursor: default !important;">
+
+  <section id="opening">
+    <div data-aos="zoom-in" data-aos-duration="1200">
+      <p class="greet">Kepada, <span id="guest">Bapak/Ibu/Saudara/i</span></p>
+      <p class="invite-text">Kami mengundang Anda ke Acara Pernikahan kami</p>
+      <h1 class="couple">
+        <span class="spouse-text" id="groom-name-opening">Arjuna</span>
+        <span class="amp">&amp;</span>
+        <span class="spouse-text" id="bride-name-opening">Melati</span>
+      </h1>
+      <p class="save">Save the Date, <span id="save-the-date"></span></p>
+      <button id="btn-open-opening" class="btn-sora">Buka Undangan</button>
+    </div>
+  </section>
+
+  <div class="falling-petals-container" aria-hidden="true"></div>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="brand" href="#">Our Invitation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link page-scroll" href="#section-1">Mempelai</a></li>
+          <li class="nav-item"><a class="nav-link page-scroll" href="#section-2">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link page-scroll" href="#section-3">Cerita Kita</a></li>
+          <li class="nav-item"><a class="nav-link page-scroll" href="#section-4">Jadwal</a></li>
+          <li class="nav-item"><a class="nav-link page-scroll" href="#section-7">RSVP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="header">
+    <div data-aos="zoom-in" data-aos-duration="1400">
+      <h1>Pernikahan</h1>
+      <div class="header-couple"><span id="header-couple">Arjuna<br>&amp;<br>Melati</span></div>
+      <p class="save">Save the Date</p>
+      <p class="date"><span id="header-date"></span></p>
+    </div>
+  </header>
+
+  <section id="section-1">
+    <div class="container section-inner">
+      <h2 class="section-title" data-aos="fade-up">Biodata Mempelai</h2>
+      <div class="row align-items-center mt-5">
+        <div class="col-md-5" data-aos="fade-right" data-aos-duration="1200">
+          <div class="spouse-card">
+            <img id="groom-photo" class="spouse-photo" src="" alt="Groom" />
+            <h4 class="spouse-name" id="groom-name">Arjuna Wicaksana</h4>
+            <p class="spouse-role" id="groom-role">Putra dari</p>
+            <p class="spouse-parents" id="father-groom"></p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 d-none d-md-block" data-aos="zoom-in">
+          <div class="amp-divider">&amp;</div>
+        </div>
+        <div class="col-md-5" data-aos="fade-left" data-aos-duration="1200">
+          <div class="spouse-card">
+            <img id="bride-photo" class="spouse-photo" src="" alt="Bride" />
+            <h4 class="spouse-name" id="bride-name">Melati Puspita</h4>
+            <p class="spouse-role" id="bride-role">Putri dari</p>
+            <p class="spouse-parents" id="father-bride"></p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-2">
+    <div class="container section-inner">
+      <h2 class="section-title on-dark" data-aos="fade-up">Galeri</h2>
+      <p class="section-desc on-dark" id="gallery-desc"></p>
+      <div class="row g-3" id="row-lightgallery">
+        <div class="col-md-6 gallery-col" data-aos="zoom-in"><a id="gallery-item-1" class="gallery-item h-wide d-block"
+            data-src=""><img id="gallery-img-1" alt="" /></a></div>
+        <div class="col-md-6 gallery-col" data-aos="zoom-in" data-aos-delay="100"><a id="gallery-item-2"
+            class="gallery-item h-wide d-block" data-src=""><img id="gallery-img-2" alt="" /></a></div>
+        <div class="col-md-4 gallery-col" data-aos="zoom-in" data-aos-delay="150"><a id="gallery-item-3"
+            class="gallery-item h-tall d-block" data-src=""><img id="gallery-img-3" alt="" /></a></div>
+        <div class="col-md-4 gallery-col" data-aos="zoom-in" data-aos-delay="200"><a id="gallery-item-4"
+            class="gallery-item h-tall d-block" data-src=""><img id="gallery-img-4" alt="" /></a></div>
+        <div class="col-md-4 gallery-col" data-aos="zoom-in" data-aos-delay="250"><a id="gallery-item-5"
+            class="gallery-item h-tall d-block" data-src=""><img id="gallery-img-5" alt="" /></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-3">
+    <div class="container section-inner">
+      <h2 class="section-title on-dark" data-aos="fade-up">Cerita Kita</h2>
+      <div id="story-list" class="mt-5"></div>
+    </div>
+  </section>
+
+  <section id="section-4">
+    <div class="container section-inner">
+      <h2 class="section-title" data-aos="fade-up">Jadwal Pernikahan</h2>
+      <div class="row g-4 mt-3">
+        <div class="col-md-6" data-aos="flip-left" data-aos-duration="1200">
+          <div class="schedule-card">
+            <h3 class="schedule-title">Akad Nikah</h3>
+            <p class="schedule-desc" id="akad-desc"></p>
+            <div class="schedule-row"><i class="fa-regular fa-calendar"></i><span id="akad-date"></span></div>
+            <div class="schedule-row"><i class="fa-regular fa-clock"></i><span id="akad-time"></span></div>
+            <div class="schedule-venue" id="akad-venue"></div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="flip-right" data-aos-duration="1200">
+          <div class="schedule-card">
+            <h3 class="schedule-title">Resepsi</h3>
+            <p class="schedule-desc" id="reception-desc"></p>
+            <div class="schedule-row"><i class="fa-regular fa-calendar"></i><span id="reception-date"></span></div>
+            <div class="schedule-row"><i class="fa-regular fa-clock"></i><span id="reception-time"></span></div>
+            <div class="schedule-venue" id="reception-venue"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-5">
+    <div class="container section-inner text-center">
+      <h2 class="section-title on-dark" data-aos="fade-down">Menuju Hari Bahagia</h2>
+      <div id="countdown-row" class="countdown" data-aos="fade-up">
+        <div class="item">
+          <div class="num" data-days>00</div>
+          <div class="lbl">Hari</div>
+        </div>
+        <div class="item">
+          <div class="num" data-hours>00</div>
+          <div class="lbl">Jam</div>
+        </div>
+        <div class="item">
+          <div class="num" data-minutes>00</div>
+          <div class="lbl">Menit</div>
+        </div>
+        <div class="item">
+          <div class="num" data-seconds>00</div>
+          <div class="lbl">Detik</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-6">
+    <div class="container section-inner">
+      <h2 class="section-title" data-aos="fade-up">Lokasi Pernikahan</h2>
+      <div class="map-card" data-aos="zoom-in" data-aos-duration="1200">
+        <iframe id="gmap_canvas" loading="lazy" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-7">
+    <div class="container section-inner">
+      <div class="rsvp-card" data-aos="fade-up" data-aos-duration="1200">
+        <div class="rsvp-form-wrap">
+          <h2>RSVP</h2>
+          <form id="comment-form">
+            <input class="form-control" name="name" type="text" placeholder="Nama Anda" required />
+            <input class="form-control" name="phone" type="tel" placeholder="Nomor Handphone / WhatsApp" />
+            <select class="form-control" name="attendance">
+              <option value="yes" selected>Ya, akan hadir</option>
+              <option value="no">Tidak bisa hadir</option>
+            </select>
+            <textarea class="form-control" name="message" placeholder="Tulis pesan dan doa untuk mempelai"
+              required></textarea>
+            <button type="submit" class="btn-sora">Kirim Ucapan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-8">
+    <div class="container section-inner">
+      <h2 class="section-title" data-aos="fade-up">Ucapan dan Doa</h2>
+      <div class="row g-3 wishes-list" id="wishes-list"></div>
+    </div>
+  </section>
+
+  <section id="payment-section">
+    <div class="container">
+      <h2 class="section-title">Amplop Digital</h2>
+      <p class="section-desc">Doa restu Anda adalah hadiah terindah. Jika berkenan memberi tanda kasih, dapat melalui:
+      </p>
+      <div id="payment-list"></div>
+    </div>
+  </section>
+
+  <section id="section-9">
+    <div class="container section-inner text-center">
+      <p class="closing-thanks" data-aos="fade-up">Terimakasih atas doa restunya</p>
+      <div class="closing-couple" data-aos="fade-up" data-aos-delay="200"><span id="closing-couple"></span></div>
+    </div>
+  </section>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+      <div>&copy; Copyright - All Rights Reserved</div>
+      <div><span id="platform-name">Your platform</span></div>
+    </div>
+  </footer>
+
+  <button id="btn-play" aria-label="Toggle music"><i class="fa-solid fa-volume-xmark"></i></button>
+  <a id="btn-to-top" href="#" class="page-scroll" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+  <audio id="audio" loop preload="none">
+    <source src="" type="audio/mpeg" />
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timezz@6.1.0/dist/timezz.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script src="/_shared/var7.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

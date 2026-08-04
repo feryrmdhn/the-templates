@@ -1,0 +1,1499 @@
+@charset "UTF-8";
+/* ============================================================
+   sweet-baby — app.scss
+   Strawberry Sweet Baby Theme
+   Struktur diselaraskan dengan welcoming-baby-2.
+   ============================================================ */
+/* ---------- Variables ---------- */
+/* ---------- Base ---------- */
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  color: #5D2A2A;
+  background-color: #FFF8F0;
+  background-image: url("../img/decoration/section-texture.svg");
+  background-size: 512px 512px;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+body.opening-show {
+  overflow: hidden;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #5D2A2A;
+}
+
+a {
+  color: #E74C3C;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #C0392B;
+}
+
+/* ---------- Utility ---------- */
+.font-type-secondary {
+  font-family: "Sacramento", cursive;
+}
+
+.font-type-accent {
+  font-family: "Quicksand", sans-serif;
+}
+
+.text-strawberry {
+  color: #E74C3C !important;
+}
+
+.text-leaf {
+  color: #6BBF59 !important;
+}
+
+.text-accent {
+  color: #F4A442 !important;
+}
+
+.text-dark-baby {
+  color: #5D2A2A !important;
+}
+
+.text-dark-soft {
+  color: #8A4444 !important;
+}
+
+.bg-strawberry {
+  background-color: #E74C3C !important;
+}
+
+.bg-leaf {
+  background-color: #6BBF59 !important;
+}
+
+.bg-cream {
+  background-color: #FFF8F0 !important;
+}
+
+.rounded-soft {
+  border-radius: 20px !important;
+}
+
+.rounded-pill-baby {
+  border-radius: 50px !important;
+}
+
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.shadow-glow-strawberry {
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4) !important;
+}
+
+/* ---------- Animations ---------- */
+@keyframes opening-hide-anim {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes bounce-soft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes drift-right {
+  0% {
+    transform: translateX(-10vw);
+  }
+  100% {
+    transform: translateX(110vw);
+  }
+}
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes pulse-soft {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+.anim-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.anim-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.anim-bounce {
+  animation: bounce-soft 1.5s ease-in-out infinite;
+}
+
+.anim-pulse {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* ---------- Gradient text ---------- */
+.gradient-text {
+  background: linear-gradient(135deg, #E74C3C 0%, #FF6B6B 30%, #6BBF59 70%, #F4A442 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* ---------- Strawberry Rain ---------- */
+.strawberry-rain-container {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  overflow: hidden;
+  display: none;
+}
+
+.strawberry-rain-piece {
+  position: absolute;
+  top: -80px;
+  will-change: transform;
+  transform: translateZ(0);
+}
+.strawberry-rain-piece img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* ---------- Buttons ---------- */
+.btn-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, #E74C3C 0%, #6BBF59 100%);
+  border: none;
+  border-radius: 50px;
+  padding: 1.4rem 3rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.35);
+}
+.btn-open:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+  color: #FFFFFF;
+}
+.btn-open:active {
+  transform: scale(0.95);
+}
+.btn-open:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------- Opening Section ---------- */
+.opening-section {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+.opening-section .opening-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, #FFF8F0 0%, #FFD0D0 60%, #D4F0C4 100%);
+}
+.opening-section .opening-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/decoration/section-texture.svg");
+  background-size: 512px 512px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+.opening-section .opening-corner {
+  position: absolute;
+  width: 18rem;
+  pointer-events: none;
+  z-index: 2;
+}
+.opening-section .opening-corner.corner-tl {
+  top: 0;
+  left: 0;
+}
+.opening-section .opening-corner.corner-br {
+  bottom: 0;
+  right: 0;
+}
+@media (max-width: 768px) {
+  .opening-section .opening-corner {
+    width: 9rem;
+    opacity: 0.6;
+  }
+}
+.opening-section .balloon-pos-1 {
+  top: 10%;
+  left: 8%;
+}
+.opening-section .balloon-pos-2 {
+  top: 14%;
+  right: 12%;
+}
+.opening-section .balloon-pos-3 {
+  bottom: 20%;
+  left: 12%;
+}
+.opening-section .balloon-pos-4 {
+  bottom: 18%;
+  right: 10%;
+}
+.opening-section .leaf-pos-1 {
+  top: 30%;
+  left: 20%;
+}
+.opening-section .leaf-pos-2 {
+  top: 40%;
+  right: 22%;
+}
+.opening-section .leaf-pos-3 {
+  bottom: 30%;
+  left: 26%;
+}
+.opening-section .leaf-pos-4 {
+  bottom: 35%;
+  right: 28%;
+}
+.opening-section .star-pos-1 {
+  top: 20%;
+  left: 40%;
+}
+.opening-section .star-pos-2 {
+  top: 25%;
+  right: 35%;
+}
+.opening-section .star-pos-3 {
+  bottom: 24%;
+  left: 45%;
+}
+.opening-section .star-pos-4 {
+  bottom: 30%;
+  right: 40%;
+}
+.opening-section .opening-basket {
+  position: absolute;
+  top: 6%;
+  right: 6%;
+  width: 9rem;
+  z-index: 2;
+}
+.opening-section .opening-content {
+  position: relative;
+  z-index: 5;
+  max-width: 60rem;
+}
+.opening-section .opening-crown {
+  width: 6rem;
+  margin: 0 auto 1rem;
+  display: block;
+  animation: bounce-soft 1.5s ease-in-out infinite;
+}
+.opening-section .opening-welcome {
+  font-family: "Sacramento", cursive;
+  font-size: 5rem;
+  margin-bottom: 0;
+}
+.opening-section .baby-name {
+  font-family: "Sacramento", cursive;
+  font-size: 8rem;
+  color: #E74C3C;
+  line-height: 1;
+  display: inline-block;
+  margin: 1rem 0;
+}
+.opening-section .baby-name .letter {
+  display: inline-block;
+}
+@media (max-width: 576px) {
+  .opening-section .baby-name {
+    font-size: 5.2rem;
+  }
+}
+.opening-section .opening-divider {
+  margin: 1.5rem 0;
+}
+.opening-section .opening-divider img {
+  width: 5rem;
+  opacity: 0.7;
+}
+.opening-section .opening-greeting {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  color: #8A4444;
+  margin-bottom: 0.3rem;
+}
+.opening-section .opening-guest {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.7rem;
+  color: #8A4444;
+}
+.opening-section .opening-guest span {
+  font-weight: 600;
+  color: #5D2A2A;
+}
+.opening-section .opening-event-date {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  color: #8A4444;
+  margin-bottom: 2.5rem;
+}
+.opening-section .opening-event-date span {
+  font-weight: 600;
+  color: #E74C3C;
+}
+.opening-section .opening-hint {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  color: #8A4444;
+  margin-top: 1rem;
+}
+.opening-section .opening-scroll-indicator {
+  margin-top: 2rem;
+}
+.opening-section .opening-scroll-indicator img {
+  width: 9rem;
+  opacity: 0.7;
+  animation: bounce-soft 1.5s ease-in-out infinite;
+}
+
+body.opening-hide .opening-section {
+  animation: opening-hide-anim 1.5s ease forwards;
+  pointer-events: none;
+}
+
+/* ---------- Floating decorations (global, reusable across all sections) ---------- */
+.floating-el {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  max-width: 100%;
+}
+
+.floating-balloon {
+  width: 6rem;
+}
+@media (max-width: 576px) {
+  .floating-balloon {
+    width: 4rem;
+  }
+}
+
+.floating-leaf {
+  width: 5rem;
+}
+@media (max-width: 576px) {
+  .floating-leaf {
+    width: 3.5rem;
+  }
+}
+
+.floating-star {
+  width: 3rem;
+}
+@media (max-width: 576px) {
+  .floating-star {
+    width: 2.2rem;
+  }
+}
+
+.floating-cloud {
+  width: 12rem;
+  opacity: 0.9;
+}
+
+.floating-blossom {
+  width: 4rem;
+}
+@media (max-width: 576px) {
+  .floating-blossom {
+    width: 3rem;
+  }
+}
+
+/* opening-section floating elements sit above the bg */
+.opening-section .floating-el {
+  z-index: 1;
+}
+
+.confetti-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -20px;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.confetti-piece.confetti-star {
+  background-image: url("../img/decoration/confetti-star.svg");
+}
+.confetti-piece.confetti-circle {
+  background-image: url("../img/decoration/confetti-circle.svg");
+}
+.confetti-piece.confetti-strawberry {
+  background-image: url("../img/decoration/confetti-strawberry.svg");
+  width: 18px;
+  height: 20px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: rgba(255, 248, 240, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(231, 76, 60, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+}
+.navbar.navbar-scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+.navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Sacramento", cursive;
+  font-size: 2.6rem;
+  color: #E74C3C;
+}
+.navbar .navbar-brand img {
+  width: 2.8rem;
+}
+.navbar .navbar-toggler {
+  border: none;
+  font-size: 2rem;
+  color: #E74C3C;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .nav-link {
+  position: relative;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #8A4444;
+  margin: 0 0.8rem;
+  padding: 0.6rem 0.4rem !important;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #E74C3C;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+.navbar .nav-link:hover {
+  color: #E74C3C;
+}
+.navbar .nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.navbar .nav-link.active {
+  color: #E74C3C;
+}
+.navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ---------- Sections General ---------- */
+.section-pad {
+  position: relative;
+  padding: 10rem 0;
+  overflow: hidden;
+}
+@media (max-width: 576px) {
+  .section-pad {
+    padding: 5rem 0;
+  }
+}
+
+.bg-white {
+  background: #FFFFFF;
+}
+
+.bg-event {
+  background: linear-gradient(180deg, #FFF8F0 0%, #FFD0D0 100%);
+}
+
+.bg-gift {
+  background: linear-gradient(180deg, #FFD0D0 0%, #D4F0C4 100%);
+}
+
+.bg-closing {
+  background: radial-gradient(circle at center, #FFF8F0 0%, #FFD0D0 100%);
+}
+.bg-closing::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../img/decoration/section-texture.svg");
+  background-size: 512px 512px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+.bg-closing .container {
+  position: relative;
+  z-index: 1;
+}
+
+.section-divider-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6rem;
+  pointer-events: none;
+}
+
+.section-ornament {
+  width: 4.6rem;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-family: "Sacramento", cursive;
+  font-size: 3.8rem;
+  color: #E74C3C;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+.section-subtitle {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #8A4444;
+}
+
+.section-corner {
+  position: absolute;
+  width: 14rem;
+  pointer-events: none;
+  opacity: 0.85;
+  z-index: 0;
+}
+.section-corner.corner-tl {
+  top: 2rem;
+  left: 2rem;
+}
+.section-corner.corner-br {
+  bottom: 2rem;
+  right: 2rem;
+}
+@media (max-width: 768px) {
+  .section-corner {
+    width: 8rem;
+    opacity: 0.5;
+  }
+}
+
+/* ---------- Section 1: Baby Profile ---------- */
+.baby-photo-frame {
+  position: relative;
+  width: 24rem;
+  height: 24rem;
+  margin: 0 auto 2.5rem;
+  border-radius: 50%;
+  padding: 0.6rem;
+  background: linear-gradient(135deg, #E74C3C 0%, #6BBF59 100%);
+  box-shadow: 0 8px 30px rgba(231, 76, 60, 0.3);
+  transition: all 0.3s ease;
+}
+.baby-photo-frame.baby-photo-hidden {
+  opacity: 0;
+  transform: scale(0.3);
+}
+.baby-photo-frame:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 40px rgba(231, 76, 60, 0.4);
+}
+.baby-photo-frame .baby-photo-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid #FFD0D0;
+  overflow: hidden;
+  background: #FFF8F0;
+}
+.baby-photo-frame .baby-photo-inner img#baby-photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.baby-photo-frame .baby-photo-deco {
+  position: absolute;
+  width: 5rem;
+  z-index: 2;
+}
+.baby-photo-frame .baby-photo-deco.deco-tl {
+  top: -1rem;
+  left: -1rem;
+}
+.baby-photo-frame .baby-photo-deco.deco-br {
+  bottom: -1rem;
+  right: -1rem;
+}
+@media (max-width: 576px) {
+  .baby-photo-frame {
+    width: 18rem;
+    height: 18rem;
+  }
+}
+
+.baby-name-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.baby-name-display h3 {
+  font-family: "Sacramento", cursive;
+  font-size: 3.4rem;
+  color: #5D2A2A;
+  margin: 0;
+  line-height: 1.6;
+}
+.baby-name-display img {
+  width: 3.4rem;
+}
+@media (max-width: 576px) {
+  .baby-name-display h3 {
+    font-size: 2.6rem;
+  }
+  .baby-name-display img {
+    width: 2.6rem;
+  }
+}
+
+.baby-info-card {
+  background: #FFF8F0;
+  border: 1px solid #FFD0D0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(231, 76, 60, 0.06);
+  padding: 3rem;
+  max-width: 62rem;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+.baby-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(231, 76, 60, 0.1);
+}
+.baby-info-card .baby-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 576px) {
+  .baby-info-card .baby-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.baby-info-card .baby-info-item {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  text-align: left;
+}
+.baby-info-card .baby-info-item .info-icon {
+  flex: 0 0 4.4rem;
+  width: 4.4rem;
+  height: 4.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFD0D0, #D4F0C4);
+  color: #E74C3C;
+  font-size: 1.8rem;
+}
+.baby-info-card .baby-info-item .info-label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #C9B8B8;
+  margin: 0;
+}
+.baby-info-card .baby-info-item .info-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #5D2A2A;
+  margin: 0;
+}
+
+/* Parents */
+.parents-divider {
+  width: 16rem;
+  margin: 6rem auto 4rem;
+  display: block;
+  opacity: 0.8;
+}
+.parents-divider img {
+  width: 100%;
+}
+
+.parents-intro {
+  font-style: italic;
+  font-size: 1.7rem;
+  color: #8A4444;
+  margin-bottom: 4rem;
+}
+
+.parent-label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #C9B8B8;
+  margin-bottom: 0.4rem;
+}
+
+.parent-name {
+  font-family: "Sacramento", cursive;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #5D2A2A;
+  margin: 0;
+}
+
+/* ---------- Section 2: Event ---------- */
+.event-card {
+  background: #FFFFFF;
+  border: 1px solid #FFD0D0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(231, 76, 60, 0.06);
+  padding: 4rem 3rem;
+  max-width: 64rem;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(231, 76, 60, 0.1);
+}
+
+.event-name {
+  font-family: "Sacramento", cursive;
+  font-size: 3.4rem;
+  color: #FF6B6B;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.event-info-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.8rem;
+}
+.event-info-row > i {
+  flex: 0 0 auto;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FFD0D0, #D4F0C4);
+  color: #E74C3C;
+  font-size: 1.6rem;
+}
+.event-info-row > div {
+  flex: 1;
+  min-width: 0;
+}
+.event-info-row > div .info-label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #C9B8B8;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.event-info-row > div .info-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #5D2A2A;
+  display: block;
+}
+
+.event-map {
+  max-width: 64rem;
+  margin: 2rem auto 0;
+}
+.event-map iframe {
+  width: 100%;
+  height: 250px;
+  border: 1px solid #FFD0D0;
+  border-radius: 15px;
+}
+
+.event-balloon-1 {
+  position: absolute;
+  top: 9rem;
+  left: 6%;
+  width: 5rem;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.event-balloon-2 {
+  position: absolute;
+  bottom: 5rem;
+  right: 6%;
+  width: 5rem;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.event-cloud {
+  position: absolute;
+  width: 12rem;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  top: 18%;
+}
+@media (max-width: 576px) {
+  .event-cloud {
+    display: none;
+  }
+}
+
+/* ---------- Section 3: RSVP ---------- */
+.rsvp-card {
+  background: #FFF8F0;
+  border: 1px solid #FFD0D0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(231, 76, 60, 0.06);
+  padding: 3rem;
+}
+.rsvp-card label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #5D2A2A;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.rsvp-card label i {
+  color: #E74C3C;
+  margin-right: 0.6rem;
+}
+.rsvp-card .form-group {
+  margin-bottom: 2rem;
+}
+.rsvp-card .form-control {
+  background: #FFF8F0;
+  border: 1px solid #EBE0E0;
+  border-radius: 15px;
+  padding: 1.4rem 2rem;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  color: #5D2A2A;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+.rsvp-card .form-control::-moz-placeholder {
+  color: #C9B8B8;
+}
+.rsvp-card .form-control::placeholder {
+  color: #C9B8B8;
+}
+.rsvp-card .form-control:focus {
+  border-color: #E74C3C;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2);
+  outline: none;
+}
+.rsvp-card textarea.form-control {
+  resize: vertical;
+}
+.rsvp-card select.form-control {
+  -webkit-appearance: auto;
+     -moz-appearance: auto;
+          appearance: auto;
+  cursor: pointer;
+}
+
+.wishes-card {
+  background: linear-gradient(135deg, #FFD0D0 0%, #D4F0C4 100%);
+  border-radius: 20px;
+  padding: 2.4rem;
+  height: 100%;
+}
+
+.wishes-title {
+  font-family: "Sacramento", cursive;
+  font-size: 2rem;
+  color: #5D2A2A;
+  margin-bottom: 1.6rem;
+  line-height: 1.6;
+}
+.wishes-title i {
+  color: #E74C3C;
+  margin-right: 0.8rem;
+}
+
+.wishes-list {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 0.6rem;
+}
+.wishes-list::-webkit-scrollbar {
+  width: 6px;
+}
+.wishes-list::-webkit-scrollbar-track {
+  background: #FFD0D0;
+  border-radius: 10px;
+}
+.wishes-list::-webkit-scrollbar-thumb {
+  background: #E74C3C;
+  border-radius: 10px;
+}
+@media (max-width: 576px) {
+  .wishes-list::-webkit-scrollbar {
+    display: none;
+  }
+  .wishes-list {
+    scrollbar-width: none;
+  }
+}
+
+.wish-item {
+  display: flex;
+  gap: 1.2rem;
+  background: #FFFFFF;
+  border-radius: 15px;
+  padding: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.wish-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.wish-avatar {
+  flex: 0 0 3.8rem;
+  width: 3.8rem;
+  height: 3.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #E74C3C;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.wish-name {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #5D2A2A;
+  margin: 0 0 0.3rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #FFD0D0;
+}
+
+.wish-message {
+  font-size: 1.4rem;
+  color: #8A4444;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.wish-empty {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #8A4444;
+}
+.wish-empty img {
+  opacity: 0.6;
+  margin-bottom: 1rem;
+}
+.wish-empty p {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.scatter-heart {
+  position: absolute;
+  width: 3.6rem;
+  opacity: 0.5;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+  z-index: 0;
+}
+
+.scatter-h-1 {
+  top: 16%;
+  right: 8%;
+}
+
+.scatter-1 {
+  top: 14%;
+  left: 16%;
+}
+
+.scatter-2 {
+  top: 22%;
+  right: 20%;
+}
+
+.scatter-3 {
+  bottom: 18%;
+  left: 22%;
+}
+
+.scatter-r-1 {
+  top: 24%;
+  left: 12%;
+}
+
+/* ---------- Section 4: Gift / Digital Wallet ---------- */
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 70rem;
+  margin: 3rem auto 0;
+}
+
+.payment-card {
+  background: #FFFFFF;
+  border: 2px solid #FFD0D0;
+  border-radius: 20px;
+  padding: 2.4rem 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.payment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.35);
+}
+.payment-card .payment-logo {
+  height: 5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 1.6rem;
+}
+
+.payment-method-label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #E74C3C;
+  margin-bottom: 1.6rem;
+}
+
+.payment-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5D2A2A;
+  margin-bottom: 0.4rem;
+}
+
+.payment-name {
+  font-size: 1.3rem;
+  color: #8A4444;
+  margin-bottom: 1.6rem;
+}
+
+.payment-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: #E74C3C;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.payment-copy-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(231, 76, 60, 0.4);
+}
+
+.gift-bottle {
+  position: absolute;
+  left: 5%;
+  top: 40%;
+  width: 4.5rem;
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 576px) {
+  .gift-bottle {
+    display: none;
+  }
+}
+
+.gift-ribbon {
+  position: absolute;
+  right: 5%;
+  bottom: 16%;
+  width: 6rem;
+  pointer-events: none;
+  z-index: 0;
+}
+@media (max-width: 576px) {
+  .gift-ribbon {
+    display: none;
+  }
+}
+
+/* ---------- Section 5: Closing ---------- */
+.closing-ornaments {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  margin-bottom: 1.6rem;
+}
+.closing-ornaments img {
+  width: 6rem;
+}
+.closing-ornaments .floating-star {
+  width: 2.2rem;
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.quote-card {
+  background: #FFFFFF;
+  border: 1px solid #FFD0D0;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(231, 76, 60, 0.06);
+  padding: 4rem 3rem;
+  max-width: 70rem;
+  margin: 0 auto 4rem;
+}
+@media (max-width: 576px) {
+  .quote-card {
+    padding: 3rem 2rem;
+  }
+}
+
+.quote-icon {
+  font-size: 3rem;
+  color: #E74C3C;
+  display: block;
+  margin-bottom: 1.6rem;
+}
+
+.quote-text {
+  font-size: 1.8rem;
+  font-style: italic;
+  color: #5D2A2A;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.quote-divider {
+  width: 3.4rem;
+  margin: 0 auto 2rem;
+  display: block;
+  opacity: 0.7;
+}
+
+.quote-name {
+  font-family: "Sacramento", cursive;
+  font-size: 2.2rem;
+  color: #E74C3C;
+  margin: 0;
+}
+
+.closing-message p {
+  font-size: 1.7rem;
+  color: #8A4444;
+  margin-bottom: 1rem;
+}
+.closing-message img {
+  width: 4rem;
+  animation: pulse-soft 2s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+
+.family-name {
+  font-family: "Sacramento", cursive;
+  font-size: 2.6rem;
+  color: #E74C3C;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.closing-cloud {
+  position: absolute;
+  width: 12rem;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+  top: 12%;
+}
+@media (max-width: 576px) {
+  .closing-cloud {
+    display: none;
+  }
+}
+
+/* ---------- Footer / Tenant ---------- */
+#section-tenant {
+  background: #FFF8F0;
+  padding: 3rem 0;
+}
+#section-tenant .tenant-label {
+  font-size: 1.2rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #5D2A2A;
+  opacity: 0.7;
+  margin-bottom: 2rem;
+}
+#section-tenant .tenant-logo {
+  max-width: 10rem;
+  max-height: 5rem;
+  width: auto;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.95;
+  border-radius: 6px;
+}
+#section-tenant .tenant-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+#section-tenant .tenant-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  background: #E74C3C;
+  border: 1px solid rgba(231, 76, 60, 0.5);
+  transition: all 0.3s;
+}
+#section-tenant .tenant-social-btn:hover {
+  background: #6BBF59;
+}
+
+.site-footer {
+  background: #5D2A2A;
+  color: #FFFFFF;
+  padding: 3rem 0;
+  text-align: center;
+}
+.site-footer img {
+  width: 3.2rem;
+  margin-bottom: 1.2rem;
+}
+.site-footer p {
+  font-size: 1.4rem;
+  margin: 0.3rem 0;
+  color: rgba(255, 255, 255, 0.85);
+}
+.site-footer .small {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.3rem;
+  color: #C9B8B8;
+}
+.site-footer .small span {
+  color: #FF6B6B;
+  font-weight: 600;
+}
+
+/* ---------- Floating Action Buttons ---------- */
+.floating-btn {
+  position: fixed;
+  z-index: 99998;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.floating-btn-audio {
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, #E74C3C 0%, #6BBF59 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+.floating-btn-audio:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 22px rgba(231, 76, 60, 0.55);
+}
+
+.floating-btn-top {
+  bottom: 9rem;
+  right: 2rem;
+  display: none;
+  background: #FFFFFF;
+  color: #E74C3C;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.floating-btn-top:hover {
+  background: #E74C3C;
+  color: #FFFFFF;
+  transform: scale(1.1);
+}
+
+/* ---------- Notification ---------- */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100000;
+  padding: 14px 24px;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  max-width: 90%;
+  text-align: center;
+}
+.notification.notification-success {
+  background: linear-gradient(135deg, #E74C3C, #6BBF59);
+  color: white;
+}
+.notification.notification-error {
+  background: #C0392B;
+  color: white;
+}/*# sourceMappingURL=app.css.map */

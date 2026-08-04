@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Website Templates</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <link rel="stylesheet" href="_assets/scss/app.css" />
+</head>
+
+<body class="opening-show">
+
+  <section class="opening" id="opening">
+    <div class="deco-layer" id="opening-deco"></div>
+    <div class="opening__inner">
+      <p class="opening__small">You Are Invited</p>
+      <h1 class="opening__names">
+        <span class="couple-name" id="groom-name"></span>
+        <span class="couple-separator couple-separator--block">&amp;</span>
+        <span class="couple-name" id="bride-name"></span>
+      </h1>
+      <p class="opening__date" id="opening-date">—</p>
+      <p class="opening__guest">Kepada Yth.<br /><span id="guest">Tamu Undangan</span></p>
+      <button class="btn-sky" id="btn-open" type="button">
+        <i class="fa-regular fa-envelope-open"></i> Buka Undangan
+      </button>
+    </div>
+    <a href="#hero" class="scroll-indicator" aria-label="Scroll"><i class="fa-solid fa-chevron-down"></i></a>
+  </section>
+
+  <nav class="nav-cs">
+    <div class="container-cs nav-cs__inner">
+      <a href="#hero" class="nav-cs__brand" id="nav-brand">Clear Sky</a>
+      <button class="nav-cs__toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-cs__menu">
+        <li><a href="#couple">Pasangan</a></li>
+        <li><a href="#story">Cerita</a></li>
+        <li><a href="#events">Lokasi</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#gift">Hadiah</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="deco-layer" id="hero-deco"></div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Pernikahan</p>
+      <h2 class="hero__names">
+        <span id="hero-groom"></span>
+        <span class="couple-separator couple-separator--block">&amp;</span>
+        <span id="hero-bride"></span>
+      </h2>
+      <img class="hero__ring" src="_assets/img/decoration/ring.svg" alt="" />
+      <p class="hero__date" id="hero-date">—</p>
+      <div class="countdown" role="timer" aria-label="Hitung mundur">
+        <div class="countdown__item">
+          <div class="countdown__num" id="cd-days">00</div>
+          <div class="countdown__label">Hari</div>
+        </div>
+        <div class="countdown__item">
+          <div class="countdown__num" id="cd-hours">00</div>
+          <div class="countdown__label">Jam</div>
+        </div>
+        <div class="countdown__item">
+          <div class="countdown__num" id="cd-mins">00</div>
+          <div class="countdown__label">Menit</div>
+        </div>
+        <div class="countdown__item">
+          <div class="countdown__num" id="cd-secs">00</div>
+          <div class="countdown__label">Detik</div>
+        </div>
+      </div>
+      <p class="hero__tagline">"Dua jiwa, satu langit"</p>
+    </div>
+  </header>
+
+  <section class="sec sec-couple" id="couple">
+    <div class="deco-layer" id="couple-deco"></div>
+    <div class="container-cs" style="position:relative;z-index:2;">
+      <h6 class="sec__title"><span class="sec__title-script">The Couple</span></h6>
+      <div class="sec__ornament"><i class="fa-solid fa-feather"></i></div>
+      <div class="couple-grid">
+        <div class="couple-card" data-aos="fade-right">
+          <h3 class="couple-card__name" id="hero-groom-2"></h3>
+          <p class="couple-card__role">The Groom</p>
+          <div class="couple-card__divider"></div>
+          <p class="couple-card__parents" id="groom-parents">—</p>
+        </div>
+        <div class="couple-amp" data-aos="zoom-in">&amp;</div>
+        <div class="couple-card" data-aos="fade-left">
+          <h3 class="couple-card__name" id="hero-bride-2"></h3>
+          <p class="couple-card__role">The Bride</p>
+          <div class="couple-card__divider"></div>
+          <p class="couple-card__parents" id="bride-parents">—</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-story" id="story">
+    <div class="deco-layer" id="story-deco"></div>
+    <div class="container-cs" style="position:relative;z-index:2;">
+      <h2 class="sec__title">Kisah Cinta Kami</h2>
+      <p class="sec__subtitle">Setiap langkah yang kami lewati membawa kami pada hari yang sempurna ini.</p>
+      <div class="timeline" id="story-list"></div>
+    </div>
+  </section>
+
+  <section class="sec sec-events" id="events">
+    <div class="container-cs">
+      <h2 class="sec__title">Lokasi Acara</h2>
+      <p class="sec__subtitle">Dengan penuh sukacita, kami mengundang Anda untuk hadir di hari istimewa kami.</p>
+      <div class="events-grid">
+        <div class="event-card" data-aos="zoom-in">
+          <div class="event-card__icon"><i class="fa-solid fa-building"></i></div>
+          <h3 class="event-card__title">Akad Nikah</h3>
+          <p class="event-card__meta" id="akad-date">—</p>
+          <p class="event-card__meta" id="akad-time">—</p>
+          <p class="event-card__venue" id="akad-venue">—</p>
+          <p class="event-card__address" id="akad-address">—</p>
+          <iframe id="akad-map" class="event-card__map" loading="lazy" title="Lokasi Akad"></iframe>
+        </div>
+        <div class="event-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="event-card__icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+          <h3 class="event-card__title">Resepsi</h3>
+          <p class="event-card__meta" id="rec-date">—</p>
+          <p class="event-card__meta" id="rec-time">—</p>
+          <p class="event-card__venue" id="rec-venue">—</p>
+          <p class="event-card__address" id="rec-address">—</p>
+          <iframe id="rec-map" class="event-card__map" loading="lazy" title="Lokasi Resepsi"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-rsvp" id="rsvp">
+    <div class="deco-layer" id="rsvp-deco"></div>
+    <div class="container-cs" style="position:relative;z-index:2;">
+      <h2 class="sec__title">RSVP &amp; Ucapan</h2>
+      <p class="sec__subtitle">Konfirmasi kehadiran dan kirimkan doa terbaikmu untuk kami.</p>
+      <div class="rsvp-grid">
+        <div class="rsvp-card" data-aos="fade-right">
+          <h3>Kirim Ucapan</h3>
+          <form id="rsvp-form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="rsvp-name">Nama</label>
+              <input class="form-control" id="rsvp-name" name="name" type="text" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rsvp-contact">WhatsApp</label>
+              <input class="form-control" id="rsvp-contact" name="contact" type="text" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rsvp-att">Kehadiran</label>
+              <select class="form-control" id="rsvp-att" name="attendance">
+                <option value="hadir">Akan Hadir</option>
+                <option value="tidak">Tidak Bisa Hadir</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="rsvp-msg">Ucapan</label>
+              <textarea class="form-control" id="rsvp-msg" name="message" required></textarea>
+            </div>
+            <button class="btn-primary-sky" type="submit"><i class="fa-regular fa-paper-plane"></i> Kirim</button>
+          </form>
+        </div>
+        <div class="rsvp-card" data-aos="fade-left">
+          <h3>Ucapan &amp; Doa</h3>
+          <div class="wishes-list" id="wishes-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec-gift" id="gift">
+    <div class="container-cs">
+      <h2 class="sec__title">Amplop Digital</h2>
+      <p class="sec__subtitle">Kehadiranmu adalah hadiah terbaik, namun jika ingin memberi tanda kasih, dapat melalui di
+        bawah ini.</p>
+      <div class="gift-grid" id="gift-list"></div>
+    </div>
+  </section>
+
+  <section class="sec-closing">
+    <div class="deco-layer" id="closing-deco"></div>
+    <div class="container-cs" style="position:relative;z-index:2;">
+      <p class="sec-closing__quote" id="quote">—</p>
+      <h2 class="sec-closing__names">
+        <span id="closing-groom"></span>
+        <span class="sec-closing__sep sec-closing__sep--block">&amp;</span>
+        <span id="closing-bride"></span>
+      </h2>
+      <p class="sec-closing__credit">Made with <i class="fa-solid fa-heart" style="color:#F0C27F"></i> by <span
+          class="platform-name">Your platform</span></p>
+    </div>
+  </section>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container-cs">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container-cs">
+      <p class="mb-0">&copy; <span id="year">2025</span> All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="fab-stack">
+    <button class="fab" id="fab-audio" type="button" aria-label="Putar musik"><i class="fa-solid fa-music"></i></button>
+    <button class="fab fab--top" id="fab-top" type="button" aria-label="Kembali ke atas"><i
+        class="fa-solid fa-arrow-up"></i></button>
+  </div>
+  <audio id="bg-audio" loop preload="none"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timezz@6.1.0/dist/timezz.min.js"></script>
+
+  <script src="/_shared/var4.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Templates</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+        integrity="sha512-kwJUhJJaTDzGp6VTPBbMQWBFUof6+pv0SM3s8fo+E6XnPmVmtfwENK0vHYup3tsYnqHgRDoBDTJWoq7rnQw2+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="_assets/scss/app.css">
+</head>
+
+<body id="index" class="opening-show" style="cursor: default !important;">
+
+    <section id="opening">
+        <div class="container text-white text-center">
+            <h2 class="font-type-secondary mb-3">
+                <span class="spouse-text" id="groom-name-opening"></span><br>&<br><span class="spouse-text"
+                    id="bride-name-opening"></span>
+            </h2>
+            <img src="_assets/img/decoration/foliage-horizontal-2.svg" alt="" class="w-24rem w-lg-35rem mb-16">
+
+            <div class="font-bold mb-2">Kepada, <span id="guest"></span></div>
+            <div class="mb-7" id="opening-date-text"></div>
+
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <button id="btn-open-opening" class="btn btn-secondary page-scroll">Buka Undangan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-md">
+        <div class="container">
+            <div class="navbar-brand px-0 d-md-none">
+                <h4 class="font-type-secondary text-white" id="navbar-brand">Our Invitation</h4>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <h5 class="mb-0"><i class="fa-solid fa-bars"></i></h5>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto align-items-md-center">
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-4">Undangan</a></li>
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-5">Lokasi</a></li>
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-3">Mempelai</a></li>
+                    <li class="nav-item">
+                        <h4 class="text-dec-navbar font-type-secondary d-none d-md-flex">
+                            <a class="nav-link" href="#index" id="navbar-couple"></a>
+                        </h4>
+                    </li>
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-6">Story</a></li>
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-7">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-8">RSVP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="header">
+        <div class="container text-white text-center">
+            <img src="_assets/img/decoration/foliage-horizontal-2.svg" alt="" class="w-24rem w-lg-35rem"
+                data-aos="fade-down" data-aos-duration="1000">
+            <h1 class="font-type-secondary my-6" id="header-couple" data-aos="zoom-in" data-aos-duration="1200"></h1>
+            <div class="mb-7" id="header-date-text" data-aos="fade-up" data-aos-duration="1400"></div>
+        </div>
+    </header>
+
+    <section id="section-1">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="mb-8" id="quote" data-aos="fade-up" data-aos-duration="1000"></p>
+                    <div data-aos="fade-up" data-aos-duration="1200" id="quote-source"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-2"></section>
+
+    <section id="section-3">
+        <div class="container">
+            <div class="text-center mb-16">
+                <img src="_assets/img/decoration/foliage-horizontal-1.svg" alt="" class="w-20rem w-lg-26rem">
+                <h6 class="my-4">Mempelai</h6>
+                <h5 class="font-bold">Perkenalkan kami</h5>
+            </div>
+
+            <div class="row justify-content-between">
+                <div class="col-md-6 col-lg-5 d-flex flex-column align-items-center text-center mb-8 mb-md-0">
+                    <div class="obj-fit obj-fit-cover rounded-circle w-19rem h-19rem" data-aos="fade-up"
+                        data-aos-duration="1000">
+                        <img id="groom-photo" src="" alt="">
+                    </div>
+                    <h1 class="font-type-secondary mt-4" id="groom-name" data-aos="fade-up" data-aos-duration="1200">
+                    </h1>
+                    <h6 class="font-bold mb-1" id="groom-role" data-aos="fade-up" data-aos-duration="1300"></h6>
+                    <p class="text-gray px-5 px-md-0" id="groom-bio" data-aos="fade-up" data-aos-duration="1400"></p>
+                </div>
+                <div class="col-md-6 col-lg-5 d-flex flex-column align-items-center text-center">
+                    <div class="obj-fit obj-fit-cover rounded-circle w-19rem h-19rem" data-aos="fade-up"
+                        data-aos-duration="1000">
+                        <img id="bride-photo" src="" alt="">
+                    </div>
+                    <h1 class="font-type-secondary mt-4" id="bride-name" data-aos="fade-up" data-aos-duration="1200">
+                    </h1>
+                    <h6 class="font-bold mb-1" id="bride-role" data-aos="fade-up" data-aos-duration="1300"></h6>
+                    <p class="text-gray px-5 px-md-0" id="bride-bio" data-aos="fade-up" data-aos-duration="1400"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-4">
+        <div class="container">
+            <div class="text-center mb-12 mb-lg-16">
+                <img src="_assets/img/decoration/foliage-horizontal-1.svg" alt="" class="w-20rem w-lg-26rem">
+                <h6 class="my-4">Event</h6>
+                <h5 class="font-bold">Waktu & Lokasi</h5>
+            </div>
+
+            <div class="row justify-content-center mb-12">
+                <div class="col-lg-8">
+                    <p class="text-center">
+                        Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri
+                        resepsi pernikahan kami yang insyaa Allah akan diselenggarakan pada:
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="row gx-4 align-items-center mb-12 overflow-hidden">
+                        <div class="col-auto" data-aos="fade-right" data-aos-duration="1200">
+                            <div
+                                class="obj-fit obj-fit-cover rounded-3 w-8rem w-md-18rem w-lg-23rem h-8rem h-md-18rem h-lg-23rem">
+                                <img id="section4-img-1" src="_assets/img/misc/hands-1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row align-items-center">
+                                <div class="col-md" data-aos="fade-right" data-aos-duration="1300">
+                                    <div class="font-semibold" id="akad-day"></div>
+                                    <div class="font-semibold" id="akad-date"></div>
+                                </div>
+                                <div class="col-md-2 my-1" data-aos="fade-right" data-aos-duration="1400">
+                                    <div
+                                        class="divider divider-horizontal divider-md-vertical h-md-8rem h-lg-15rem bg-gray-800">
+                                    </div>
+                                </div>
+                                <div class="col-md" data-aos="fade-right" data-aos-duration="1500">
+                                    <div class="font-semibold" id="akad-time"></div>
+                                    <div class="font-semibold" id="akad-venue"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-4 align-items-center">
+                        <div class="col-auto" data-aos="fade-right" data-aos-duration="1200">
+                            <div
+                                class="obj-fit obj-fit-cover rounded-3 w-8rem w-md-18rem w-lg-23rem h-8rem h-md-18rem h-lg-23rem">
+                                <img id="section4-img-2" src="_assets/img/misc/hands-2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row align-items-center">
+                                <div class="col-md" data-aos="fade-right" data-aos-duration="1300">
+                                    <div class="font-semibold" id="reception-day"></div>
+                                    <div class="font-semibold" id="reception-date"></div>
+                                </div>
+                                <div class="col-md-2 my-1" data-aos="fade-right" data-aos-duration="1400">
+                                    <div
+                                        class="divider divider-horizontal divider-md-vertical h-md-8rem h-lg-15rem bg-gray-800">
+                                    </div>
+                                </div>
+                                <div class="col-md" data-aos="fade-right" data-aos-duration="1500">
+                                    <div class="font-semibold" id="reception-time"></div>
+                                    <div class="font-semibold" id="reception-venue"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-5">
+        <div class="container">
+            <div class="text-center mb-16">
+                <img src="_assets/img/decoration/foliage-horizontal-1.svg" alt="" class="w-20rem w-lg-26rem">
+                <h6 class="my-4">Detail lokasi akad & resepsi</h6>
+                <h5 class="font-bold">Maps</h5>
+            </div>
+
+            <div class="row justify-content-between align-items-lg-center mb-16 overflow-hidden">
+                <div class="col-md-6 col-lg-5" data-aos="fade-left" data-aos-duration="1200">
+                    <h6 class="font-bold mb-2" id="akad-location-title"></h6>
+                    <div class="text-dark-500 font-semibold mb-4" id="akad-address"></div>
+                    <div class="mb-4" style="height:200px;">
+                        <iframe id="akad-map" src="" width="100%" height="200" frameborder="0" scrolling="no"
+                            style="border-radius:8px;"></iframe>
+                    </div>
+                    <a id="akad-maps-btn" href="https://www.google.com/maps" class="btn btn-primary"
+                        target="_blank">Lihat Map</a>
+                </div>
+            </div>
+            <div class="row justify-content-between align-items-lg-center overflow-hidden">
+                <div class="col-md-6 col-lg-5" data-aos="fade-right" data-aos-duration="1200">
+                    <h6 class="font-bold mb-2" id="reception-location-title"></h6>
+                    <div class="text-dark-500 font-semibold mb-4" id="reception-address"></div>
+                    <div class="mb-4" style="height:200px;">
+                        <iframe id="reception-map" src="" width="100%" height="200" frameborder="0" scrolling="no"
+                            style="border-radius:8px;"></iframe>
+                    </div>
+                    <a id="reception-maps-btn" href="https://www.google.com/maps" class="btn btn-primary"
+                        target="_blank">Lihat Map</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-6">
+        <div class="container">
+            <div class="text-center mb-16">
+                <img src="_assets/img/decoration/foliage-horizontal-1.svg" alt="" class="w-20rem w-lg-26rem">
+                <h6 class="my-4">Tentang cerita kami berdua</h6>
+                <h5 class="font-bold">Story</h5>
+            </div>
+            <div class="row justify-content-center overflow-hidden">
+                <div class="col-lg-8" id="story-list"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-7">
+        <div class="container">
+            <div class="text-center mb-16">
+                <img src="_assets/img/decoration/foliage-horizontal-1.svg" alt="" class="w-20rem w-lg-26rem">
+                <h6 class="my-4">Sejak kami bertemu dan memutuskan menikah</h6>
+                <h5 class="font-bold">Galeri</h5>
+            </div>
+            <div id="row-lightgallery" class="row gx-2 gx-md-4 mt-10 overflow-hidden">
+                <div class="col-4" id="gallery-col-1"></div>
+                <div class="col-4" id="gallery-col-2"></div>
+                <div class="col-4" id="gallery-col-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-8">
+        <div class="container">
+            <div class="text-center mb-16">
+                <img src="_assets/img/decoration/foliage-horizontal-1.svg" alt="" class="w-20rem w-lg-26rem">
+                <h6 class="my-4">Terima kasih telah memberikan ucapan dan doa</h6>
+                <h5 class="font-bold">Ucapan</h5>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="comment-form" action="" class="mb-16">
+                        <div class="mb-5">
+                            <label class="form-label">Nama Anda</label>
+                            <input type="text" name="name" class="form-control" placeholder="Nama lengkap" required>
+                        </div>
+                        <div class="mb-5">
+                            <label class="form-label">Whatsapp/Hp</label>
+                            <input type="text" name="phone" class="form-control" placeholder="Nomor Hp atau Whatsapp">
+                        </div>
+                        <div class="mb-5">
+                            <label class="form-label">Bersedia hadir di acara kami?</label>
+                            <select name="attendance" class="form-select">
+                                <option selected disabled>Pilih salah satu</option>
+                                <option value="yes">Ya</option>
+                                <option value="no">Tidak</option>
+                            </select>
+                        </div>
+                        <div class="mb-5">
+                            <label class="form-label">Kirim ucapan</label>
+                            <textarea name="message" cols="30" rows="8"
+                                placeholder="Anda bisa menuliskan ucapan selamat dan doa" class="form-control"
+                                required></textarea>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary">Jawab Undangan</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="pr-2 mb-12">
+                        <ul id="wishes-list" class="list-message"
+                            style="padding:0;list-style:none;max-height:calc(100vh - 174px);overflow-y:auto;"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="payment-section" style="display:none;">
+        <div class="container">
+            <div class="text-center mb-8">
+                <img src="_assets/img/decoration/foliage-horizontal-1.svg" alt="" class="w-20rem w-lg-26rem">
+                <h5 class="font-bold mt-4">Amplop Digital</h5>
+            </div>
+            <div id="payment-list" class="payment-list d-flex justify-content-center flex-wrap gap-4"></div>
+        </div>
+    </section>
+
+    <section id="section-9">
+        <div class="container">
+            <div class="text-center mb-12">
+                <img src="_assets/img/decoration/foliage-horizontal-1.svg" alt="" class="w-20rem w-lg-26rem">
+                <h5 class="font-bold mt-4" id="closing-couple"></h5>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="section-tenant" class="text-center">
+        <div class="container">
+            <p class="tenant-label">Digital Invitation by</p>
+            <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+            <div id="tenant-social" class="tenant-social"></div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row font-light">
+                <div class="col-md mb-3 mb-md-0">&copy; Copyright - All Rights Reserved</div>
+                <div class="col-auto" id="platform-name">Our Invitation</div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="btn-play" class="btn btn-light"><i class="fa-solid fa-volume-high"></i></button>
+    <a href="#header" id="btn-to-top" class="btn btn-light page-scroll"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <audio controls id="audio" class="d-none">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"
+        integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/_shared/var.js"></script>
+    <script src="/_shared/api.js"></script>
+
+    <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

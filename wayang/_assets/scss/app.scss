@@ -1,0 +1,1255 @@
+// =========================================
+// Wayang Wedding — SCSS Stylesheet
+// =========================================
+
+// ===== VARIABLES =====
+$primary: #C9963B;
+$primary-500: #DDB055;
+$primary-200: #F0D68A;
+$secondary: #8B4513;
+$secondary-500: #A0522D;
+$secondary-200: #CD853F;
+$accent: #5C2018;
+$light: #FDF5E6;
+$light-500: #FAEBD7;
+$dark: #1A0F0A;
+$dark-500: #3D2317;
+$gray: #8B7D6B;
+$white: #FFF8F0;
+
+$f-primary: 'Playfair Display', 'Cinzel', serif;
+$f-secondary: 'Lora', 'Crimson Text', serif;
+$f-script: 'Great Vibes', cursive;
+
+// ===== BASE =====
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $f-secondary;
+    color: $dark;
+    background: $light;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+// ===== TYPOGRAPHY =====
+.eyebrow {
+    font-family: $f-primary;
+    letter-spacing: .4em;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: $primary;
+    margin-bottom: .75rem;
+
+    &.light {
+        color: $primary-200;
+    }
+}
+
+.section-title {
+    font-family: $f-primary;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: $accent;
+    margin: 0 0 .5rem;
+
+    &.script {
+        font-family: $f-script;
+        font-size: clamp(2.6rem, 5vw, 4.2rem);
+        color: $primary-200;
+    }
+}
+
+.section-sub {
+    max-width: 620px;
+    margin: 0 auto 2rem;
+    color: $gray;
+}
+
+.ornament-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin: 14px 0 22px;
+
+    span {
+        display: inline-block;
+        width: 80px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, $primary, transparent);
+    }
+
+    i {
+        color: $primary-200;
+    }
+}
+
+// ===== BUTTON =====
+.btn-ukir {
+    display: inline-flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .9rem 2.2rem;
+    border: 2px solid $primary;
+    background: linear-gradient(135deg, rgba(201, 150, 59, .15), rgba(92, 32, 24, .4));
+    color: $primary-200;
+    font-family: $f-primary;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    justify-content: center;
+    font-size: .85rem;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+    box-shadow: 0 0 0 4px rgba(201, 150, 59, .08), inset 0 0 0 1px rgba(240, 214, 138, .3);
+
+    &:hover {
+        background: $primary;
+        color: $dark;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 30px rgba(201, 150, 59, .4);
+    }
+}
+
+// ===================== OPENING =====================
+.opening {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: linear-gradient(135deg, #5C2018 0%, #8B4513 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .9s cubic-bezier(.77, 0, .18, 1), opacity .9s;
+    padding: 60px 20px;
+
+    &.is-open {
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__bg {
+        position: absolute;
+        inset: 0;
+        background:
+            radial-gradient(circle at 20% 30%, rgba(240, 214, 138, .15), transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(201, 150, 59, .1), transparent 50%);
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 3;
+        color: $light;
+        max-width: 560px;
+    }
+
+    &__names {
+        font-family: $f-primary;
+        font-weight: 700;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        line-height: normal;
+        margin: .4rem 0 1rem;
+        color: $primary-200;
+
+        .amp {
+            display: block;
+            font-family: $f-script;
+            color: $primary;
+            font-size: 1.3em;
+            font-weight: 400;
+            margin: .2rem 0;
+        }
+    }
+
+    &__date {
+        font-family: $f-primary;
+        letter-spacing: .2em;
+        color: $light-500;
+        margin-bottom: 1.6rem;
+    }
+}
+
+.guest-card {
+    background: rgba(0, 0, 0, .25);
+    border: 1px solid rgba(240, 214, 138, .3);
+    border-radius: 6px;
+    padding: 1rem 1.4rem;
+    margin: 0 auto 2rem;
+    max-width: 380px;
+    backdrop-filter: blur(4px);
+
+    small {
+        display: block;
+        letter-spacing: .18em;
+        text-transform: uppercase;
+        font-size: .7rem;
+        color: $primary-200;
+        margin-bottom: .4rem;
+    }
+
+    p {
+        font-family: $f-primary;
+        font-size: 1.3rem;
+        color: $white;
+        margin: 0;
+    }
+}
+
+.kayon-float {
+    position: absolute;
+    width: 120px;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .18;
+    filter: drop-shadow(0 0 16px rgba(240, 214, 138, .4));
+}
+
+.wayang-swing {
+    position: absolute;
+    width: 130px;
+    bottom: 0;
+    opacity: .35;
+    filter: drop-shadow(0 0 12px rgba(201, 150, 59, .5));
+
+    &--left {
+        left: 2%;
+        transform-origin: top center;
+    }
+
+    &--right {
+        right: 2%;
+        transform-origin: top center;
+    }
+}
+
+.mega-mendung {
+    position: absolute;
+    width: 340px;
+    height: 120px;
+    background: url("../img/decoration/mega-mendung.svg") no-repeat center/contain;
+    opacity: .18;
+    pointer-events: none;
+}
+
+.mm-1 {
+    top: 18%;
+    left: -200px;
+}
+
+.mm-2 {
+    bottom: 14%;
+    right: -200px;
+}
+
+.gold-particles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #F0D68A, transparent 70%);
+    opacity: .8;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, 12px);
+        opacity: .3;
+    }
+}
+
+// ===================== NAVBAR =====================
+.navbar-wayang {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    padding: 14px 0;
+    transition: .35s;
+    background: transparent;
+
+    &.is-scrolled {
+        background: rgba(26, 15, 10, .85);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .3);
+    }
+
+    .brand {
+        font-family: $f-primary;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $primary-200;
+        letter-spacing: .2em;
+    }
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+
+    a {
+        color: $light;
+        font-family: $f-primary;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        font-size: .78rem;
+        position: relative;
+        padding: 6px 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 6px;
+            background: url("../img/decoration/batik-parang.svg") repeat-x center/auto 100%;
+            transition: .35s;
+        }
+
+        &:hover {
+            color: $primary-200;
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: $primary-200;
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(26, 15, 10, .96);
+        flex-direction: column;
+        padding: 20px;
+        gap: 14px;
+        transform: translateY(-10px);
+        opacity: 0;
+        pointer-events: none;
+        transition: .3s;
+
+        &.is-open {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}
+
+// ===================== HERO =====================
+.hero {
+    min-height: 100vh;
+    background: url('../img/bg/background.avif') center/cover no-repeat, #1A0F0A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $light;
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(26, 15, 10, .75), rgba(61, 35, 23, .65));
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 3;
+        max-width: 760px;
+        padding: 40px 20px;
+    }
+
+    &__names {
+        font-family: $f-primary;
+        font-size: clamp(2.4rem, 6vw, 4.6rem);
+        font-weight: 700;
+        color: $primary-200;
+        margin: .4rem 0 .6rem;
+        line-height: 1.05;
+
+        .amp-decor {
+            display: block;
+            margin: .4rem auto;
+        }
+    }
+
+    &__date {
+        font-family: $f-primary;
+        letter-spacing: .5em;
+        color: $light-500;
+        margin-bottom: 2rem;
+    }
+
+    &__tag {
+        font-family: $f-secondary;
+        color: $primary-200;
+        margin-top: 1.5rem;
+    }
+}
+
+.amp-icon {
+    width: 60px;
+    margin: 0 auto;
+    filter: drop-shadow(0 0 12px rgba(240, 214, 138, .5));
+}
+
+.corner {
+    position: absolute;
+    width: 160px;
+    opacity: .25;
+    z-index: 2;
+    filter: drop-shadow(0 0 10px rgba(201, 150, 59, .4));
+
+    &--tl {
+        top: 10px;
+        left: 10px;
+    }
+
+    &--br {
+        bottom: 10px;
+        right: 10px;
+        transform: scaleX(-1);
+    }
+}
+
+// === COUNTDOWN ===
+.countdown {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0 1rem;
+}
+
+.cd-box {
+    background: linear-gradient(135deg, rgba(92, 32, 24, .7), rgba(26, 15, 10, .85));
+    border: 2px solid $primary;
+    border-radius: 8px;
+    padding: 14px 18px;
+    min-width: 88px;
+    background-image: url("../img/decoration/batik-kawung.svg");
+    background-blend-mode: overlay;
+    background-size: 80px;
+    box-shadow: 0 0 0 4px rgba(201, 150, 59, .1), inset 0 0 12px rgba(0, 0, 0, .4);
+
+    strong {
+        display: block;
+        font-family: $f-primary;
+        font-size: 2rem;
+        color: #FFFFFF;
+    }
+
+    span {
+        display: block;
+        font-size: .7rem;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        color: $light-500;
+        margin-top: 4px;
+    }
+}
+
+// ===================== COUPLE =====================
+.couple {
+    background: $dark;
+    color: $light;
+
+    .batik-overlay {
+        position: absolute;
+        inset: 0;
+        background: url("../img/decoration/mega-mendung.svg") repeat;
+        background-size: 280px;
+        opacity: .06;
+        pointer-events: none;
+    }
+}
+
+.kayon-center {
+    width: 90px;
+    margin: 1rem auto 2.5rem;
+    filter: drop-shadow(0 0 16px rgba(240, 214, 138, .4));
+}
+
+.couple-grid {
+    margin-top: 1rem;
+}
+
+.couple-card {
+    background: linear-gradient(160deg, rgba(92, 32, 24, .4), rgba(26, 15, 10, .6));
+    border: 1px solid rgba(201, 150, 59, .4);
+    border-radius: 10px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
+    transition: .35s;
+
+    &:hover {
+        transform: translateY(-6px);
+        border-color: $primary-200;
+    }
+
+    h3 {
+        font-family: $f-primary;
+        font-size: 1.7rem;
+        color: $primary-200;
+        margin: .5rem 0 .2rem;
+    }
+
+    .role {
+        font-family: $f-script;
+        color: $primary;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.couple-icon {
+    width: 100px;
+    margin: 0 auto 1rem;
+    filter: drop-shadow(0 0 12px rgba(201, 150, 59, .5));
+}
+
+.couple-photo {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto 1rem;
+    border: 3px solid rgba(201, 150, 59, .4);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+
+    &--groom {
+        transform: scaleX(-1);
+    }
+
+    &--bride {
+        transform: scaleX(-1);
+    }
+}
+
+.batik-divider {
+    height: 14px;
+    background: url("../img/decoration/batik-parang.svg") repeat-x center/auto 100%;
+    opacity: .7;
+    margin: .8rem 0;
+}
+
+.parents {
+    color: $light-500;
+    font-size: .95rem;
+    margin: 0;
+
+    strong {
+        color: $white;
+        font-family: $f-primary;
+    }
+}
+
+.amp-col {
+    position: relative;
+}
+
+.amp-big {
+    font-family: $f-script;
+    font-size: 7rem;
+    color: $primary;
+    display: block;
+    text-align: center;
+    filter: drop-shadow(0 0 16px rgba(201, 150, 59, .4));
+}
+
+// ===================== STORY =====================
+.story {
+    background: linear-gradient(180deg, #2a160d, #3D2317);
+    color: $light;
+
+    .batik-overlay {
+        position: absolute;
+        inset: 0;
+        background: url("../img/decoration/batik-kawung.svg") repeat;
+        background-size: 200px;
+        opacity: .05;
+    }
+}
+
+.timeline {
+    position: relative;
+    max-width: 880px;
+    margin: 3rem auto 0;
+    padding: 20px 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 6px;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg, transparent, $primary, $primary-200, $primary, transparent);
+        border-radius: 4px;
+    }
+}
+
+.tl-item {
+    position: relative;
+    width: 50%;
+    padding: 18px 40px;
+    box-sizing: border-box;
+
+    &:nth-child(odd) {
+        left: 0;
+        text-align: right;
+
+        .tl-node {
+            right: -23px;
+        }
+    }
+
+    &:nth-child(even) {
+        left: 50%;
+
+        .tl-node {
+            left: -23px;
+        }
+    }
+}
+
+.tl-node {
+    position: absolute;
+    top: 28px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: radial-gradient(circle, $primary-200, $primary);
+    border: 3px solid $dark;
+    box-shadow: 0 0 0 4px rgba(201, 150, 59, .2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 28px;
+        filter: brightness(0) invert(.1);
+    }
+}
+
+.tl-card {
+    background: linear-gradient(160deg, rgba(92, 32, 24, .5), rgba(26, 15, 10, .7));
+    border: 1px solid rgba(201, 150, 59, .3);
+    padding: 1.4rem 1.6rem;
+    border-radius: 10px;
+
+    .year {
+        font-family: $f-primary;
+        color: $primary-200;
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: .2rem;
+    }
+
+    h4 {
+        font-family: $f-primary;
+        color: $white;
+        margin: .2rem 0 .5rem;
+    }
+
+    p {
+        color: $light-500;
+        font-size: .95rem;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+    }
+
+    .tl-item {
+        width: 100%;
+        left: 0 !important;
+        padding-left: 55px;
+        padding-right: 10px;
+        text-align: left !important;
+
+        .tl-node {
+            left: -3px !important;
+            right: auto !important;
+        }
+    }
+}
+
+// ===================== EVENTS =====================
+.events {
+    background: $light;
+}
+
+.event-card {
+    background: $white;
+    border: 1px solid rgba(139, 69, 19, .2);
+    border-radius: 10px;
+    padding: 2rem 1.6rem;
+    text-align: center;
+    transition: .35s;
+    box-shadow: 0 4px 20px rgba(92, 32, 24, .06);
+
+    &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 40px rgba(201, 150, 59, .25);
+        border-color: $primary;
+    }
+
+    h3 {
+        font-family: $f-primary;
+        color: $accent;
+        font-size: 1.7rem;
+        margin: .4rem 0;
+    }
+}
+
+.event-icon {
+    width: 80px;
+    margin: 0 auto 1rem;
+    opacity: .85;
+}
+
+.event-date,
+.event-time {
+    font-family: $f-primary;
+    color: $secondary;
+    margin: .2rem 0;
+}
+
+.event-venue {
+    font-weight: 600;
+    color: $dark;
+    margin-top: .6rem;
+}
+
+.event-addr {
+    color: $gray;
+    font-size: .9rem;
+}
+
+.map-wrap {
+    margin-top: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, .08);
+
+    iframe {
+        width: 100%;
+        height: 220px;
+        border: 0;
+        display: block;
+    }
+}
+
+// ===================== RSVP =====================
+.rsvp {
+    background: $dark-500;
+    color: $light;
+
+    .batik-overlay.kawung {
+        position: absolute;
+        inset: 0;
+        background: url("../img/decoration/batik-kawung.svg") repeat;
+        background-size: 160px;
+        opacity: .06;
+    }
+}
+
+.rsvp-form {
+    label {
+        display: block;
+        font-family: $f-primary;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        font-size: .75rem;
+        color: $primary-200;
+        margin: .9rem 0 .35rem;
+    }
+
+    .req {
+        color: #ff8d6b;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: .75rem 1rem;
+        background: rgba(0, 0, 0, .35);
+        border: 1px solid rgba(201, 150, 59, .4);
+        color: $light;
+        border-radius: 6px;
+        font-family: $f-secondary;
+        font-size: .95rem;
+        outline: none;
+        transition: .2s;
+
+        &:focus {
+            border-color: $primary-200;
+            box-shadow: 0 0 0 3px rgba(201, 150, 59, .2);
+        }
+    }
+
+    button {
+        margin-top: 1.2rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+}
+
+.wishes {
+    background: rgba(0, 0, 0, .3);
+    border: 1px solid rgba(201, 150, 59, .3);
+    border-radius: 10px;
+    padding: 1.4rem;
+
+    h4 {
+        font-family: $f-primary;
+        color: $primary-200;
+        margin: 0 0 1rem;
+    }
+}
+
+.wishes-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 420px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $primary;
+        border-radius: 4px;
+    }
+}
+
+.wish {
+    display: flex;
+    gap: 12px;
+    padding: .8rem;
+    background: rgba(255, 255, 255, .04);
+    border-radius: 8px;
+    border: 1px solid rgba(201, 150, 59, .15);
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        flex: 0 0 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, $primary, $secondary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: $f-primary;
+        color: $dark;
+        font-weight: 700;
+    }
+
+    .body {
+        strong {
+            display: block;
+            color: $primary-200;
+            font-family: $f-primary;
+        }
+
+        p {
+            margin: .2rem 0 0;
+            color: $light-500;
+            font-size: .92rem;
+        }
+    }
+}
+
+// ===================== GIFT =====================
+.gift {
+    background: $light;
+}
+
+.gift-card {
+    background: $white;
+    border: 1px solid rgba(139, 69, 19, .2);
+    border-radius: 10px;
+    padding: 1.6rem;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(92, 32, 24, .05);
+    transition: .3s;
+
+    &:hover {
+        transform: translateY(-4px);
+        border-color: $primary;
+    }
+
+    &__logo {
+        width: 5.5rem;
+        height: auto;
+        margin: 0 auto 1rem;
+        object-fit: contain;
+    }
+
+    .gift-logo {
+        font-family: $f-primary;
+        font-size: 1.4rem;
+        color: $accent;
+        margin-bottom: .3rem;
+    }
+
+    .acc-no {
+        font-family: 'Courier New', monospace;
+        font-size: 1.2rem;
+        color: $dark;
+        background: $light-500;
+        padding: .5rem;
+        border-radius: 6px;
+        margin: .6rem 0;
+        letter-spacing: .05em;
+    }
+
+    .acc-name {
+        color: $gray;
+        font-size: .9rem;
+        margin-bottom: .8rem;
+    }
+}
+
+.btn-copy {
+    background: $primary;
+    color: $dark;
+    border: none;
+    padding: .55rem 1.2rem;
+    border-radius: 6px;
+    font-family: $f-primary;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    font-size: .75rem;
+    cursor: pointer;
+    transition: .2s;
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+
+    &:hover {
+        background: $primary-500;
+    }
+
+    &.copied {
+        background: #3a9a5b;
+        color: #fff;
+    }
+}
+
+// ===================== CLOSING =====================
+.closing {
+    background: linear-gradient(180deg, #1A0F0A, #3D2317);
+    color: $light;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at center, rgba(201, 150, 59, .1), transparent 70%);
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 3;
+        max-width: 700px;
+        padding: 40px 20px;
+    }
+
+    blockquote {
+        font-family: $f-secondary;
+        color: $light-500;
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin: 0 auto 2rem;
+        max-width: 580px;
+        border: none;
+        padding: 0;
+    }
+
+    &__names {
+        font-family: $f-primary;
+        font-size: clamp(2rem, 5vw, 3.6rem);
+        color: $primary-200;
+        margin: 1rem 0;
+
+        .amp {
+            font-family: $f-script;
+            color: $primary;
+            font-size: 1.2em;
+            display: block;
+            font-weight: 400;
+        }
+    }
+}
+
+.credit {
+    color: $gray;
+    margin-top: 2rem;
+    font-size: .85rem;
+
+    i {
+        color: $accent;
+    }
+}
+
+// ===================== FOOTER =====================
+// ===== Tenant logo & social =====
+#section-tenant {
+    background: $light;
+    padding: 2rem 0;
+
+    .tenant-label {
+        font-size: .8rem;
+        letter-spacing: .15em;
+        text-transform: uppercase;
+        color: $dark;
+        opacity: .7;
+        margin-bottom: 1.2rem;
+    }
+
+    .tenant-logo {
+        max-width: 6.5rem;
+        max-height: 3.2rem;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+        opacity: .95;
+        border-radius: 4px;
+    }
+
+    .tenant-social {
+        display: flex;
+        justify-content: center;
+        gap: .75rem;
+        margin-top: 1.2rem;
+    }
+
+    .tenant-social-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 50%;
+        font-size: .95rem;
+        color: $light;
+        background: $primary;
+        border: 1px solid rgba(201, 150, 59, .5);
+        transition: all .3s;
+
+        &:hover {
+            background: $secondary;
+        }
+    }
+}
+
+.footer {
+    background: #0e0805;
+    color: $gray;
+    padding: 24px 0;
+
+    small {
+        letter-spacing: .1em;
+    }
+}
+
+// ===================== FAB =====================
+.fab {
+    position: fixed;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid $primary;
+    background: $dark;
+    color: $primary-200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    cursor: pointer;
+    z-index: 800;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
+    transition: .25s;
+
+    &:hover {
+        transform: scale(1.1);
+        background: $primary;
+        color: $dark;
+    }
+}
+
+.fab-audio {
+    bottom: 84px;
+}
+
+.fab-top {
+    bottom: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+
+    &.is-visible {
+        opacity: 1;
+        pointer-events: all;
+        transform: translateY(0);
+    }
+}
+
+// ===================== MELATI =====================
+.melati-fall {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.melati {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: url("../img/decoration/bunga-melati.svg") no-repeat center/contain;
+    opacity: .7;
+}
+
+// ===================== TOAST =====================
+.toast-area {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9000;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.toast {
+    background: $dark;
+    color: $primary-200;
+    padding: .85rem 1.4rem;
+    border-radius: 6px;
+    border: 1px solid $primary;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .4);
+    font-family: $f-primary;
+    letter-spacing: .05em;
+    animation: toastIn .3s ease;
+
+    &.error {
+        border-color: #c0392b;
+        color: #ff8d6b;
+    }
+}
+
+@keyframes toastIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// ===================== RESPONSIVE =====================
+@media (max-width: 576px) {
+    section {
+        padding: 70px 0;
+    }
+
+    .opening__names {
+        font-size: 2rem;
+    }
+
+    .cd-box {
+        min-width: 70px;
+        padding: 10px;
+
+        strong {
+            font-size: 1.4rem;
+        }
+    }
+}

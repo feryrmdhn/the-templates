@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Templates</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css"
+        integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css"
+        integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="_assets/scss/app.css">
+</head>
+
+<body id="glide-section" class="glide opening-show" style="cursor: default !important;">
+
+    <section id="opening">
+        <div class="cover-content container text-center d-flex flex-column align-items-center justify-content-center">
+            <div class="img-wrapper-spouse mx-auto mb-4">
+                <div class="img-wrapper">
+                    <img id="opening-photo" src="" alt="">
+                </div>
+            </div>
+
+            <h5 class="mb-2">Kepada, <span id="guest"></span></h5>
+            <h5 class="font-light">Kami mengundang Anda ke Acara Pernikahan kami</h5>
+            <h1 class="font-type-secondary my-6">
+                <span class="spouse-text" id="groom-name-opening"></span><br>&<br><span class="spouse-text"
+                    id="bride-name-opening"></span>
+            </h1>
+            <h4 class="font-light mb-2">Save the Date</h4>
+            <h5 class="font-light" id="save-the-date"></h5>
+
+            <div class="row justify-content-center mt-6">
+                <div class="col-auto">
+                    <button id="btn-open-opening" class="btn btn-primary"><i class="fa-solid fa-envelope mr-1"></i> Buka
+                        Undangan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="glide__track" data-glide-el="track">
+        <div class="glide__slides">
+            <section id="section-1" class="glide__slide">
+                <div class="container py-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 order-2 order-lg-1">
+                            <h6 class="mb-4">Assalamu'alaikum Warahmatullahi Wabarakatuh</h6>
+                            <p class="text-lg mb-6">
+                                Dengan memohon rahmat dan ridho Allah Subhanahu Wataala, serta diiringi shalawat dan
+                                salam pada baginda Rasulullah, kami bermaksud menyelenggarakan acara akad nikah dan
+                                resepsi pernikahan putra dan putri kami tercinta yang Insya Allah akan dilaksanakan
+                                pada:
+                            </p>
+
+                            <div class="row gx-lg-5 align-items-center mb-6">
+                                <div class="col-auto">
+                                    <div class="text-md"><i class="fa-solid fa-calendar"></i></div>
+                                </div>
+                                <div class="col">
+                                    <h6 class="font-bold">Hari dan Tanggal</h6>
+                                    <div class="text-md" id="event-date"></div>
+                                </div>
+                            </div>
+                            <div class="row gx-lg-5 align-items-center mb-6">
+                                <div class="col-auto">
+                                    <div class="text-md"><i class="fa-solid fa-calendar"></i></div>
+                                </div>
+                                <div class="col">
+                                    <h6 class="font-bold">Waktu</h6>
+                                    <div class="text-md" id="event-time"></div>
+                                </div>
+                            </div>
+                            <div class="row gx-lg-5 align-items-center mb-6">
+                                <div class="col-auto">
+                                    <div class="text-md"><i class="fa-solid fa-location-dot"></i></div>
+                                </div>
+                                <div class="col">
+                                    <h6 class="font-bold">Lokasi</h6>
+                                    <div class="text-md" id="event-venue"></div>
+                                </div>
+                            </div>
+
+
+                            <div id="payment-section" style="display:none;" class="mt-6">
+                                <h6 class="font-bold mb-3">Amplop Digital</h6>
+                                <div id="payment-list"></div>
+                            </div>
+
+                            <p class="text-lg my-6 pb-4">
+                                Kami berterima kasih sebesar-besarnya apabila Bapak/Ibu, Saudara/i berkenan hadir untuk
+                                memberikan doa restu untuk kedua mempelai.
+                            </p>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2">
+                            <div class="row flex-lg-column">
+                                <div class="col-6 col-lg-auto align-self-center align-self-lg-end">
+                                    <div class="card card-story card-story-left mx-auto mb-6 mb-sm-10 mb-lg-16"
+                                        data-aos="card-story-left" data-aos-duration="1500">
+                                        <div class="card-body">
+                                            <img id="story-photo-1" src="" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-lg-auto align-self-center align-self-lg-start">
+                                    <div class="card card-story card-story-right mx-auto" data-aos="card-story-right"
+                                        data-aos-offset="-150" data-aos-duration="1500">
+                                        <div class="card-body">
+                                            <img id="story-photo-2" src="" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-2" class="glide__slide" style="overflow-x: hidden;">
+                <div class="container-xxl position-relative overflow-hidden">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 pt-10 py-lg-12">
+                            <h3 class="font-type-secondary text-center mb-4">RSVP</h3>
+                            <div class="card">
+                                <div class="card-body p-5">
+                                    <form id="rsvp-form" action="">
+                                        <div class="mb-5">
+                                            <label class="form-label">Nama</label>
+                                            <input type="text" name="name" class="form-control"
+                                                placeholder="Nama Lengkap Anda" required>
+                                        </div>
+                                        <div class="mb-5">
+                                            <label class="form-label">Nomor WhatsApp atau HP</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="Nomor WhatsApp atau HP Anda">
+                                        </div>
+                                        <div class="mb-5">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">Ya, saya akan
+                                                    hadir</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault2">
+                                                <label class="form-check-label" for="flexRadioDefault2">Tidak, saya
+                                                    tidak bisa hadir</label>
+                                            </div>
+                                        </div>
+                                        <div class="mb-5">
+                                            <label class="form-label">Ucapan dan Doa Anda</label>
+                                            <textarea name="message" class="form-control" rows="3"
+                                                placeholder="Tulis ucapan dan doa anda untuk mempelai pengantin"
+                                                required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Kirim Ucapan</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="section-2-list-group">
+                                <ul id="wishes-list" class="list-group list-group-flush"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="section-3" class="glide__slide">
+                <div class="container text-center">
+                    <div class="img-wrapper-spouse mx-auto mb-4">
+                        <div class="img-wrapper">
+                            <img id="closing-photo" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7">
+                            <p class="mb-5" id="quote"></p>
+                            <div class="text-center">
+                                <img src="" alt="" class="w-25rem">
+                                <h4 class="font-type-secondary font-bold mb-6" style="color: #8a6a3d;">Terimakasih atas
+                                    doa
+                                    restunya</h4>
+                                <h2 class="font-type-secondary font-bold mb-10" id="closing-couple"></h2>
+                            </div>
+
+                            <p class="tenant-label">Digital Invitation by</p>
+                            <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+                            <div id="tenant-social" class="tenant-social"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="btn-group-action" data-glide-el="controls[nav]" class="btn-group btn-group-action">
+        <button data-glide-dir="=0" class="btn btn-action btn-primary active">
+            <i class="fa-solid fa-desktop"></i>
+            <div>Home</div>
+        </button>
+        <button data-glide-dir="=1" class="btn btn-action btn-primary">
+            <i class="fa-solid fa-comment"></i>
+            <div>RSVP</div>
+        </button>
+        <button data-glide-dir="=2" class="btn btn-action btn-primary">
+            <i class="fa-solid fa-star"></i>
+            <div>Quote</div>
+        </button>
+    </div>
+
+    <button id="btn-play" class="btn btn-light"><i class="fa-solid fa-volume-high"></i></button>
+
+    <audio controls id="audio" class="d-none">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timezz@6.1.0/dist/timezz.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"
+        integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/_shared/var.js"></script>
+    <script src="/_shared/api.js"></script>
+
+    <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

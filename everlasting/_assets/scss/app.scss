@@ -1,0 +1,845 @@
+@use 'sass:map';
+@use 'sass:color';
+
+// ===== Variables =====
+$colors: (
+  'primary': #DC9001,
+  'secondary': #FFEDE1,
+  'light': #F4F5F5,
+  'dark': #3D2800,
+  'white': #FFFFFF,
+  'black': #000000
+);
+
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px
+);
+
+$primary: map.get($colors, 'primary');
+$secondary: map.get($colors, 'secondary');
+$light: map.get($colors, 'light');
+$dark: map.get($colors, 'dark');
+$white: map.get($colors, 'white');
+$black: map.get($colors, 'black');
+
+$font-type-primary: 'Source Serif Pro', serif;
+$font-type-secondary: 'Berkshire Swash', cursive;
+
+// ===== Base =====
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  @media (max-width: map.get($breakpoints, 'sm')) {
+    font-size: 9px;
+  }
+}
+
+body {
+  font-family: $font-type-primary;
+  font-size: 1.4rem;
+  color: $dark;
+  background: $white;
+  line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  font-family: $font-type-primary;
+  font-size: 1.4rem;
+  color: $dark;
+  background: $white;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 4.8rem;
+}
+
+h2 {
+  font-size: 3.8rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
+h5 {
+  font-size: 2.2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+@media (max-width: map.get($breakpoints, 'sm')) {
+  h1 {
+    font-size: 3.6rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2.6rem;
+  }
+
+  h4 {
+    font-size: 2.2rem;
+  }
+
+  h5 {
+    font-size: 1.9rem;
+  }
+
+  h6 {
+    font-size: 1.6rem;
+  }
+}
+
+a,
+button {
+  transition: all .25s ease;
+}
+
+.font-secondary {
+  font-family: $font-type-secondary;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.bg-light {
+  background: $light !important;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 0.3rem;
+}
+
+// ===== Buttons =====
+#btnOpen {
+  font-size: 1.8rem;
+  padding: 1rem 2.8rem;
+
+  i {
+    font-size: 2rem;
+  }
+}
+
+#rsvpSubmit {
+  font-size: 1.7rem;
+  padding: .85rem 2.4rem;
+}
+
+// ===== Opening =====
+body.opening-show {
+  overflow: hidden;
+  max-height: 100vh;
+
+  #mainNav,
+  header#hero,
+  section:not(#opening),
+  footer,
+  #btnScrollTop,
+  #btnAudio {
+    display: none !important;
+  }
+}
+
+body.opening-hide {
+  section#opening {
+    animation: opening-hide 2s ease-in-out forwards;
+  }
+}
+
+@keyframes opening-hide {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(1rem);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+}
+
+section#opening {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .opening-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../img/bg/opening.jpg') center/cover no-repeat;
+  }
+
+  .opening-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+  }
+
+  .opening-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 2rem;
+  }
+}
+
+// ===== Navbar =====
+#mainNav {
+  background: transparent;
+  transition: background .3s ease, padding .3s ease;
+  padding: 1.5rem 0;
+
+  &.scrolled {
+    background: $primary;
+    padding: .75rem 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
+  }
+
+  .navbar-brand {
+    font-family: $font-type-secondary;
+    font-size: 2rem;
+    color: $white;
+  }
+
+  .navbar-toggler {
+    width: 36px;
+    height: 36px;
+    padding: .6rem;
+
+    .navbar-toggler-icon {
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  .nav-link {
+    color: $white !important;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .15rem;
+    margin: 0 .5rem;
+
+    &.active {
+      color: $secondary !important;
+      font-weight: 600;
+    }
+  }
+}
+
+// ===== Hero =====
+header#hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('../img/bg/header.jpg') center/cover no-repeat;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+  }
+
+  h1 {
+    font-size: clamp(4rem, 10vw, 8rem);
+  }
+}
+
+// ===== Sections =====
+.section {
+  padding: 6rem 0;
+  position: relative;
+
+  @media (max-width: map.get($breakpoints, 'md')) {
+    padding: 4rem 0;
+  }
+}
+
+.section-title {
+  font-size: 3.6rem;
+  color: $primary;
+}
+
+.section-subtitle {
+  font-size: 1.4rem;
+  color: color.adjust($dark, $lightness: 25%);
+}
+
+// ===== Leaf decorations =====
+.leaf {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  pointer-events: none;
+  opacity: .8;
+  z-index: 0;
+
+  @media (max-width: map.get($breakpoints, 'md')) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.leaf-left {
+  left: 0;
+  background-image: url('../img/decoration/leaf-left.png');
+  background-position: bottom left;
+}
+
+.leaf-right {
+  right: 0;
+  background-image: url('../img/decoration/leaf-right.png');
+  background-position: bottom right;
+}
+
+// ===== Couple =====
+.section-couple {
+  background: $secondary;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid $primary;
+}
+
+.social {
+  margin-top: 1rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0 .25rem;
+    background: $primary;
+    color: $white;
+    border-radius: 50%;
+
+    &:hover {
+      background: $dark;
+    }
+  }
+}
+
+// ===== Gallery =====
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  >a:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  @media (max-width: map.get($breakpoints, 'md')) {
+    grid-template-columns: repeat(2, 1fr);
+
+    >a:nth-child(1) {
+      grid-column: span 2;
+      grid-row: auto;
+    }
+  }
+}
+
+// ===== Story =====
+.story-item {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+
+  img {
+    width: 45%;
+    border-radius: 8px;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+  }
+
+  .story-card {
+    flex: 1;
+    border: 2px solid $primary;
+    background: $secondary;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+
+  @media (max-width: map.get($breakpoints, 'md')) {
+    flex-direction: column !important;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// ===== Schedule =====
+.section-schedule {
+  background: url('../img/bg/schedule.jpg') center/cover no-repeat;
+}
+
+.schedule-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, .85);
+}
+
+.card-bordered {
+  border: 2px solid $primary;
+  background: $white;
+  border-radius: 8px;
+}
+
+.schedule-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  i {
+    color: $primary;
+    margin-right: .25rem;
+  }
+}
+
+// ===== Countdown =====
+.section-countdown {
+  background: url('../img/bg/countdown.jpg') center/cover no-repeat;
+}
+
+.countdown-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .6);
+}
+
+.countdown-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+  overflow: hidden;
+
+  .cd-card {
+    background: rgba(255, 255, 255, .1);
+    border: 2px solid $primary;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    min-width: 75px;
+
+    @media (max-width: map.get($breakpoints, 'sm')) {
+      padding: .7rem .8rem;
+      min-width: 0;
+      flex: 1;
+    }
+  }
+
+  .cd-num {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+
+    @media (max-width: map.get($breakpoints, 'sm')) {
+      font-size: 2rem;
+    }
+  }
+
+  .cd-label {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin-top: .4rem;
+
+    @media (max-width: map.get($breakpoints, 'sm')) {
+      font-size: .8rem;
+      letter-spacing: .05rem;
+    }
+  }
+
+  .cd-divider {
+    font-size: 2.4rem;
+    color: $primary;
+    flex-shrink: 0;
+
+    @media (max-width: map.get($breakpoints, 'sm')) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+// ===== Form =====
+.form-control-line {
+  border: none;
+  border-bottom: 2px solid $primary;
+  border-radius: 0;
+  background: transparent;
+  padding-left: 0;
+
+  &:focus {
+    box-shadow: none;
+    border-color: $dark;
+    background: transparent;
+  }
+}
+
+.form-check-input:checked {
+  background-color: $primary;
+  border-color: $primary;
+}
+
+.btn-primary {
+  background: $primary !important;
+  border-color: $primary !important;
+  color: $white !important;
+
+  &:hover {
+    background: color.adjust($primary, $lightness: -8%) !important;
+    border-color: color.adjust($primary, $lightness: -8%) !important;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible,
+  &.active {
+    background: color.adjust($primary, $lightness: -10%) !important;
+    border-color: color.adjust($primary, $lightness: -10%) !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+}
+
+// ===== Wishes =====
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: .5rem;
+
+  // Hide scrollbar
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  @media (max-width: map.get($breakpoints, 'md')) {
+    grid-template-columns: 1fr;
+  }
+
+  .wish {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: $white;
+    border-radius: 8px;
+    border: 1px solid #eee;
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: $primary;
+      color: $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .name {
+      font-weight: 600;
+    }
+
+    .msg {
+      font-size: 1.3rem;
+      color: color.adjust($dark, $lightness: 20%);
+    }
+  }
+}
+
+// ===== Payment =====
+.section-payment {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, $secondary 0%, color.adjust($secondary, $lightness: 5%) 100%);
+  position: relative;
+  overflow: hidden;
+
+  // Subtle decorative ring behind content
+  &::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 60px solid rgba($primary, .05);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .section-title {
+    margin-bottom: .8rem;
+  }
+
+  .section-payment-subtitle {
+    font-size: 1.4rem;
+    color: color.adjust($dark, $lightness: 25%);
+    margin-bottom: 3.5rem;
+  }
+}
+
+#payment-list {
+  gap: 2rem !important;
+
+  @media (max-width: map.get($breakpoints, 'sm')) {
+    gap: 1.5rem !important;
+  }
+}
+
+.payment-card {
+  background: $white;
+  border: 1.5px solid color.adjust($primary, $lightness: 30%);
+  border-radius: 16px;
+  padding: 2.4rem 2rem;
+  text-align: center;
+  min-width: 180px;
+  max-width: 220px;
+  box-shadow: 0 4px 20px rgba($primary, .08);
+  transition: transform .25s ease, box-shadow .25s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 32px rgba($primary, .18);
+  }
+
+  .payment-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: $secondary;
+    margin: 0 auto 1.2rem;
+
+    img {
+      width: 40px;
+      height: 24px;
+      object-fit: contain;
+    }
+  }
+
+  .payment-value {
+    font-family: $font-type-secondary;
+    font-size: 1.8rem;
+    color: $dark;
+    margin-bottom: .4rem;
+    letter-spacing: .05rem;
+  }
+
+  .payment-name {
+    color: color.adjust($dark, $lightness: 25%);
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  // Accent line at top
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: $primary;
+    border-radius: 0 0 4px 4px;
+  }
+}
+
+// ===== Closing =====
+.section-closing {
+  background: $secondary;
+  padding: 6rem 0;
+
+  .closing-decoration {
+    width: 120px;
+    height: 60px;
+    margin: 0 auto;
+    background: url('../img/decoration/closing.png') center/contain no-repeat;
+  }
+}
+
+// ===== Footer =====
+.footer {
+  background: $dark;
+  color: $white;
+  padding: 1.5rem 0;
+}
+
+// ===== Tenant logo & social =====
+#section-tenant {
+  background: $light;
+  padding: 3rem 0;
+
+  .tenant-label {
+    font-size: 1.2rem;
+    letter-spacing: .15rem;
+    text-transform: uppercase;
+    color: $dark;
+    opacity: .7;
+    margin-bottom: 2rem;
+  }
+
+  .tenant-logo {
+    max-width: 10rem;
+    max-height: 5rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    opacity: .95;
+    border-radius: 6px;
+  }
+
+  .tenant-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+}
+
+// ===== Floating buttons =====
+.floating-btn {
+  position: fixed;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: $primary;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
+  z-index: 1000;
+
+  &:hover {
+    background: $dark;
+  }
+}
+
+.floating-btn-audio {
+  bottom: 16px;
+}
+
+.floating-btn-up {
+  bottom: 60px;
+  opacity: 0;
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+// ===== Tenant social button =====
+.tenant-social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.6rem;
+  height: 3.6rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: $white;
+  background: $primary;
+  border: 1px solid rgba(220, 144, 1, .5);
+  text-decoration: none;
+  transition: all .3s;
+
+  &:hover {
+    background: $dark;
+    color: $secondary;
+  }
+}

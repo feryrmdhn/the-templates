@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan Manhattan</title>
+  <meta name="description"
+    content="Undangan pernikahan digital dengan pengalaman 3D menyusuri jalanan kota Manhattan malam hari." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Italiana&family=Bebas+Neue&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="./_assets/css/app.css" />
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="ring"></div>
+    <div class="caps">memasuki kota</div>
+  </div>
+
+  <div id="stage" aria-hidden="true"></div>
+  <div class="vignette"></div>
+  <div class="grain"></div>
+  <div id="progress"></div>
+  <div id="depth"><span>Downtown</span> · <b id="depthVal">0 blok</b></div>
+
+  <button id="music" title="Musik latar" aria-label="Putar musik">
+    <i class="fas fa-music"></i>
+  </button>
+
+  <audio id="audio" loop preload="none">
+    <source src="/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main>
+    <section id="cover">
+      <div class="reveal" data-anim="fade-up">
+        <div class="caps">The Wedding of</div>
+        <h1 style="margin-top:1rem"><span id="cover-groom">Reyhan</span><span class="amp">&amp;</span><span
+            id="cover-bride">Amara</span></h1>
+        <div class="meta" id="cover-meta">Sabtu · 17 Oktober 2026 · Manhattan</div>
+        <div class="guest-greet">Kepada Yth.<span id="guest">Tamu Undangan</span></div>
+      </div>
+      <div class="scroll-hint">
+        <span>Masuk ke Kota</span>
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="opening">
+      <div class="card reveal reveal-stagger" data-anim="blur">
+        <div class="caps">In The Name of Love</div>
+        <div class="divider"><span class="line"></span>
+          <svg viewBox="0 0 24 24">
+            <path d="M4 20V6l8-3 8 3v14M9 20v-6h6v6" />
+          </svg>
+          <span class="line"></span>
+        </div>
+        <p>Di antara gemerlap lampu jalan dan detak kota yang tak pernah tidur,
+          kami menemukan tempat pulang — pada satu sama lain.
+          Dengan penuh syukur, kami mengundang Bapak/Ibu/Saudara/i untuk hadir
+          di hari sakral kami.</p>
+      </div>
+    </section>
+
+    <section id="couple">
+      <div class="card reveal reveal-stagger" data-anim="zoom-in">
+        <div class="caps">The Couple</div>
+        <h2>Kedua Mempelai</h2>
+        <div class="divider"><span class="line"></span>
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="12" cy="12" r="8" />
+          </svg>
+          <span class="line"></span>
+        </div>
+        <div class="couple2">
+          <div class="m">
+            <div class="portrait"><img id="groom-photo" alt="Reyhan" loading="lazy"
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80&auto=format&fit=crop" />
+            </div>
+            <div>
+              <div class="name" id="couple-groom">Reyhan Adhitya</div>
+              <div class="parents"><span id="groom-role">Putra dari</span><br /><span id="groom-parents">Bapak Yusuf
+                  &amp; Ibu Sekar</span></div>
+            </div>
+          </div>
+          <div class="amp">&amp;</div>
+          <div class="m">
+            <div class="portrait"><img id="bride-photo" alt="Amara" loading="lazy"
+                src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=600&q=80&auto=format&fit=crop" />
+            </div>
+            <div>
+              <div class="name" id="couple-bride">Amara Kirana</div>
+              <div class="parents"><span id="bride-role">Putri dari</span><br /><span id="bride-parents">Bapak Adnan
+                  &amp; Ibu Ratih</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="date">
+      <div class="card reveal reveal-stagger" data-anim="fade-up">
+        <div class="caps">Save the Date</div>
+        <h2 id="date-display">17 · 10 · 2026</h2>
+        <p class="italic" id="date-time">Sabtu, pukul 10.00 — hingga selesai</p>
+        <div class="cd" id="countdown">
+          <div class="cell">
+            <div class="num" data-k="d">–</div>
+            <div class="lbl">Hari</div>
+          </div>
+          <div class="cell">
+            <div class="num" data-k="h">–</div>
+            <div class="lbl">Jam</div>
+          </div>
+          <div class="cell">
+            <div class="num" data-k="m">–</div>
+            <div class="lbl">Menit</div>
+          </div>
+          <div class="cell">
+            <div class="num" data-k="s">–</div>
+            <div class="lbl">Detik</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <div class="card reveal reveal-stagger" data-anim="fade-up" style="max-width:820px">
+        <div class="caps">Rangkaian Acara</div>
+        <h2>Waktu &amp; Tempat</h2>
+        <div class="divider"><span class="line"></span>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2v20M2 12h20" />
+          </svg>
+          <span class="line"></span>
+        </div>
+        <div class="events">
+          <div class="event">
+            <div class="t">Akad Nikah</div>
+            <div class="d" id="akad-date">Sabtu, 17 Oktober 2026 · 10.00</div>
+            <div class="a"><span id="akad-venue">The Rooftop Chapel</span><br /><span id="akad-address">432 Park Avenue,
+                Manhattan, NY</span></div>
+          </div>
+          <div class="event">
+            <div class="t">Resepsi</div>
+            <div class="d" id="reception-date">Sabtu, 17 Oktober 2026 · 18.00</div>
+            <div class="a"><span id="reception-venue">The Grand Ballroom</span><br /><span id="reception-address">The
+                Plaza Hotel, 5th Avenue, NY</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery-sec">
+      <div class="card reveal" data-anim="fade-up" style="max-width:960px">
+        <div class="caps">Galeri</div>
+        <h2>Momen Bersama</h2>
+        <p class="italic">Setiap sudut kota menyimpan cerita kami.</p>
+        <div class="gallery" id="gallery"></div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="card reveal" data-anim="fade-up">
+        <div class="caps">Kesediaan Hadir</div>
+        <h2>RSVP</h2>
+        <p class="italic">Mohon konfirmasi kehadiran Anda agar kami dapat mempersiapkan hari istimewa ini.</p>
+        <form id="rsvp-form">
+          <div><label for="nm">Nama Lengkap</label><input id="nm" name="name" required placeholder="Nama Anda" /></div>
+          <div><label for="att">Kehadiran</label>
+            <select id="att" name="attendance" required>
+              <option value="">— Pilih —</option>
+              <option>Hadir</option>
+              <option>Tidak Dapat Hadir</option>
+              <option>Masih Ragu</option>
+            </select>
+          </div>
+          <div><label for="msg">Ucapan &amp; Doa</label><textarea id="msg" name="message" rows="3"
+              placeholder="Tuliskan doa terbaik Anda…"></textarea></div>
+          <button type="submit">Kirim RSVP</button>
+        </form>
+        <div id="wishes-list"></div>
+      </div>
+    </section>
+
+    <section id="closing">
+      <div class="reveal" data-anim="fade-up" style="max-width:700px">
+        <div class="caps">Terima Kasih</div>
+        <h2 style="margin-top:1rem;color:var(--gold-2)" id="closing-quote">"In a city of a million lights, we chose to
+          shine together."</h2>
+        <div class="divider"><span class="line"></span>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z" />
+          </svg>
+          <span class="line"></span>
+        </div>
+        <h3 style="font-family:'Italiana',serif;color:#fff" id="closing-names">Reyhan &amp; Amara</h3>
+        <p class="italic" id="closing-date">17.10.2026</p>
+      </div>
+    </section>
+  </main>
+
+  <section id="payment-section" style="display:none">
+    <div class="card reveal" data-anim="fade-up" style="max-width:820px">
+      <div class="caps">Hadiah Pernikahan</div>
+      <h2>Kirim Hadiah</h2>
+      <p class="italic">Doa restu Anda adalah hadiah terindah. Jika ingin memberi lebih, silakan melalui:</p>
+      <div class="payment-grid" id="payment-list"></div>
+    </div>
+  </section>
+
+  <section id="section-tenant">
+    <div class="tenant-label">Digial Invitation By</div>
+    <img id="tenant-logo" class="tenant-logo" src="/daimov-icon.png" alt="Logo" />
+    <div class="tenant-social" id="tenant-social"></div>
+  </section>
+
+  <footer>
+    <div class="caps">We would be delighted if you could attend.</div>
+    <p style="margin-top:.5rem">Made with <span class="heart">♥</span> — 2026</p>
+  </footer>
+
+  <div id="toastMc" class="toast-mc"></div>
+
+  <script src="/_shared/var8.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.161.0/build/three.module.js" } }
+</script>
+  <script type="module" src="./_assets/js/app.js"></script>
+</body>
+
+</html>

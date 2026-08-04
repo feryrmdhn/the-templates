@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400" opacity="0.5">
+  <g fill="#C9A0D6">
+    <path d="M150 50 q-60 30 -50 120 q70 -10 80 -100 q-15 -15 -30 -20z"/>
+    <path d="M150 200 q60 30 50 150 q-70 -10 -80 -130 q15 -15 30 -20z"/>
+  </g>
+  <path d="M150 50 Q 130 220 150 380" stroke="#9B4DB2" stroke-width="2" fill="none"/>
+</svg>

@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Website Templates</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="_assets/img/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="_assets/img/favicon/favicon-16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.4.0/dist/css/lightgallery.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="_assets/scss/app.css" />
+</head>
+
+<body class="opening-show">
+
+  <section id="opening" class="opening">
+    <div class="opening-bg" id="opening-bg"></div>
+    <div class="opening-overlay"></div>
+    <div class="confetti-container" aria-hidden="true"></div>
+    <div class="sparkle-layer" aria-hidden="true"></div>
+    <div class="floating-layer" aria-hidden="true"></div>
+
+    <div class="opening-inner">
+      <p class="invited-tag gradient-text">You're Invited!</p>
+      <div class="opening-photos glass-card">
+        <img id="opening-photo-groom" src="_assets/img/spouse/man.jpg" alt="Groom" />
+        <img id="opening-photo-bride" src="_assets/img/spouse/woman.jpg" alt="Bride" />
+      </div>
+      <h1 class="couple-line">
+        <span class="couple-name" id="groom-name"></span>
+        <span class="couple-separator">&amp;</span>
+        <span class="couple-name" id="bride-name"></span>
+      </h1>
+      <p class="opening-date" id="opening-date">Sabtu, 15 Agustus 2025</p>
+      <p class="opening-guest">Kepada Yth.<br /><strong id="guest">Teman Terbaik Kami</strong></p>
+      <button id="btn-open-opening" class="btn-gradient" type="button">
+        <i class="fa-solid fa-envelope-open"></i> Open Invitation
+      </button>
+      <div class="scroll-indicator" aria-hidden="true">
+        <img src="_assets/img/decoration/arrow-down.svg" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <nav class="navbar-glass" id="main-navbar">
+    <div class="container nav-wrap">
+      <a href="#hero" class="nav-brand"><span id="nav-brand">Our Invitation</span></a>
+      <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#couple">Couple</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#gift">Gift</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero" class="section hero">
+    <div class="blob blob-1 parallax-slow"><img src="_assets/img/decoration/blob-1.svg" alt="" /></div>
+    <div class="blob blob-2 parallax-slow"><img src="_assets/img/decoration/blob-2.svg" alt="" /></div>
+    <div class="blob blob-3 parallax-slow"><img src="_assets/img/decoration/blob-3.svg" alt="" /></div>
+    <div class="sparkle-layer" aria-hidden="true"></div>
+
+    <div class="container text-center hero-inner">
+      <div class="hero-photos glass-card" data-aos="zoom-in">
+        <img id="hero-photo-groom" src="_assets/img/spouse/man.jpg" alt="Groom" />
+        <img id="hero-photo-bride" src="_assets/img/spouse/woman.jpg" alt="Bride" />
+      </div>
+      <h2 class="hero-names gradient-text" data-aos="fade-up">
+        <span id="hero-groom">Arya Wijaya</span>
+        <span class="amp">&amp;</span>
+        <span id="hero-bride">Dinda Maharani</span>
+      </h2>
+      <p class="hero-tag" data-aos="fade-up" data-aos-delay="150">Two Hearts, One Love</p>
+
+      <div id="countdown-container" class="countdown" data-aos="fade-up" data-aos-delay="300">
+        <div class="cd-card"><span id="countdown-days">00</span><label>Days</label></div>
+        <div class="cd-card"><span id="countdown-hours">00</span><label>Hours</label></div>
+        <div class="cd-card"><span id="countdown-minutes">00</span><label>Mins</label></div>
+        <div class="cd-card"><span id="countdown-seconds">00</span><label>Secs</label></div>
+      </div>
+    </div>
+    <img src="_assets/img/decoration/wave-gradient.svg" class="hero-wave" alt="" />
+  </section>
+
+  <section id="couple" class="section couple">
+    <div class="container">
+      <h2 class="section-title gradient-text" data-aos="fade-up">The Couple</h2>
+      <div class="row g-5">
+        <div class="col-md-6 text-center" data-aos="fade-right">
+          <div class="spouse-card">
+            <div class="spouse-frame"><img id="groom-photo" src="_assets/img/spouse/man.jpg" alt="Groom" /></div>
+            <h3 id="groom-name-2">Arya Wijaya</h3>
+            <p id="groom-desc">Putra pertama dari Bapak Ahmad &amp; Ibu Siti</p>
+            <div class="spouse-social">
+              <a href="#" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 text-center" data-aos="fade-left">
+          <div class="spouse-card">
+            <div class="spouse-frame"><img id="bride-photo" src="_assets/img/spouse/woman.jpg" alt="Bride" /></div>
+            <h3 id="bride-name-2">Dinda Maharani</h3>
+            <p id="bride-desc">Putri kedua dari Bapak Budi &amp; Ibu Ani</p>
+            <div class="spouse-social">
+              <a href="#" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" target="_blank" rel="noopener" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="section story">
+    <div class="container">
+      <h2 class="section-title gradient-text" data-aos="fade-up">Our Love Story</h2>
+      <div class="timeline" id="timeline-container"></div>
+    </div>
+  </section>
+
+  <section id="details" class="section details">
+    <div class="container">
+      <h2 class="section-title gradient-text" data-aos="fade-up">Event Location</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="detail-card glass-card">
+            <div class="detail-icon"><i class="fa-solid fa-mosque"></i></div>
+            <h3>Akad Nikah</h3>
+            <p><span id="akad-day">Sabtu</span>, <span id="akad-date">15</span> <span id="akad-month">Agustus</span>
+              <span id="akad-year">2025</span>
+            </p>
+            <p><i class="fa-regular fa-clock"></i> <span id="akad-time">09:00</span></p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong id="akad-venue">Masjid Agung Al-Azhar</strong></p>
+            <p id="akad-address" class="muted">Jl. Sisingamangaraja, Jakarta Selatan</p>
+            <iframe id="akad-map" src="" loading="lazy" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="150">
+          <div class="detail-card glass-card">
+            <div class="detail-icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+            <h3>Resepsi</h3>
+            <p><span id="rec-day">Sabtu</span>, <span id="rec-date">15</span> <span id="rec-month">Agustus</span>
+              <span id="rec-year">2025</span>
+            </p>
+            <p><i class="fa-regular fa-clock"></i> <span id="rec-time">18:00</span></p>
+            <p><i class="fa-solid fa-location-dot"></i> <strong id="rec-venue">The Ritz-Carlton Ballroom</strong></p>
+            <p id="rec-address" class="muted">Jl. Mega Kuningan, Jakarta Selatan</p>
+            <iframe id="rec-map" src="" loading="lazy" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section gallery">
+    <div class="container">
+      <h2 class="section-title gradient-text" data-aos="fade-up">Our Moments</h2>
+      <div class="gallery-grid" id="gallery-container"></div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="section rsvp">
+    <div class="container">
+      <h2 class="section-title gradient-text" data-aos="fade-up">RSVP &amp; Wishes</h2>
+      <div class="row g-4">
+        <div class="col-md-6" data-aos="fade-right">
+          <form id="rsvp-form" class="glass-card rsvp-card">
+            <div class="mb-3"><label>Nama</label><input class="form-control" name="name" required /></div>
+            <div class="mb-3"><label>WhatsApp</label><input class="form-control" name="phone" /></div>
+            <div class="mb-3"><label>Kehadiran</label>
+              <select class="form-select" name="attendance">
+                <option value="hadir">Hadir</option>
+                <option value="tidak">Tidak Hadir</option>
+              </select>
+            </div>
+            <div class="mb-3"><label>Ucapan</label><textarea class="form-control" name="message" rows="3"
+                required></textarea></div>
+            <button type="submit" class="btn-gradient w-100"><i class="fa-regular fa-paper-plane"></i> Kirim
+              Ucapan</button>
+          </form>
+        </div>
+        <div class="col-md-6" data-aos="fade-left">
+          <div class="glass-card wishes-card">
+            <h4>Wishes</h4>
+            <div id="wishes-container" class="wishes-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gift" class="section gift">
+    <div class="container text-center">
+      <h2 class="section-title gradient-text" data-aos="fade-up">Wedding Gift</h2>
+      <p class="muted" data-aos="fade-up">Your presence is the best gift, but if you wish to give...</p>
+      <div class="row g-4 justify-content-center" id="payment-container"></div>
+    </div>
+  </section>
+
+  <section id="closing" class="closing">
+    <div class="opening-bg"></div>
+    <div class="sparkle-layer" aria-hidden="true"></div>
+    <div class="floating-layer" aria-hidden="true"></div>
+    <div class="container text-center closing-inner">
+      <p class="quote" id="quote">"Thank you for being part of our special day"</p>
+      <h2 class="closing-names">
+        <span id="closing-groom">Arya</span> &amp; <span id="closing-bride">Dinda</span>
+      </h2>
+    </div>
+  </section>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container d-flex justify-content-between flex-wrap">
+      <p>&copy; <span id="year"></span> All rights Reserved.</p>
+      <p>Made with <i class="fa-solid fa-heart" style="color:#FF6B9D"></i> by <span id="platform-name">Daimov</span></p>
+    </div>
+  </footer>
+
+  <div class="fab-stack">
+    <button id="btn-audio" class="fab glass-card" aria-label="Music"><i class="fa-solid fa-music"></i></button>
+    <button id="btn-scroll-top" class="fab glass-card" aria-label="Scroll top" style="display:none"><i
+        class="fa-solid fa-arrow-up"></i></button>
+  </div>
+
+  <audio id="audio" loop>
+    <source src="_assets/audio/song.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.4.0/dist/js/lightgallery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timezz@6.1.0/dist/index.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"></script>
+
+  <script src="/_shared/var4.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

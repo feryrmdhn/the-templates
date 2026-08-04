@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Website Templates</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&family=Lora:wght@400;500;600&family=Great+Vibes&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="_assets/scss/app.css">
+</head>
+
+<body>
+
+  <section id="opening" class="opening">
+    <div class="opening__bg"></div>
+    <div class="mega-mendung mm-1"></div>
+    <div class="mega-mendung mm-2"></div>
+    <img src="_assets/img/decoration/gunungan-kayon.svg" class="kayon-float" alt="Gunungan Kayon">
+    <img src="_assets/img/decoration/wayang-arjuna.svg" class="wayang-swing wayang-swing--left" alt="Wayang Arjuna">
+    <img src="_assets/img/decoration/wayang-sumbadra.svg" class="wayang-swing wayang-swing--right"
+      alt="Wayang Sumbadra">
+    <div class="gold-particles" data-particles></div>
+
+    <div class="opening__inner text-center">
+      <p class="eyebrow">You Are Invited</p>
+      <div class="ornament-line"><span></span><i class="fa-solid fa-gem"></i><span></span></div>
+      <h1 class="opening__names">
+        <span data-groom>Raden Arjuna</span>
+        <span class="amp">&amp;</span>
+        <span data-bride>Dewi Sumbadra</span>
+      </h1>
+      <p class="opening__date" id="opening-date">Sabtu, 15 November 2026</p>
+      <div class="guest-card">
+        <small>Kepada Yth.</small>
+        <p id="guest">Bapak/Ibu/Saudara/i</p>
+      </div>
+      <button class="btn-ukir" id="btnOpen">
+        <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+      </button>
+    </div>
+  </section>
+
+  <nav class="navbar-wayang" id="navbar">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="#hero" class="brand" id="nav-brand">A &amp; S</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#couple">Pasangan</a></li>
+        <li><a href="#story">Cerita</a></li>
+        <li><a href="#events">Lokasi</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#gift">Hadiah</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="hero__overlay"></div>
+    <div class="gold-particles" data-particles></div>
+    <div class="melati-fall" data-melati></div>
+
+    <div class="hero__inner text-center">
+      <p class="eyebrow">Pernikahan</p>
+      <h2 class="hero__names">
+        <span data-groom-short>Arjuna</span>
+        <span class="amp-decor">
+          <img src="_assets/img/decoration/keris.svg" alt="" class="amp-icon">
+        </span>
+        <span data-bride-short>Sumbadra</span>
+      </h2>
+      <p class="hero__date" data-hero-date>15 . 11 . 2026</p>
+
+      <div class="countdown" id="countdown">
+        <div class="cd-box"><strong id="cd-d">00</strong><span>Hari</span></div>
+        <div class="cd-box"><strong id="cd-h">00</strong><span>Jam</span></div>
+        <div class="cd-box"><strong id="cd-m">00</strong><span>Menit</span></div>
+        <div class="cd-box"><strong id="cd-s">00</strong><span>Detik</span></div>
+      </div>
+
+      <p class="hero__tag" id="hero-tagline"><em>"Cinta yang abadi seperti kisah Arjuna dan Sumbadra."</em></p>
+    </div>
+  </section>
+
+  <section id="couple" class="couple">
+    <div class="batik-overlay"></div>
+    <div class="container text-center">
+      <p class="eyebrow light">The Couple</p>
+      <h2 class="section-title script">Mempelai</h2>
+      <img src="_assets/img/decoration/gunungan-kayon.svg" alt="" class="kayon-center" data-aos="zoom-in">
+
+      <div class="row justify-content-center align-items-center couple-grid">
+        <div class="col-md-5" data-aos="fade-right">
+          <div class="couple-card">
+            <img src="_assets/img/bg/wayang-to-left.jpg" alt="Arjuna" class="couple-photo couple-photo--groom">
+            <h3 data-groom>Raden Arjuna</h3>
+            <p class="role">The Groom</p>
+            <div class="batik-divider"></div>
+            <p class="parents">Putra dari<br><strong id="groom-parents">Bp. Pandu &amp; Ibu Kunti</strong></p>
+          </div>
+        </div>
+        <div class="col-md-2 amp-col" data-aos="zoom-in">
+          <span class="amp-big">&amp;</span>
+        </div>
+        <div class="col-md-5" data-aos="fade-left">
+          <div class="couple-card">
+            <img src="_assets/img/bg/wayang-to-right.jpg" alt="Sumbadra" class="couple-photo couple-photo--bride">
+            <h3 data-bride>Dewi Sumbadra</h3>
+            <p class="role">The Bride</p>
+            <div class="batik-divider"></div>
+            <p class="parents">Putri dari<br><strong id="bride-parents">Bp. Basudewa &amp; Ibu Dewaki</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="story">
+    <div class="batik-overlay"></div>
+    <div class="gold-particles" data-particles></div>
+    <div class="melati-fall" data-melati></div>
+    <div class="container text-center">
+      <p class="eyebrow light">Our Journey</p>
+      <h2 class="section-title script">Kisah Cinta Kami</h2>
+      <p class="section-sub">Setiap pertemuan adalah jalan yang dirajut takdir.</p>
+
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </section>
+
+  <section id="events" class="events">
+    <div class="container text-center">
+      <p class="eyebrow">Save The Date</p>
+      <h2 class="section-title">Lokasi Acara</h2>
+      <p class="section-sub">Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir.</p>
+
+      <div class="row g-4 mt-4">
+        <div class="col-md-6" data-aos="zoom-in">
+          <div class="event-card">
+            <h3>Akad Nikah</h3>
+            <p class="event-date" id="akad-date">Sabtu, 15 November 2026</p>
+            <p class="event-time" id="akad-time">08:00</p>
+            <p class="event-venue" id="akad-venue">Pendopo Agung</p>
+            <p class="event-addr" id="akad-address">Jl. Malioboro No. 1, Yogyakarta</p>
+            <div class="map-wrap">
+              <iframe id="akad-map" loading="lazy" src="https://www.google.com/maps?q=Yogyakarta&output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6" data-aos="zoom-in" data-aos-delay="150">
+          <div class="event-card">
+            <h3>Resepsi</h3>
+            <p class="event-date" id="resepsi-date">Sabtu, 15 November 2026</p>
+            <p class="event-time" id="resepsi-time">11:00</p>
+            <p class="event-venue" id="resepsi-venue">Pendopo Agung</p>
+            <p class="event-addr" id="resepsi-address">Jl. Malioboro No. 1, Yogyakarta</p>
+            <div class="map-wrap">
+              <iframe id="resepsi-map" loading="lazy"
+                src="https://www.google.com/maps?q=Yogyakarta&output=embed"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="rsvp">
+    <div class="batik-overlay kawung"></div>
+    <div class="container">
+      <div class="text-center">
+        <p class="eyebrow light">Konfirmasi Kehadiran</p>
+        <h2 class="section-title script">RSVP</h2>
+      </div>
+      <div class="row g-4 mt-3">
+        <div class="col-lg-6" data-aos="fade-right">
+          <form id="rsvpForm" class="rsvp-form">
+            <label>Nama <span class="req">*</span></label>
+            <input type="text" name="name" required placeholder="Nama Anda">
+            <label>WhatsApp</label>
+            <input type="text" name="phone" placeholder="08xxxxxxxx">
+            <label>Kehadiran</label>
+            <select name="attend">
+              <option value="hadir">Akan Hadir</option>
+              <option value="tidak">Tidak Bisa Hadir</option>
+            </select>
+            <label>Ucapan <span class="req">*</span></label>
+            <textarea name="message" rows="4" required placeholder="Tulis ucapan terbaik Anda..."></textarea>
+            <button type="submit" class="btn-ukir"><i class="fa-solid fa-paper-plane"></i> Kirim</button>
+          </form>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="wishes">
+            <h4>Ucapan dan Doa</h4>
+            <ul id="wishesList" class="wishes-list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gift" class="gift">
+    <div class="container text-center">
+      <p class="eyebrow">Tanda Kasih</p>
+      <h2 class="section-title">Amplop Digital</h2>
+      <p class="section-sub">Doa restu Anda adalah hadiah terindah. Namun jika berkenan, dapat melalui:</p>
+      <div class="row g-4 justify-content-center mt-3" id="giftList"></div>
+    </div>
+  </section>
+
+  <section id="closing" class="closing">
+    <div class="closing__overlay"></div>
+    <div class="gold-particles" data-particles></div>
+    <div class="melati-fall" data-melati></div>
+    <img src="_assets/img/decoration/wayang-arjuna.svg" class="corner corner--tl" alt="">
+    <img src="_assets/img/decoration/wayang-sumbadra.svg" class="corner corner--br" alt="">
+
+    <div class="closing__inner text-center">
+      <p class="eyebrow light">Terima Kasih</p>
+      <blockquote id="quote"><em>"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan dari
+          jenismu
+          sendiri, supaya kamu cenderung dan merasa tenteram kepadanya."</em></blockquote>
+      <h2 class="closing__names">
+        <span data-groom>Arjuna</span>
+        <span class="amp">&amp;</span>
+        <span data-bride>Sumbadra</span>
+      </h2>
+      <p class="credit">Made with <i class="fa-solid fa-heart"></i> by <span class="platform-name">Wayang
+          Invitation</span></p>
+    </div>
+  </section>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <small>&copy; <span id="year"></span> All rights reserved.</small>
+    </div>
+  </footer>
+
+  <button class="fab fab-audio" id="fabAudio" aria-label="Toggle music"><i class="fa-solid fa-music"></i></button>
+  <button class="fab fab-top" id="fabTop" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <audio id="bgAudio" loop preload="none"></audio>
+
+  <div class="toast-area" id="toastArea"></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+  <script src="/_shared/var5.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

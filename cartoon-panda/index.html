@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+
+  <title>Website Templates</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Fredoka+One&family=Bubblegum+Sans&family=Pacifico&family=Caveat:wght@500;700&family=Quicksand:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <link rel="stylesheet" href="_assets/scss/app.css">
+</head>
+
+<body>
+
+  <section id="opening" class="opening">
+    <div class="opening__bg"></div>
+    <div class="deco-layer" id="opening-deco" aria-hidden="true"></div>
+    <div class="opening__inner">
+      <p class="opening__eyebrow">You Are Invited</p>
+      <h1 class="opening__couple">
+        <span class="couple-name" id="groom-name">Rangga</span>
+        <span class="amp amp--block">&amp;</span>
+        <span class="couple-name" id="bride-name">Kirana</span>
+      </h1>
+      <p class="opening__date" id="opening-date">Sabtu, 12 Oktober 2026</p>
+      <div class="opening__guest">
+        <small>Kepada Yth.</small>
+        <p id="guest">Tamu Undangan</p>
+      </div>
+      <button id="btn-open" class="btn-cartoon" type="button">
+        <i class="fa-solid fa-envelope-open"></i> Buka Undangan
+      </button>
+      <div class="scroll-indicator"><span></span></div>
+    </div>
+  </section>
+
+  <nav id="navbar" class="navbar-cz">
+    <div class="container">
+      <a href="#hero" class="brand" id="nav-brand">R &amp; K</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#couple">Pasangan</a></li>
+        <li><a href="#story">Cerita</a></li>
+        <li><a href="#events">Lokasi</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#gift">Hadiah</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="hero" class="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="deco-layer" id="hero-deco" aria-hidden="true"></div>
+    <div class="container hero__inner text-center">
+      <p class="eyebrow">Pernikahan</p>
+      <h1 class="hero__title">
+        <span id="hero-groom">Rangga</span>
+        <span class="amp amp--block">&amp;</span>
+        <span id="hero-bride">Kirana</span>
+      </h1>
+      <p class="hero__date" id="hero-date">Sabtu, 12 Oktober 2026</p>
+
+      <div class="countdown" id="countdown" data-target="2026-10-12T10:00:00">
+        <div><b id="cd-days">00</b><small>Hari</small></div>
+        <div><b id="cd-hours">00</b><small>Jam</small></div>
+        <div><b id="cd-mins">00</b><small>Menit</small></div>
+        <div><b id="cd-secs">00</b><small>Detik</small></div>
+      </div>
+
+      <p class="hero__tagline">"And of His signs is that He created for you from yourselves mates…"</p>
+    </div>
+  </header>
+
+  <section id="couple" class="section section--couple">
+    <div class="dots-pattern" aria-hidden="true"></div>
+    <div class="container text-center">
+      <h2 class="section__title script">The Couple</h2>
+      <p class="section__sub">Dengan memohon rahmat Tuhan, kami akan menikah</p>
+
+      <div class="row g-4 align-items-center couple-grid">
+        <div class="col-md-5" data-aos="fade-right">
+          <div class="couple-card">
+            <div class="couple-card__animal">🐼</div>
+            <h3 id="hero-groom-2">Rangga Pradipta</h3>
+            <p class="role">The Groom</p>
+            <hr />
+            <p class="parents">Putra dari<br /><b id="groom-parents">Bpk. Surya &amp; Ibu Lestari</b></p>
+          </div>
+        </div>
+        <div class="col-md-2 text-center amp-big" data-aos="zoom-in">&amp;</div>
+        <div class="col-md-5" data-aos="fade-left">
+          <div class="couple-card">
+            <div class="couple-card__animal">🐨</div>
+            <h3 id="hero-bride-2">Kirana Maheswari</h3>
+            <p class="role">The Bride</p>
+            <hr />
+            <p class="parents">Putri dari<br /><b id="bride-parents">Bpk. Anwar &amp; Ibu Sekar</b></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="section section--story">
+    <div class="deco-layer" id="story-deco" aria-hidden="true"></div>
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section__title script">Kisah Cinta Kami</h2>
+        <p class="section__sub">Perjalanan singkat dari pertemuan hingga ke pelaminan</p>
+      </div>
+      <div id="story-list" class="timeline"></div>
+    </div>
+  </section>
+
+  <section id="events" class="section section--events">
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section__title script">Lokasi Acara</h2>
+        <p class="section__sub">Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir</p>
+      </div>
+      <div class="events-grid" id="event-list"></div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="section section--rsvp">
+    <div class="dots-pattern" aria-hidden="true"></div>
+    <div class="container">
+      <div class="text-center">
+        <h2 class="section__title script">RSVP &amp; Ucapan</h2>
+        <p class="section__sub">Kirimkan doa &amp; ucapan terbaik Anda</p>
+      </div>
+      <div class="row g-4 mt-3">
+        <div class="col-lg-6" data-aos="fade-right">
+          <form id="rsvp-form" class="rsvp-form" novalidate>
+            <div class="mb-3">
+              <label>Nama <span class="req">*</span></label>
+              <input name="name" type="text" required maxlength="60" />
+            </div>
+            <div class="mb-3">
+              <label>WhatsApp</label>
+              <input name="phone" type="tel" maxlength="20" />
+            </div>
+            <div class="mb-3">
+              <label>Kehadiran</label>
+              <select name="attendance">
+                <option value="yes">Akan Hadir</option>
+                <option value="no">Tidak Bisa Hadir</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label>Ucapan <span class="req">*</span></label>
+              <textarea name="message" rows="4" required maxlength="500"></textarea>
+            </div>
+            <button class="btn-cartoon" type="submit"><i class="fa-solid fa-paper-plane"></i> Kirim</button>
+          </form>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="wishes" id="wishes-list" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gift" class="section section--gift">
+    <div class="container text-center">
+      <h2 class="section__title script">Amplop Digital</h2>
+      <p class="section__sub">Kehadiranmu adalah hadiah terbaik, namun jika ingin memberi tanda kasih, dapat melalui:
+      </p>
+      <div class="gift-grid" id="gift-list"></div>
+    </div>
+  </section>
+
+  <section id="closing" class="closing">
+    <div class="closing__bg"></div>
+    <div class="closing__overlay"></div>
+    <div class="deco-layer" id="closing-deco" aria-hidden="true"></div>
+    <div class="container text-center closing__inner">
+      <p class="quote" id="quote">"Dan di antara tanda-tanda kekuasaan-Nya, Dia menciptakan untukmu pasangan dari
+        jenismu sendiri…"
+      </p>
+      <h2 class="closing__couple">
+        <span class="couple-name" id="closing-groom">Rangga</span>
+        <span class="amp amp--block">&amp;</span>
+        <span class="couple-name" id="closing-bride">Kirana</span>
+      </h2>
+      <p class="credit">Made with <i class="fa-solid fa-heart"></i> by <span class="platform-name">Cartoon Zoo</span>
+      </p>
+    </div>
+  </section>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container text-center">
+      <small>© <span id="year">2025</span> All rights reserved.</small>
+    </div>
+  </footer>
+
+  <button id="fab-audio" class="fab fab--audio" aria-label="Toggle Music"><i class="fa-solid fa-music"></i></button>
+  <button id="fab-top" class="fab fab--top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <audio id="bg-audio"
+    src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_8cb749cb39.mp3?filename=little-idea-21261.mp3" loop
+    preload="none"></audio>
+
+  <div id="toast-cz" class="toast-cz" role="status" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+  <script src="/_shared/var5.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

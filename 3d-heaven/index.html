@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Templates</title>
+  <meta name="description" content="Undangan pernikahan digital bertema surga dengan pengalaman 3D scroll-driven." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=Italiana&family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="_assets/css/app.css" />
+</head>
+
+<body>
+
+  <div id="loader">
+    <div class="ring"></div>
+    <div class="caps">Memasuki Acara</div>
+  </div>
+
+  <div id="stage" aria-hidden="true"></div>
+  <div class="glow"></div>
+  <div class="rays"></div>
+  <div class="grain"></div>
+  <div id="progress"></div>
+
+  <div class="chapter left" id="chapL">A Heavenly Union</div>
+  <div class="chapter right" id="chapR">Sub Specie Aeternitatis</div>
+
+  <button id="music" title="Musik latar" aria-label="Putar musik">
+    <i class="fas fa-music"></i>
+  </button>
+
+  <div class="toast-3d" id="toast3d"></div>
+
+  <audio id="audio" loop preload="none">
+    <source src="" type="audio/mpeg" />
+  </audio>
+
+  <main>
+    <section id="cover">
+      <div class="reveal reveal-stagger" data-anim="fade-up">
+        <div class="caps">The Wedding of</div>
+        <h1 class="display" style="margin-top:1rem"><span id="cover-groom">Andika</span><span class="amp">et</span><span
+            id="cover-bride">Putri</span></h1>
+        <div class="meta" id="cover-meta">Minggu &middot; 17 Mei 2026 &middot; Ubud, Bali</div>
+        <p class="verse" id="cover-verse">&ldquo;Sesungguhnya jodoh telah dituliskan di langit,<br />sebelum bumi
+          mengenal namanya.&rdquo;</p>
+        <div class="guest-greet">Kepada Yth. <span id="guest">Bapak/Ibu/Saudara/i</span></div>
+      </div>
+      <div class="scroll-hint">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div><span>Scroll</span>
+      </div>
+    </section>
+
+    <section id="opening">
+      <div class="card reveal reveal-stagger" data-anim="zoom-in">
+        <div class="caps">In the name of Grace</div>
+        <div class="divider"><span class="line"></span>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3l2 6h6l-5 4 2 7-5-4-5 4 2-7-5-4h6z" />
+          </svg>
+          <span class="line"></span>
+        </div>
+        <p>Dengan segala kerendahan hati dan syukur atas cahaya kasih yang menuntun langkah kami,
+          kami bermaksud menyelenggarakan pernikahan kudus.
+          Sebuah kehormatan bila Bapak/Ibu/Saudara/i berkenan hadir,
+          turut memanjatkan doa dan restu di hari yang penuh berkat ini.</p>
+      </div>
+    </section>
+
+    <section id="couple">
+      <div class="card reveal reveal-stagger" data-anim="fade-up">
+        <div class="caps">The Couple</div>
+        <h2>Kedua Mempelai</h2>
+        <div class="divider"><span class="line"></span>
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="12" cy="12" r="8" />
+          </svg>
+          <span class="line"></span>
+        </div>
+        <div class="couple">
+          <div>
+            <div class="name" id="couple-groom">Andika Ilyas, SE</div>
+            <div class="parents"><span id="groom-role">Putra dari</span><br /><span id="groom-parents">Bpk. Hendra
+                Wijaya &amp; Ibu Maria Pingkan</span></div>
+          </div>
+          <div class="amp">&amp;</div>
+          <div>
+            <div class="name" id="couple-bride">Putri Auliya, S.Pd</div>
+            <div class="parents"><span id="bride-role">Putri dari</span><br /><span id="bride-parents">Bpk. Aditya
+                Santoso &amp; Ibu Evelyn</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="date">
+      <div class="card reveal reveal-stagger" data-anim="fade-left">
+        <div class="caps">Save the Date</div>
+        <h2 id="date-display">17 &middot; 05 &middot; 2026</h2>
+        <p class="italic" id="date-time">Minggu, pukul 10.00 &mdash; hingga selesai</p>
+        <div class="cd" id="countdown">
+          <div class="cell">
+            <div class="num" data-k="d">&ndash;</div>
+            <div class="lbl">Hari</div>
+          </div>
+          <div class="cell">
+            <div class="num" data-k="h">&ndash;</div>
+            <div class="lbl">Jam</div>
+          </div>
+          <div class="cell">
+            <div class="num" data-k="m">&ndash;</div>
+            <div class="lbl">Menit</div>
+          </div>
+          <div class="cell">
+            <div class="num" data-k="s">&ndash;</div>
+            <div class="lbl">Detik</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events">
+      <div class="card reveal reveal-stagger" data-anim="fade-right" style="max-width:760px">
+        <div class="caps">Rangkaian Sakral</div>
+        <h2>Waktu &amp; Tempat</h2>
+        <div class="divider"><span class="line"></span>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2v20M2 12h20" />
+          </svg>
+          <span class="line"></span>
+        </div>
+        <div class="events">
+          <div class="event">
+            <div class="t">Pemberkatan</div>
+            <div class="d" id="akad-date">Minggu, 17 Mei 2026 &middot; 10.00</div>
+            <div class="a"><span id="akad-venue">Chapel of Light</span><br /><span id="akad-address">Puri Kertha
+                Bhuwana, Ubud</span></div>
+          </div>
+          <div class="event">
+            <div class="t">Resepsi</div>
+            <div class="d" id="reception-date">Minggu, 17 Mei 2026 &middot; 18.00</div>
+            <div class="a"><span id="reception-venue">Celestial Garden Pavilion</span><br /><span
+                id="reception-address">Alaya Resort, Ubud</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="card reveal reveal-stagger" data-anim="zoom-in">
+        <div class="caps">Kesediaan Hadir</div>
+        <h2>RSVP</h2>
+        <p class="italic">Mohon konfirmasi agar kami dapat mempersiapkan hari yang penuh cahaya ini.</p>
+        <form id="rsvp-form">
+          <div><label for="nm">Nama Lengkap</label><input id="nm" name="name" type="text" required
+              placeholder="Nama Anda" /></div>
+          <div><label for="att">Kehadiran</label>
+            <select id="att" name="attendance" required>
+              <option value="">&mdash; Pilih &mdash;</option>
+              <option value="yes">Hadir</option>
+              <option value="no">Tidak Dapat Hadir</option>
+            </select>
+          </div>
+          <div><label for="msg">Ucapan &amp; Doa</label><textarea id="msg" name="message" rows="3"
+              placeholder="Tuliskan doa terbaik Anda&hellip;"></textarea></div>
+          <button type="submit">Kirim RSVP</button>
+        </form>
+        <div id="wishes-list"></div>
+      </div>
+    </section>
+
+    <section id="payment-section" style="display:none">
+      <div class="card reveal reveal-stagger" data-anim="fade-up" style="max-width:760px">
+        <div class="caps">Wedding Gift</div>
+        <h2>Amplop Digital</h2>
+        <p class="italic">Kehadiranmu adalah hadiah terbaik. Namun jika berkenan memberi tanda kasih, dapat melalui:</p>
+        <div class="payment-grid" id="payment-list"></div>
+      </div>
+    </section>
+
+    <section id="closing">
+      <div class="reveal reveal-stagger" data-anim="blur" style="max-width:700px">
+        <div class="caps">The Closing Quote</div>
+        <h2 style="margin-top:1rem;color:var(--gold-3)" id="closing-quote">&ldquo;Dan Ia menyatukan hati
+          mereka,<br />seperti Ia menyatukan langit dan cahaya.&rdquo;</h2>
+        <div class="divider"><span class="line"></span>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z" />
+          </svg>
+          <span class="line"></span>
+        </div>
+        <h3 class="display" id="closing-names">Andika &amp; Putri</h3>
+        <p class="italic" id="closing-date">17.05.2026</p>
+      </div>
+    </section>
+  </main>
+
+  <section id="section-tenant">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="caps">With Grace &amp; Love</div>
+    <p style="margin-top:.5rem">Made with <span class="heart">&hearts;</span> &mdash; <span id="platform-name">Your
+        platform</span></p>
+  </footer>
+
+  <script type="importmap">
+{ "imports": { "three": "https://unpkg.com/three@0.161.0/build/three.module.js" } }
+</script>
+
+  <script src="/_shared/var8.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script type="module" src="_assets/js/app.js"></script>
+</body>
+
+</html>

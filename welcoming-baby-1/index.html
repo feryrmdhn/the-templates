@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Website Templates</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="_assets/img/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="_assets/img/favicon/favicon-16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Pacifico&family=Quicksand:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link href="_assets/scss/app.css" rel="stylesheet" />
+</head>
+
+<body class="opening-show">
+
+  <section id="opening" aria-label="Pembuka undangan">
+    <div class="confetti-container" aria-hidden="true"></div>
+
+    <img class="floral-top" src="_assets/img/decoration/floral-top.png" alt="" aria-hidden="true" />
+    <img class="floral-bottom" src="_assets/img/decoration/floral-bottom.png" alt="" aria-hidden="true" />
+
+    <img class="floating-balloon" style="top: 18%; left: 8%;" src="_assets/img/decoration/balloon-1.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-balloon" style="top: 40%; left: 4%;" src="_assets/img/decoration/balloon-2.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-balloon" style="top: 64%; left: 10%;" src="_assets/img/decoration/balloon-1.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-balloon" style="top: 22%; right: 8%;" src="_assets/img/decoration/balloon-2.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-balloon" style="top: 48%; right: 5%;" src="_assets/img/decoration/balloon-1.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-balloon" style="top: 70%; right: 11%;" src="_assets/img/decoration/balloon-2.svg" alt=""
+      aria-hidden="true" />
+
+    <img class="floating-cloud" style="top: 12%; left: 16%;" src="_assets/img/decoration/cloud-soft.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-cloud" style="top: 30%; right: 18%;" src="_assets/img/decoration/cloud-soft.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-cloud" style="bottom: 24%; left: 12%;" src="_assets/img/decoration/cloud-soft.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-cloud" style="bottom: 14%; right: 14%;" src="_assets/img/decoration/cloud-soft.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-cloud" style="top: 55%; left: 26%;" src="_assets/img/decoration/cloud-soft.svg" alt=""
+      aria-hidden="true" />
+
+    <img class="floating-star" style="top: 16%; left: 30%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-star" style="top: 10%; right: 28%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-star" style="top: 36%; left: 18%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-star" style="top: 44%; right: 22%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-star" style="bottom: 30%; left: 24%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-star" style="bottom: 36%; right: 26%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-star" style="top: 60%; right: 32%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-star" style="top: 70%; left: 34%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-star" style="bottom: 12%; left: 40%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+    <img class="floating-star" style="top: 8%; left: 55%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+      aria-hidden="true" />
+
+    <div class="opening-content">
+      <img class="opening-carriage bounce-carriage" src="_assets/img/decoration/baby-carriage.svg" alt=""
+        aria-hidden="true" />
+      <p class="opening-welcome gradient-text">Assalamualaikum Wr. Wb.</p>
+      <img class="opening-crown" src="_assets/img/decoration/baby-crown.svg" alt="" aria-hidden="true" />
+      <h1 class="baby-name" id="baby-name"></h1>
+      <p class="opening-guest">Kepada Yth.,<br /><span id="guest"></span></p>
+      <p class="opening-date">Kami mengundang anda pada:<br /><span id="event-date-short"></span></p>
+      <button type="button" class="btn-baby" id="btn-open-opening" aria-label="Buka undangan">
+        <i class="fa-solid fa-envelope-open-text"></i> Buka Undangan
+      </button>
+      <img class="scroll-indicator d-block mx-auto" src="_assets/img/decoration/footprint-path.svg" alt=""
+        aria-hidden="true" />
+    </div>
+  </section>
+
+  <nav class="navbar navbar-expand-lg" aria-label="Navigasi utama">
+    <div class="container">
+      <a class="navbar-brand" href="#profil">
+        <img src="_assets/img/decoration/baby-feet.svg" alt="" aria-hidden="true" />
+        <span id="navbar-baby-name"></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu"
+        aria-controls="navbarMenu" aria-expanded="false" aria-label="Buka menu navigasi">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#acara">Acara</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hadiah">Hadiah</a></li>
+          <li class="nav-item"><a class="nav-link" href="#doa">Doa</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="profil">
+      <div class="section-divider"><img src="_assets/img/decoration/divider-wave.svg" alt="" aria-hidden="true" /></div>
+
+      <img class="side-floral side-floral-left" src="_assets/img/decoration/floral-left.png" alt="" aria-hidden="true"
+        data-aos="fade-right" />
+      <img class="side-floral side-floral-right" src="_assets/img/decoration/floral-right.png" alt="" aria-hidden="true"
+        data-aos="fade-left" />
+      <img class="scatter-star" style="top: 14%; left: 16%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+        aria-hidden="true" data-aos="zoom-in" />
+      <img class="scatter-star" style="top: 22%; right: 20%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+        aria-hidden="true" data-aos="zoom-in" />
+      <img class="scatter-star" style="bottom: 18%; left: 22%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+        aria-hidden="true" data-aos="zoom-in" />
+
+      <div class="container text-center">
+        <img class="section-icon" src="_assets/img/decoration/baby-crown.svg" alt="" aria-hidden="true"
+          data-aos="zoom-in" />
+        <h2 class="section-title" data-aos="fade-up">Profil Buah Hati</h2>
+
+        <div class="baby-photo-frame baby-photo-hidden">
+          <div class="baby-photo-inner">
+            <img id="baby-photo" src="" alt="Foto bayi" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="baby-name-display" data-aos="fade-up" data-aos-delay="150">
+          <img src="_assets/img/decoration/baby-feet.svg" alt="" aria-hidden="true" />
+          <h3 id="baby-name-2"></h3>
+          <img src="_assets/img/decoration/baby-feet.svg" alt="" aria-hidden="true" />
+        </div>
+
+        <div class="baby-info-card" data-aos="zoom-in" data-aos-delay="200">
+          <div class="baby-info-grid">
+            <div class="baby-info-item">
+              <div class="info-icon"><i class="fa-solid fa-calendar-days"></i></div>
+              <div>
+                <p class="info-label">Tanggal Lahir</p>
+                <p class="info-value" id="baby-birthdate"></p>
+              </div>
+            </div>
+            <div class="baby-info-item">
+              <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <div>
+                <p class="info-label">Tempat Lahir</p>
+                <p class="info-value" id="baby-place-of-born"></p>
+              </div>
+            </div>
+            <div class="baby-info-item">
+              <div class="info-icon"><i class="fa-solid fa-baby"></i></div>
+              <div>
+                <p class="info-label">Jenis Kelamin</p>
+                <p class="info-value" id="baby-gender"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img class="parents-divider" src="_assets/img/decoration/footprint-path.svg" alt="" aria-hidden="true" />
+        <p class="parents-intro" data-aos="fade-up">Dengan penuh syukur, kami menyambut kehadiran buah hati kami</p>
+
+        <div class="row justify-content-center align-items-center g-4" data-aos="fade-up">
+          <div class="col-md-4">
+            <div class="parent-card parent-father">
+              <p class="parent-role">Ayah</p>
+              <p class="parent-name" id="father-name"></p>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <img class="parents-heart" src="_assets/img/decoration/heart-baby.svg" alt="" aria-hidden="true" />
+          </div>
+          <div class="col-md-4">
+            <div class="parent-card parent-mother">
+              <p class="parent-role">Ibu</p>
+              <p class="parent-name" id="mother-name"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="acara">
+      <div class="section-divider"><img src="_assets/img/decoration/divider-wave.svg" alt="" aria-hidden="true" /></div>
+
+      <img class="corner-balloon corner-balloon-tl" src="_assets/img/decoration/balloon-1.svg" alt="" aria-hidden="true"
+        data-aos="fade-down-right" />
+      <img class="corner-balloon corner-balloon-br" src="_assets/img/decoration/balloon-2.svg" alt="" aria-hidden="true"
+        data-aos="fade-up-left" />
+      <img class="bg-cloud" style="top: 18%;" src="_assets/img/decoration/cloud-soft.svg" alt="" aria-hidden="true" />
+      <img class="bg-cloud" style="top: 58%; animation-delay: -18s;" src="_assets/img/decoration/cloud-soft.svg" alt=""
+        aria-hidden="true" />
+
+      <div class="container text-center">
+        <img class="section-icon" src="_assets/img/decoration/baby-carriage.svg" alt="" aria-hidden="true"
+          data-aos="zoom-in" />
+        <h2 class="section-title" data-aos="fade-up">Waktu &amp; Tempat</h2>
+        <p class="section-subtitle mb-5" data-aos="fade-up" data-aos-delay="50">Kami mengundang kehadiran
+          Bapak/Ibu/Saudara/i</p>
+
+        <div class="event-card" data-aos="zoom-in" data-aos-delay="100">
+          <div class="event-detail">
+            <i class="fa-solid fa-calendar"></i>
+            <div class="event-detail-text">
+              <p class="label">Hari &amp; Tanggal</p>
+              <p class="value"><span id="event-day"></span>, <span id="event-date"></span></p>
+            </div>
+          </div>
+
+          <div class="event-detail">
+            <i class="fa-solid fa-clock"></i>
+            <div class="event-detail-text">
+              <p class="label">Waktu</p>
+              <p class="value" id="event-time"></p>
+            </div>
+          </div>
+
+          <div class="event-detail">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="event-detail-text">
+              <p class="label">Tempat</p>
+              <p class="value" id="event-venue"></p>
+            </div>
+          </div>
+
+          <div class="event-detail">
+            <i class="fa-solid fa-map-pin"></i>
+            <div class="event-detail-text">
+              <p class="label">Alamat</p>
+              <p class="value" id="event-address"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="maps-wrapper" data-aos="fade-up" data-aos-delay="150">
+          <iframe id="gmap_canvas" src="" title="Peta lokasi acara" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="section-divider"><img src="_assets/img/decoration/divider-wave.svg" alt="" aria-hidden="true" /></div>
+
+      <img class="rsvp-floating-heart" style="top: 16%; right: 8%;" src="_assets/img/decoration/heart-baby.svg" alt=""
+        aria-hidden="true" />
+      <img class="rsvp-floating-heart" style="bottom: 12%; left: 6%; animation-delay: -1.4s;"
+        src="_assets/img/decoration/heart-baby.svg" alt="" aria-hidden="true" />
+      <img class="scatter-star" style="top: 24%; left: 12%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+        aria-hidden="true" />
+      <img class="scatter-star" style="bottom: 28%; right: 14%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+        aria-hidden="true" />
+
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-7" data-aos="fade-right">
+            <div class="text-center text-lg-start mb-4">
+              <img class="section-icon" src="_assets/img/decoration/baby-rattle.svg" alt="" aria-hidden="true" />
+              <h2 class="section-title">RSVP &amp; Ucapan</h2>
+              <p class="section-subtitle">Kirimkan konfirmasi kehadiran serta doa terbaik untuk si kecil</p>
+            </div>
+
+            <div class="rsvp-card">
+              <form id="rsvp-form" novalidate>
+                <div class="mb-4">
+                  <label class="form-label" for="rsvp-name"><i class="fa-solid fa-user"></i>Nama Anda</label>
+                  <input type="text" class="form-control" id="rsvp-name" name="name" placeholder="Masukkan nama Anda"
+                    required />
+                  <div class="invalid-feedback-custom">Nama wajib diisi</div>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="rsvp-phone"><i class="fa-solid fa-phone"></i>WhatsApp / HP</label>
+                  <input type="tel" class="form-control" id="rsvp-phone" name="phone" placeholder="08xxxxxxxxxx" />
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="rsvp-attendance"><i class="fa-solid fa-check-circle"></i>Konfirmasi
+                    Kehadiran</label>
+                  <select class="form-select" id="rsvp-attendance" name="attendance">
+                    <option value="hadir">Insya Allah Hadir</option>
+                    <option value="tidak-hadir">Mohon Maaf Tidak Bisa Hadir</option>
+                  </select>
+                </div>
+                <div class="mb-4">
+                  <label class="form-label" for="rsvp-message"><i class="fa-solid fa-heart"></i>Ucapan &amp; Doa untuk
+                    Si Kecil</label>
+                  <textarea class="form-control" id="rsvp-message" name="message" rows="4"
+                    placeholder="Tuliskan ucapan dan doa terbaik..." required></textarea>
+                  <div class="invalid-feedback-custom">Ucapan wajib diisi</div>
+                </div>
+                <button type="submit" class="btn-baby">
+                  <i class="fa-solid fa-paper-plane"></i> Kirim Ucapan
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-5" data-aos="fade-left">
+            <div class="wishes-card">
+              <p class="wishes-title">Ucapan &amp; Doa</p>
+              <div id="wishes-list" aria-live="polite"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="hadiah">
+      <div class="section-divider"><img src="_assets/img/decoration/divider-wave.svg" alt="" aria-hidden="true" /></div>
+
+      <img class="gift-corner-icon gift-corner-left" src="_assets/img/decoration/baby-bottle.svg" alt=""
+        aria-hidden="true" data-aos="fade-right" />
+      <img class="gift-corner-icon gift-corner-right" src="_assets/img/decoration/ribbon-bow.svg" alt=""
+        aria-hidden="true" data-aos="fade-left" />
+
+      <div class="container text-center" id="payment-section">
+        <img class="section-icon" src="_assets/img/decoration/onesie-baby.svg" alt="" aria-hidden="true"
+          data-aos="zoom-in" />
+        <h2 class="section-title" data-aos="fade-up">Amplop Digital</h2>
+        <p class="section-subtitle fst-italic" data-aos="fade-up" data-aos-delay="50">Doa restu Anda merupakan karunia
+          yang sangat berarti bagi kami.<br />Namun jika memberi adalah ungkapan tanda kasih, dapat disampaikan
+          melalui:</p>
+
+        <div id="payment-list"></div>
+      </div>
+    </section>
+
+    <section id="doa">
+      <div class="section-divider"><img src="_assets/img/decoration/divider-wave.svg" alt="" aria-hidden="true" /></div>
+
+      <img class="side-floral side-floral-left" src="_assets/img/decoration/floral-left.png" alt="" aria-hidden="true"
+        data-aos="fade-right" />
+      <img class="side-floral side-floral-right" src="_assets/img/decoration/floral-right.png" alt="" aria-hidden="true"
+        data-aos="fade-left" />
+      <img class="scatter-star" style="top: 18%; left: 20%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+        aria-hidden="true" />
+      <img class="scatter-star" style="top: 30%; right: 18%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+        aria-hidden="true" />
+      <img class="scatter-star" style="bottom: 24%; left: 26%;" src="_assets/img/decoration/star-twinkle.svg" alt=""
+        aria-hidden="true" />
+      <img class="bg-cloud" style="top: 12%; animation-delay: -10s;" src="_assets/img/decoration/cloud-soft.svg" alt=""
+        aria-hidden="true" />
+
+      <div class="container text-center">
+        <div class="prayer-ornament" data-aos="zoom-in">
+          <img class="star" src="_assets/img/decoration/star-twinkle.svg" alt="" aria-hidden="true" />
+          <img class="moon" src="_assets/img/decoration/moon-crescent.svg" alt="" aria-hidden="true" />
+          <img class="star" src="_assets/img/decoration/star-twinkle.svg" alt="" aria-hidden="true" />
+        </div>
+        <h2 class="section-title" data-aos="fade-up">Doa untuk Si Kecil</h2>
+
+        <div class="prayer-card" data-aos="fade-up" data-aos-delay="100">
+          <p class="prayer-arabic" lang="ar">بَارَكَ اللَّهُ لَكَ فِي الْمَوْهُوبِ لَكَ، وَشَكَرْتَ الْوَاهِبَ، وَبَلَغَ
+            أَشُدَّهُ، وَرُزِقْتَ بِرَّهُ</p>
+          <img class="prayer-divider" src="_assets/img/decoration/baby-feet.svg" alt="" aria-hidden="true" />
+          <p class="prayer-translation">Semoga Allah memberkahmu dalam anak yang dianugerahkan kepadamu, dan kamu
+            bersyukur kepada Yang Maha Pemberi, dan ia mencapai usia dewasa, dan kamu diberi kebaikannya.</p>
+        </div>
+
+        <div data-aos="zoom-in" data-aos-delay="150">
+          <p class="closing-text">Terima kasih atas doa dan restu Bapak/Ibu/Saudara/i</p>
+          <p class="closing-family" id="family-name"></p>
+          <img class="closing-heart" src="_assets/img/decoration/heart-baby.svg" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <img src="_assets/img/decoration/baby-feet.svg" alt="" aria-hidden="true" />
+      <p>Made with <i class="fa-solid fa-heart" style="color:#FFB5C2;"></i> by <span id="platform-name"></span></p>
+      <p class="footer-platform">&copy; <span id="year"></span> <span id="platform-name"></span> All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <button type="button" id="btn-scroll-top" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+  <button type="button" id="btn-audio" class="is-paused" aria-label="Putar / jeda musik">
+    <i class="fa-solid fa-volume-xmark"></i>
+  </button>
+
+  <audio id="audio" loop preload="none"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+  <script src="/_shared/var6.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

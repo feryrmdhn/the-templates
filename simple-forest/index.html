@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Website Templates</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css"
+        integrity="sha512-YQlbvfX5C6Ym6fTUSZ9GZpyB3F92hmQAZTO5YjciedwAaGRI9ccNs4iw2QTCJiSPheUQZomZKHQtuwbHkA9lgw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.theme.min.css"
+        integrity="sha512-wCwx+DYp8LDIaTem/rpXubV/C1WiNRsEVqoztV0NZm8tiTvsUeSlA/Uz02VTGSiqfzAHD4RnqVoevMcRZgYEcQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+        integrity="sha512-kwJUhJJaTDzGp6VTPBbMQWBFUof6+pv0SM3s8fo+E6XnPmVmtfwENK0vHYup3tsYnqHgRDoBDTJWoq7rnQw2+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="_assets/scss/app.css">
+</head>
+
+<body class="opening-show" style="cursor: default !important;">
+
+    <section id="opening">
+        <div class="container text-center d-flex flex-column align-items-center justify-content-center">
+            <img src="_assets/img/decoration/foliage-horizontal-2.svg" alt="" class="w-24rem w-lg-35rem">
+            <div class="row justify-content-center gx-4">
+                <div class="col-6 col-sm-auto">
+                    <div class="img-wrapper-spouse mx-auto mb-4">
+                        <div class="img-wrapper">
+                            <img id="groom-photo" src="_assets/img/spouse/man.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-auto">
+                    <div class="img-wrapper-spouse mx-auto mb-4">
+                        <div class="img-wrapper">
+                            <img id="bride-photo" src="_assets/img/spouse/woman.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="font-type-secondary mb-8">
+                <span class="spouse-text" id="groom-name"></span><br>&<br><span class="spouse-text"
+                    id="bride-name"></span>
+            </h1>
+            <div class="font-bold mb-2">Kepada, <span id="guest"></span></div>
+            <div>
+                Kami mengundang anda pada: <br>
+                <span id="reception-date-short"></span>
+            </div>
+
+            <div class="row justify-content-center mt-6">
+                <div class="col-auto">
+                    <button id="btn-open-opening" class="btn btn-sm btn-primary"><i
+                            class="fa-solid fa-envelope mr-1"></i> Buka
+                        Undangan</button>
+                </div>
+            </div>
+        </div>
+
+        <img src="_assets/img/decoration/foliage-top-left.png" class="decoration" data-aos="fade-down-right"
+            id="opening-decoration-1" data-aos-duration="1200" alt="">
+        <img src="_assets/img/decoration/foliage-top-right.png" class="decoration" data-aos="fade-down-left"
+            id="opening-decoration-2" data-aos-duration="1200" alt="">
+        <img src="_assets/img/decoration/foliage-bottom.png" class="decoration" data-aos="fade-up"
+            id="opening-decoration-3" data-aos-duration="1300" alt="">
+    </section>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false"
+        data-bs-interval="false">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+
+                <section id="section-1">
+                    <div class="container">
+                        <div class="text-center">
+                            <img src="_assets/img/decoration/foliage-horizontal-2.svg" alt=""
+                                class="w-24rem w-lg-35rem mb-8">
+                        </div>
+                        <div class="row justify-content-center text-primary">
+
+                            <div class="col-auto text-center">
+                                <h4 class="font-type-secondary mr-3">Akad Nikah</h4>
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <h6 class="text-bordered" id="akad-day"></h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="font-light" id="akad-month"></div>
+                                        <h1 class="font-type-secondary" id="akad-date-num"></h1>
+                                        <div class="font-light" id="akad-year"></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <h6 class="text-bordered" id="akad-time"></h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1 mb-5 mb-lg-0"></div>
+
+                            <div class="col-auto text-center">
+                                <h4 class="font-type-secondary mr-3">Resepsi</h4>
+                                <div class="row align-items-center">
+                                    <div class="col-auto">
+                                        <h6 class="text-bordered" id="reception-day"></h6>
+                                    </div>
+                                    <div class="col-auto">
+                                        <div class="font-light" id="reception-month"></div>
+                                        <h1 class="font-type-secondary" id="reception-date-num"></h1>
+                                        <div class="font-light" id="reception-year"></div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <h6 class="text-bordered" id="reception-time"></h6>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-100 mb-8"></div>
+
+                            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                                <h6><i class="fa-solid fa-location-dot mr-2"></i></h6>
+                                <div id="akad-venue"></div>
+                            </div>
+
+                            <div class="w-100 mb-8"></div>
+
+                            <div class="col-lg-8">
+                                <div class="mapouter" style="padding-bottom: 5.5rem;">
+                                    <div class="gmap_canvas w-100">
+                                        <iframe width="100%" height="200" id="gmap_canvas" src="" frameborder="0"
+                                            scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                        <style>
+                                            .gmap_canvas {
+                                                overflow: hidden;
+                                                background: none !important;
+                                                height: 185px;
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <img src="_assets/img/decoration/foliage-top-left-lg.png" data-aos="fade-down-right"
+                        data-aos-offset="-150" data-aos-duration="1200" class="decoration" id="opening-decoration-1"
+                        alt="">
+                    <img src="_assets/img/decoration/foliage-bottom-left-lg.png" data-aos="fade-up-left"
+                        data-aos-offset="-150" data-aos-duration="1200" class="decoration" id="opening-decoration-2"
+                        alt="">
+                </section>
+
+            </div>
+            <div class="carousel-item">
+
+                <section id="section-2">
+                    <div class="container">
+                        <div class="row g-0 align-items-stretch">
+                            <div class="col-lg-7">
+                                <div class="card border-0" style="background-color: #D4DAD6;">
+                                    <div class="card-body px-4 py-8">
+                                        <h4 class="font-type-secondary text-primary mb-6">Kirim Ucapan</h4>
+                                        <form id="rsvp-form">
+                                            <div class="mb-5">
+                                                <label class="form-label text-primary">Nama Anda</label>
+                                                <input type="text" name="name"
+                                                    class="form-control form-control-sm bg-transparent"
+                                                    placeholder="Nama lengkap">
+                                            </div>
+                                            <div class="mb-5">
+                                                <label class="form-label text-primary">Whatsapp/Hp</label>
+                                                <input type="text" name="phone"
+                                                    class="form-control form-control-sm bg-transparent"
+                                                    placeholder="Nomor Hp atau Whatsapp">
+                                            </div>
+                                            <div class="mb-5">
+                                                <label class="form-label text-primary">Bersedia hadir di acara
+                                                    kami?</label>
+                                                <select name="attendance"
+                                                    class="form-select form-select-sm bg-transparent">
+                                                    <option selected disabled>Pilih salah satu</option>
+                                                    <option value="yes">Ya</option>
+                                                    <option value="no">Tidak</option>
+                                                </select>
+                                            </div>
+                                            <div class="mb-5">
+                                                <label for="" class="form-label">Kirim ucapan</label>
+                                                <textarea name="message" cols="30" rows="8"
+                                                    placeholder="Anda bisa menuliskan ucapan selamat dan doa"
+                                                    class="form-control form-control-sm"></textarea>
+                                            </div>
+                                            <div class="row justify-content-center">
+                                                <div class="col-auto">
+                                                    <button type="submit" class="btn btn-primary">Jawab
+                                                        Undangan</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 flex-grow-1">
+                                <div class="card border-0" id="section-2-card-message"
+                                    style="background-color: #5E5F5B;">
+                                    <div id="wishes-list" class="card-body px-4 py-8 h-100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+            <div class="carousel-item">
+
+                <section id="section-3">
+                    <div class="container-xxl position-relative">
+                        <h2 class="font-type-secondary text-primary text-center mb-8 d-md-none">Gallery Kami</h2>
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-md-5 col-lg-4 offset-lg-1">
+                                <div id="glide-gallery-preview" class="glide-gallery-preview">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-lg-6 text-center">
+                                <h2 class="font-type-secondary text-primary d-none d-md-block">Gallery Kami</h2>
+                                <div class="glide glide-gallery">
+                                    <div class="glide__track" data-glide-el="track">
+                                        <div id="gallery-slides" class="row glide__slides py-5 py-md-10"></div>
+                                    </div>
+                                    <div class="row row-glide-nav justify-content-between justify-content-md-center">
+                                        <div class="col-auto" data-glide-el="controls">
+                                            <button class="btn btn-sm" data-glide-dir="<"><i
+                                                    class="fa-solid fa-arrow-left"></i></button>
+                                        </div>
+                                        <div class="col-auto" data-glide-el="controls">
+                                            <button class="btn btn-sm" data-glide-dir=">"><i
+                                                    class="fa-solid fa-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="_assets/img/decoration/foliage-top-left-lg.png" data-aos="fade-down-right"
+                        data-aos-offset="-150" data-aos-duration="1200" class="decoration" id="section-3-decoration-1"
+                        alt="">
+                    <img src="_assets/img/decoration/foliage-bottom-left-lg.png" data-aos="fade-up-left"
+                        data-aos-offset="-150" data-aos-duration="1200" class="decoration" id="section-3-decoration-2"
+                        alt="">
+                </section>
+
+            </div>
+            <div class="carousel-item">
+                <section id="section-4">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-8 text-center">
+                                <h5 class="text-primary-500 font-type-secondary mb-10 mb-lg-12">
+                                    <span class="mr-2">"</span>
+                                    <span id="quote"></span>
+                                    <span class="ml-2">"</span>
+                                </h5>
+                                <h2 class="font-type-secondary text-primary">
+                                    <span id="groom-name-2"></span><br>&<br><span id="bride-name-2"></span>
+                                </h2>
+                            </div>
+                        </div>
+
+
+                        <div id="payment-section" style="display:none;" class="mt-10">
+                            <h4 class="font-type-secondary text-center" style="color: var(--bs-light);">Amplop Digital
+                            </h4>
+                            <div id="payment-list" class="payment-list"></div>
+                        </div>
+
+                        <p class="tenant-label">Digital Invitation by</p>
+                        <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+                        <div id="tenant-social" class="tenant-social"></div>
+                    </div>
+
+                    <img src="_assets/img/decoration/foliage-left.png" data-aos="fade-right" data-aos-offset="-150"
+                        data-aos-duration="1200" class="decoration" id="section-4-decoration-1" alt="">
+                    <img src="_assets/img/decoration/foliage-right.png" data-aos="fade-left" data-aos-offset="-150"
+                        data-aos-duration="1200" class="decoration" id="section-4-decoration-2" alt="">
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div id="btn-group-action" class="btn-group btn-group-action">
+        <div class="btn-group-action-container">
+            <div class="carousel-indicator">
+                <button data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="btn btn-action btn-primary">
+                    <i class="fa-solid fa-desktop"></i>
+                </button>
+                <button data-bs-target="#carouselExampleFade" data-bs-slide-to="1" class="btn btn-action btn-primary">
+                    <i class="fa-solid fa-comment"></i>
+                </button>
+                <button data-bs-target="#carouselExampleFade" data-bs-slide-to="2" class="btn btn-action btn-primary">
+                    <i class="fa-solid fa-user-check"></i>
+                </button>
+                <button data-bs-target="#carouselExampleFade" data-bs-slide-to="3" class="btn btn-action btn-primary">
+                    <i class="fa-solid fa-star"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <button id="btn-play" class="btn btn-light">
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
+
+    <audio controls id="audio" class="d-none">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"
+        integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timezz@6.1.0/dist/timezz.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/glide.min.js"
+        integrity="sha512-IkLiryZhI6G4pnA3bBZzYCT9Ewk87U4DGEOz+TnRD3MrKqaUitt+ssHgn2X/sxoM7FxCP/ROUp6wcxjH/GcI5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/_shared/var.js"></script>
+    <script src="/_shared/api.js"></script>
+
+    <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

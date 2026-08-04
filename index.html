@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Catalog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>🎨 Template Catalog</h1>
+        <p>Koleksi template undangan &amp; website</p>
+    </header>
+
+    <div class="filter-bar" id="filterBar">
+        <button class="filter-btn active" data-cat="all">Semua</button>
+        <button class="filter-btn" data-cat="wedding">Pernikahan</button>
+        <button class="filter-btn" data-cat="birthday">Ulang Tahun</button>
+        <button class="filter-btn" data-cat="baby">Baby</button>
+        <button class="filter-btn" data-cat="3d">3D</button>
+        <button class="filter-btn" data-cat="nature">Nature</button>
+        <button class="filter-btn" data-cat="cultural">Budaya</button>
+        <button class="filter-btn" data-cat="simple">Simple</button>
+    </div>
+
+    <div class="search-wrap">
+        <input type="text" id="searchInput" placeholder="Cari template..." autocomplete="off" />
+    </div>
+
+    <div class="stats" id="stats"><span id="statsCount">0</span> template</div>
+
+    <main class="grid" id="grid"></main>
+
+    <script>
+        const templates = [
+            // ── 3D ──────────────────────────────────────────────────────────
+            { id: '3d-ballroom', name: '3D Ballroom', cat: ['3d', 'wedding'], image: '_assets/3d-ballroom.webp' },
+            { id: '3d-forest', name: '3D Forest', cat: ['3d', 'wedding', 'nature'], image: '_assets/3d-forest.webp' },
+            { id: '3d-heaven', name: '3D Heaven', cat: ['3d', 'wedding'], image: '_assets/3d-heaven.webp' },
+            { id: '3d-midnight-city', name: '3D Midnight City', cat: ['3d', 'wedding'], image: '_assets/3d-midnight-city.webp' },
+
+            // ── Wedding ─────────────────────────────────────────────────────
+            { id: 'batik-heritage', name: 'Batik Heritage', cat: ['wedding', 'cultural'], image: '_assets/batik-heritage.webp' },
+            { id: 'brown-casual', name: 'Brown Casual', cat: ['wedding', 'nature'], image: '_assets/brown-casual.webp' },
+            { id: 'clear-sky', name: 'Clear Sky', cat: ['wedding', 'nature'], image: '_assets/clear-sky.webp' },
+            { id: 'elegant-classy', name: 'Elegant Classy', cat: ['wedding'], image: '_assets/elegant-classy.webp' },
+            { id: 'everlasting', name: 'Everlasting', cat: ['wedding'], image: '_assets/everlasting.webp' },
+            { id: 'fall-season', name: 'Fall Season', cat: ['wedding', 'nature'], image: '_assets/fall-season.webp' },
+            { id: 'feminin', name: 'Feminin', cat: ['wedding'], image: '_assets/feminin.webp' },
+            { id: 'gold-crown', name: 'Gold Crown', cat: ['wedding'], image: '_assets/gold-crown.webp' },
+            { id: 'green-forest', name: 'Green Forest', cat: ['wedding', 'nature'], image: '_assets/green-forest.webp' },
+            { id: 'inner-flat', name: 'Inner Flat', cat: ['wedding', 'simple'], image: '_assets/inner-flat.webp' },
+            { id: 'modern-city', name: 'Modern City', cat: ['wedding'], image: '_assets/modern-city.webp' },
+            { id: 'ocean-breeze', name: 'Ocean Breeze', cat: ['wedding', 'nature'], image: '_assets/ocean-breeze.webp' },
+            { id: 'pink-brides', name: 'Pink Brides', cat: ['wedding'], image: '_assets/pink-brides.webp' },
+            { id: 'pretty-elegant', name: 'Pretty Elegant', cat: ['wedding'], image: '_assets/pretty-elegant.webp' },
+            { id: 'pretty-sora', name: 'Pretty Sora', cat: ['wedding'], image: '_assets/pretty-sora.webp' },
+            { id: 'royale', name: 'Royale', cat: ['wedding'], image: '_assets/royale.webp' },
+            { id: 'sakura', name: 'Sakura', cat: ['wedding', 'nature'], image: '_assets/sakura.webp' },
+            { id: 'simple-beauty', name: 'Simple Beauty', cat: ['wedding', 'simple'], image: '_assets/simple-beauty.webp' },
+            { id: 'simple-bless', name: 'Simple Bless', cat: ['wedding', 'simple'], image: '_assets/simple-bless.webp' },
+            { id: 'simple-forest', name: 'Simple Forest', cat: ['wedding', 'simple', 'nature'], image: '_assets/simple-forest.webp' },
+            { id: 'simple-ricefield', name: 'Simple Ricefield', cat: ['wedding', 'simple', 'cultural'], image: '_assets/simple-ricefield.webp' },
+            { id: 'smooth-snow', name: 'Smooth Snow', cat: ['wedding', 'nature'], image: '_assets/smooth-snow.webp' },
+            { id: 'sweet-flower', name: 'Sweet Flower', cat: ['wedding', 'nature'], image: '_assets/sweet-flower.webp' },
+            { id: 'violet-brides', name: 'Violet Brides', cat: ['wedding'], image: '_assets/violet-brides.webp' },
+            { id: 'wayang', name: 'Wayang', cat: ['wedding', 'cultural'], image: '_assets/wayang.webp' },
+            { id: 'woods', name: 'Woods', cat: ['wedding', 'nature'], image: '_assets/woods.webp' },
+
+            // ── Birthday ─────────────────────────────────────────────────────
+            { id: 'birthday-celebrate-1', name: 'Birthday Celebrate 1', cat: ['birthday'], image: '_assets/birthday-celebrate-1.webp' },
+            { id: 'birthday-celebrate-2', name: 'Birthday Celebrate 2', cat: ['birthday'], image: '_assets/birthday-celebrate-2.webp' },
+            { id: 'cartoon-panda', name: 'Cartoon Panda', cat: ['birthday'], image: '_assets/cartoon-panda.webp' },
+
+            // ── Baby ─────────────────────────────────────────────────────────
+            { id: 'sweet-baby', name: 'Sweet Baby', cat: ['baby'], image: '_assets/sweet-baby.webp' },
+            { id: 'welcoming-baby-1', name: 'Welcoming Baby 1', cat: ['baby'], image: '_assets/welcoming-baby-1.webp' },
+            { id: 'welcoming-baby-2', name: 'Welcoming Baby 2', cat: ['baby'], image: '_assets/welcoming-baby-2.webp' },
+            { id: 'welcoming-baby-3', name: 'Welcoming Baby 3', cat: ['baby'], image: '_assets/welcoming-baby-3.webp' },
+        ];
+
+        const grid = document.getElementById('grid');
+        const statsCount = document.getElementById('statsCount');
+        let activeFilter = 'all';
+        let searchQuery = '';
+
+        function getEmoji(id) {
+            const t = templates.find(t => t.id === id);
+            return t ? t.emoji : '📄';
+        }
+
+        function renderCards() {
+            const filtered = templates.filter(t => {
+                const matchCat = activeFilter === 'all' || t.cat.includes(activeFilter);
+                const q = searchQuery.toLowerCase();
+                const matchSearch = !q ||
+                    t.name.toLowerCase().includes(q) ||
+                    t.desc.toLowerCase().includes(q) ||
+                    t.id.toLowerCase().includes(q);
+                return matchCat && matchSearch;
+            });
+
+            statsCount.textContent = filtered.length;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<div class="empty">Tidak ada template yang cocok 🔍</div>';
+                return;
+            }
+
+            grid.innerHTML = filtered.map(t => `
+        <div class="card" data-cats="${t.cat.join(' ')}">
+          <div class="card-thumb">
+            <img src="${t.image}" alt="${t.name}" loading="lazy" />
+          </div>
+          <div class="card-body">
+            <div class="card-name">${t.name}</div>
+            <div class="card-meta">
+              <span class="tag">${t.cat[0]}</span>
+              <a class="card-link" href="${t.id}/index.html" target="_blank" rel="noopener">
+                Preview
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                  <polyline points="15 3 21 3 21 9"/>
+                  <line x1="10" y1="14" x2="21" y2="3"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+        }
+
+        document.getElementById('filterBar').addEventListener('click', e => {
+            const btn = e.target.closest('.filter-btn');
+            if (!btn) return;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeFilter = btn.dataset.cat;
+            renderCards();
+        });
+
+        document.getElementById('searchInput').addEventListener('input', e => {
+            searchQuery = e.target.value;
+            renderCards();
+        });
+
+        renderCards();
+    </script>
+
+</body>
+
+</html>

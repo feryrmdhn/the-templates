@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Templates</title>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="_assets/img/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="_assets/img/favicon/favicon-16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/tiny-slider@2.9.3/dist/tiny-slider.css" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/css/lightgallery.min.css" rel="stylesheet" />
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link href="_assets/scss/app.css" rel="stylesheet" />
+</head>
+
+<body id="index" class="opening-show" style="cursor: default !important;">
+
+  <section id="opening" class="opening">
+    <div class="opening-bg"></div>
+    <div class="opening-overlay"></div>
+    <div class="container text-center text-white opening-content">
+      <p class="text-uppercase letter-spacing-3 mb-2">The Wedding Of</p>
+      <h1 class="font-secondary couple-anim mb-3" id="openingCouple"></h1>
+      <p class="mb-4" id="openingDate"></p>
+      <p class="mb-1">To the honourable</p>
+      <h4 class="font-secondary mb-4" id="openingGuest"></h4>
+      <button id="btnOpen" class="btn btn-primary btn-lg rounded-pill px-4">
+        <i class="fa-regular fa-envelope-open me-2"></i> Open Invitation
+      </button>
+    </div>
+  </section>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+    <div class="container px-4">
+      <a class="navbar-brand font-secondary" href="#hero">Invitation</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link page-scroll" href="#story">Our Story</a></li>
+          <li class="nav-item"><a class="nav-link page-scroll" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link page-scroll" href="#schedule">Wedding Schedule</a></li>
+          <li class="nav-item"><a class="nav-link page-scroll" href="#rsvp">RSVP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container text-center text-white position-relative" data-aos="zoom-in" data-aos-duration="1200">
+      <p class="text-uppercase letter-spacing-3 mb-2">The Wedding Of</p>
+      <h1 class="font-secondary display-1 couple-anim" id="heroCouple"></h1>
+      <p class="mt-3" id="heroDate"></p>
+    </div>
+  </header>
+
+  <section id="couple" class="section section-couple position-relative">
+    <div class="leaf leaf-left"></div>
+    <div class="leaf leaf-right"></div>
+    <div class="container text-center">
+      <h2 class="font-secondary section-title mb-2" data-aos="fade-up" data-aos-duration="1000">The Couple</h2>
+      <p class="section-subtitle mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+        Proudly with the blessing of God</p>
+      <div class="row align-items-center g-4">
+        <div class="col-md-5" data-aos="fade-right" data-aos-duration="1200">
+          <img id="groomPhoto" src="" alt="Groom" class="profile-photo" />
+          <h3 class="font-secondary mt-3" id="groomName"></h3>
+          <p class="mb-1" id="groomRole"></p>
+          <p class="text-muted" id="fatherGroom"></p>
+          <div class="social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-md-2 d-none d-md-block" data-aos="zoom-in" data-aos-duration="1000">
+          <h1 class="font-secondary text-primary display-3">&amp;</h1>
+        </div>
+        <div class="col-md-5" data-aos="fade-left" data-aos-duration="1200">
+          <img id="bridePhoto" src="" alt="Bride" class="profile-photo" />
+          <h3 class="font-secondary mt-3" id="brideName"></h3>
+          <p class="mb-1" id="brideRole"></p>
+          <p class="text-muted" id="fatherBride"></p>
+          <div class="social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section section-gallery position-relative">
+    <div class="leaf leaf-left"></div>
+    <div class="leaf leaf-right"></div>
+    <div class="container text-center">
+      <h2 class="font-secondary section-title mb-2" data-aos="fade-up" data-aos-duration="1000">Gallery</h2>
+      <p class="section-subtitle mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">A few of our
+        favourite moments together.</p>
+      <div id="galleryGrid" class="gallery-grid" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+        <a id="gallery-item-1" class="gallery-item gallery-item-lg"></a>
+        <a id="gallery-item-2" class="gallery-item"></a>
+        <a id="gallery-item-3" class="gallery-item"></a>
+        <a id="gallery-item-4" class="gallery-item gallery-item-wide"></a>
+        <a id="gallery-item-5" class="gallery-item"></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" class="section section-story">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="font-secondary section-title" data-aos="fade-up" data-aos-duration="1000">Our Story</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">How it all began.
+        </p>
+      </div>
+      <div id="storyList"></div>
+    </div>
+  </section>
+
+  <section id="schedule" class="section section-schedule position-relative">
+    <div class="schedule-overlay"></div>
+    <div class="container position-relative">
+      <div class="text-center mb-5">
+        <h2 class="font-secondary section-title" data-aos="fade-up" data-aos-duration="1000">Wedding Schedule</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Save the date and
+          join our celebration.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-5" data-aos="fade-up" data-aos-duration="1200">
+          <div class="card-bordered text-center p-4">
+            <h3 class="font-secondary text-primary">Ceremony</h3>
+            <p class="mb-3" id="akadDesc"></p>
+            <div class="schedule-meta">
+              <div><i class="fa-regular fa-calendar"></i> <span id="akadDate"></span></div>
+              <div><i class="fa-regular fa-clock"></i> <span id="akadTime"></span></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="150">
+          <div class="card-bordered text-center p-4">
+            <h3 class="font-secondary text-primary">Reception</h3>
+            <p class="mb-3" id="receptionDesc"></p>
+            <div class="schedule-meta">
+              <div><i class="fa-regular fa-calendar"></i> <span id="receptionDate"></span>
+              </div>
+              <div><i class="fa-regular fa-clock"></i> <span id="receptionTime"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="countdown" class="section section-countdown">
+    <div class="countdown-overlay"></div>
+    <div class="container text-center text-white position-relative">
+      <h2 class="font-secondary section-title mb-4" data-aos="fade-up" data-aos-duration="1000">Counting The Days</h2>
+      <div id="timer" class="countdown-grid">
+        <div class="cd-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0">
+          <div class="cd-num" data-days>00</div>
+          <div class="cd-label">Days</div>
+        </div>
+        <span class="cd-divider">:</span>
+        <div class="cd-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+          <div class="cd-num" data-hours>00</div>
+          <div class="cd-label">Hours</div>
+        </div>
+        <span class="cd-divider">:</span>
+        <div class="cd-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+          <div class="cd-num" data-minutes>00</div>
+          <div class="cd-label">Minutes</div>
+        </div>
+        <span class="cd-divider">:</span>
+        <div class="cd-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+          <div class="cd-num" data-seconds>00</div>
+          <div class="cd-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="location" class="section section-location position-relative">
+    <div class="leaf leaf-right"></div>
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="font-secondary section-title" data-aos="fade-up" data-aos-duration="1000">Location</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Find us at the
+          venue below.</p>
+      </div>
+      <div class="card-bordered overflow-hidden" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+        <iframe id="mapsFrame" src="" width="100%" height="450" style="border:0;" allowfullscreen=""
+          loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="section section-rsvp">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="font-secondary section-title" data-aos="fade-up" data-aos-duration="1000">RSVP</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Kindly let us know
+          if you can attend.</p>
+      </div>
+      <div class="card-bordered bg-light p-4 p-md-5" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-5">
+            <img id="rsvpPhoto" src="" alt="RSVP" class="img-fluid rounded" />
+          </div>
+          <div class="col-md-7">
+            <form id="rsvpForm">
+              <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control form-control-line" name="name" required maxlength="100" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Phone</label>
+                <input type="tel" class="form-control form-control-line" name="phone" maxlength="20" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label d-block">Will you attend?</label>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="attending" value="yes" id="attendYes" checked />
+                  <label class="form-check-label" for="attendYes">Yes, I will attend</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="attending" value="no" id="attendNo" />
+                  <label class="form-check-label" for="attendNo">Sorry, I can't</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control form-control-line" name="message" rows="3" maxlength="500"
+                  required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary rounded-pill px-4" id="rsvpSubmit">Send RSVP</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="wishes" class="section section-wishes">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="font-secondary section-title" data-aos="fade-up" data-aos-duration="1000">Wishes &amp; Prayers</h2>
+        <p class="section-subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Thank you for your
+          blessings.</p>
+      </div>
+      <div class="card-bordered bg-light p-4" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+        <div id="wishesList" class="wishes-grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="payment-section" class="section section-payment text-center" style="display:none;">
+    <div class="container">
+      <h2 class="font-secondary section-title">Digital Envelope</h2>
+      <p class="section-payment-subtitle">Your gift means a lot to us</p>
+      <div id="payment-list" class="d-flex justify-content-center flex-wrap"></div>
+    </div>
+  </section>
+
+  <section id="closing" class="section section-closing text-center">
+    <div class="container">
+      <div class="closing-decoration mb-3" data-aos="zoom-in" data-aos-duration="1000"></div>
+      <p class="mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Thank you for being part of our
+        special day.</p>
+      <h2 class="font-secondary text-primary" id="closingCouple" data-aos="fade-up" data-aos-duration="1000"
+        data-aos-delay="200"></h2>
+    </div>
+  </section>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer class="footer text-center">
+    <div class="container">
+      <small>&copy; <span id="year"></span> <span id="platformName">Wedding Platform</span>. All rights
+        reserved.</small>
+    </div>
+  </footer>
+
+  <button id="btnScrollTop" class="floating-btn floating-btn-up" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+  <button id="btnAudio" class="floating-btn floating-btn-audio" aria-label="Toggle music">
+    <i class="fa-solid fa-volume-xmark" id="audioIcon"></i>
+  </button>
+  <audio id="bgMusic" loop preload="none" src="_assets/audio/song.mp3"></audio>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timezz@6.1.0/dist/timezz.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"
+    integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="/_shared/var3.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

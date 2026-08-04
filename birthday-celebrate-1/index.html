@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Website Templates</title>
+  <meta name="description"
+    content="Undangan digital ulang tahun bertema festive party — balon, confetti, penuh warna." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" rel="stylesheet" />
+
+  <link href="_assets/scss/app.css" rel="stylesheet" />
+</head>
+
+<body class="no-scroll">
+
+  <section id="opening" aria-label="Pembuka undangan">
+    <div class="bunting" aria-hidden="true">
+      <span class="flag" style="border-top-color:#FF6B6B"></span>
+      <span class="flag" style="border-top-color:#FFD93D"></span>
+      <span class="flag" style="border-top-color:#4ECDC4"></span>
+      <span class="flag" style="border-top-color:#A78BFA"></span>
+      <span class="flag" style="border-top-color:#FF6B9D"></span>
+      <span class="flag" style="border-top-color:#6BCB77"></span>
+      <span class="flag" style="border-top-color:#FFD93D"></span>
+      <span class="flag" style="border-top-color:#FF6B6B"></span>
+      <span class="flag" style="border-top-color:#4ECDC4"></span>
+      <span class="flag" style="border-top-color:#A78BFA"></span>
+    </div>
+
+    <div class="opening-inner">
+      <div class="hi">Halo, <span id="guest"></span></div>
+      <div class="sub">Kami mengundang Anda ke Pesta Ulang Tahun</div>
+      <div class="birthday-text" id="birthday-name-opening"></div>
+      <div class="save-date">Save the Date · <span id="save-the-date"></span></div>
+      <button class="btn-primary-cta" id="btn-open-opening" aria-label="Buka undangan">
+        <i class="fa-solid fa-envelope-open"></i> &nbsp; Buka Undangan
+      </button>
+    </div>
+
+    <div class="floating-cake" aria-hidden="true">🎂</div>
+  </section>
+
+  <div class="falling-confetti-container" id="confetti-rain" aria-hidden="true"></div>
+
+  <nav class="navbar navbar-expand-lg" aria-label="Navigasi utama">
+    <div class="container">
+      <a class="navbar-brand" href="#section-1"><i class="fa-solid fa-cake-candles"></i> Let's Celebrate!</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"
+        aria-controls="navMain" aria-expanded="false" aria-label="Buka menu navigasi">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMain">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#section-1">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-2">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-3">Jadwal</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-4">Countdown</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-5">Lokasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-6">RSVP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="section-1">
+    <div class="corner tl" data-aos="fade-down-right" aria-hidden="true">🎈</div>
+    <div class="corner br" data-aos="fade-up-left" aria-hidden="true">🎈</div>
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Momen Spesial Telah Tiba</h2>
+      <p class="section-sub" data-aos="fade-up">Bersama kegembiraan yang tak terhingga, kami mengumumkan hari istimewa
+        ini.</p>
+
+      <div class="profile-wrap">
+        <div class="profile-photo-wrap" data-aos="zoom-in">
+          <div class="party-hat" aria-hidden="true">
+            <svg viewBox="0 0 60 60" width="60" height="60">
+              <polygon points="30,5 50,55 10,55" fill="#FF6B6B" />
+              <circle cx="30" cy="7" r="4" fill="#FFD93D" />
+              <circle cx="18" cy="35" r="3" fill="#FFD93D" />
+              <circle cx="42" cy="35" r="3" fill="#4ECDC4" />
+              <circle cx="30" cy="45" r="3" fill="#A78BFA" />
+            </svg>
+          </div>
+          <img id="birthday-photo" class="profile-photo" src="" alt="Birthday" loading="lazy" />
+        </div>
+        <div class="birthday-name-h" id="birthday-name" data-aos="fade-up" data-aos-delay="200"></div>
+        <p data-aos="fade-up">Buah hati dari:</p>
+        <div class="profile-parents" id="birthday-parents" data-aos="fade-up" data-aos-delay="350"></div>
+      </div>
+
+      <div class="info-grid" data-aos="fade-up" data-aos-delay="500">
+        <div class="info-tile">
+          <div class="lbl"><i class="fa-solid fa-calendar"></i> Tanggal Lahir</div>
+          <div class="val" id="birth-date"></div>
+        </div>
+        <div class="info-tile">
+          <div class="lbl"><i class="fa-solid fa-quote-left"></i> Doa Untukmu</div>
+          <div class="val" id="birthday-quote"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-2">
+    <div class="container">
+      <h2 class="section-title on-dark" data-aos="fade-down">Galeri Momen</h2>
+      <div class="row g-3" id="row-lightgallery">
+        <div class="col-12 col-md-6 gallery-col" data-aos="zoom-in"><a id="gallery-item-1"
+            class="gallery-item h-wide d-block" data-src=""><img id="gallery-img-1" alt="" loading="lazy" /></a></div>
+        <div class="col-12 col-md-6 gallery-col" data-aos="zoom-in" data-aos-delay="100"><a id="gallery-item-2"
+            class="gallery-item h-wide d-block" data-src=""><img id="gallery-img-2" alt="" loading="lazy" /></a></div>
+        <div class="col-12 col-md-4 gallery-col" data-aos="zoom-in" data-aos-delay="150"><a id="gallery-item-3"
+            class="gallery-item h-tall d-block" data-src=""><img id="gallery-img-3" alt="" loading="lazy" /></a></div>
+        <div class="col-12 col-md-4 gallery-col" data-aos="zoom-in" data-aos-delay="200"><a id="gallery-item-4"
+            class="gallery-item h-tall d-block" data-src=""><img id="gallery-img-4" alt="" loading="lazy" /></a></div>
+        <div class="col-12 col-md-4 gallery-col" data-aos="zoom-in" data-aos-delay="250"><a id="gallery-item-5"
+            class="gallery-item h-tall d-block" data-src=""><img id="gallery-img-5" alt="" loading="lazy" /></a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-3">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Jadwal Acara</h2>
+      <div class="sched-grid sched-grid-single">
+        <div class="sched-card" data-aos="flip-left">
+          <h3>Pesta Ulang Tahun</h3>
+          <p class="sched-desc" id="event-desc"></p>
+          <div class="sched-row"><i class="fa-solid fa-calendar-days"></i>
+            <div>
+              <div class="k">Hari, Tanggal</div>
+              <div class="v" id="event-date"></div>
+            </div>
+          </div>
+          <div class="sched-row"><i class="fa-solid fa-clock"></i>
+            <div>
+              <div class="k">Waktu</div>
+              <div class="v" id="event-time"></div>
+            </div>
+          </div>
+          <div class="sched-row"><i class="fa-solid fa-location-dot"></i>
+            <div>
+              <div class="k">Tempat</div>
+              <div class="v" id="event-venue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-4">
+    <div class="container">
+      <h2 class="section-title on-dark" data-aos="fade-down">Countdown Menuju Hari-H</h2>
+      <p class="section-sub on-dark" data-aos="fade-up">Hitung mundur bersama kami!</p>
+      <div class="countdown-row" id="countdown-row">
+        <div class="cd-card" data-aos="fade-up">
+          <div class="cd-num" id="cd-d">0</div>
+          <div class="cd-lbl">Hari</div>
+        </div>
+        <div class="cd-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cd-num" id="cd-h">0</div>
+          <div class="cd-lbl">Jam</div>
+        </div>
+        <div class="cd-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="cd-num" id="cd-m">0</div>
+          <div class="cd-lbl">Menit</div>
+        </div>
+        <div class="cd-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="cd-num" id="cd-s">0</div>
+          <div class="cd-lbl">Detik</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-5">
+    <div class="corner tl" data-aos="fade-down-right" aria-hidden="true">🎁</div>
+    <div class="corner br" data-aos="fade-up-left" aria-hidden="true">🎊</div>
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Lokasi Pesta</h2>
+      <p class="section-sub" data-aos="fade-up">Ikuti peta di bawah untuk menemukan lokasi kami dengan mudah.</p>
+      <div class="map-card" data-aos="zoom-in">
+        <iframe id="gmap_canvas" src="" title="Peta lokasi acara" loading="lazy" allowfullscreen></iframe>
+        <div class="addr-line" id="event-address"></div>
+        <div style="text-align:center;">
+          <a class="btn-map" href="#" id="btn-open-maps" target="_blank" rel="noopener">
+            <i class="fa-solid fa-map-location-dot"></i> Buka di Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-6">
+    <div class="container">
+      <h2 class="section-title on-dark" data-aos="fade-down">Konfirmasi Kehadiran</h2>
+      <p class="section-sub on-dark" data-aos="fade-up">Kirimkan konfirmasi &amp; ucapan spesial Anda.</p>
+      <div class="rsvp-wrap" data-aos="zoom-in">
+        <div class="rsvp-grid">
+          <form id="rsvp-form" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Nama</label>
+              <input class="form-control" name="name" placeholder="Nama lengkap" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Nomor WhatsApp</label>
+              <input class="form-control" name="phone" placeholder="08xxxxxxxx" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Konfirmasi Kehadiran</label>
+              <div class="attendance-row">
+                <label class="att-opt selected"><input type="radio" name="attendance" value="Hadir" checked> 🎉 Ya,
+                  saya hadir</label>
+                <label class="att-opt"><input type="radio" name="attendance" value="Tidak"> 😔 Tidak bisa</label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Ucapan &amp; Doa</label>
+              <textarea class="form-control" name="message" rows="3" placeholder="Tuliskan ucapan Anda..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn-send">
+              <i class="fa-solid fa-paper-plane"></i> Kirim Ucapan
+            </button>
+          </form>
+          <img id="rsvp-photo" class="rsvp-photo"
+            src="https://images.unsplash.com/photo-1464349153735-7db50ed83c84?w=800&q=80" alt="RSVP" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-7">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Ucapan dan Doa</h2>
+      <p class="section-sub" data-aos="fade-up">Untaian doa &amp; ucapan hangat dari sahabat &amp; keluarga.</p>
+      <div class="wishes-grid" id="wishes-list" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="payment-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Hadiah Digital</h2>
+      <p class="section-sub" data-aos="fade-up">Dukungan Anda sangat berarti bagi kami.</p>
+      <div class="payment-grid" id="payment-list"></div>
+    </div>
+  </section>
+
+  <section id="section-8">
+    <div class="container" data-aos="zoom-in">
+      <div class="closing-cake" aria-hidden="true">🎂🎈🎉</div>
+      <p class="closing-msg">Terima kasih atas doa &amp; kehadiran Anda yang membuat hari ini semakin istimewa.</p>
+      <span class="closing-name" id="closing-name"></span>
+      <p style="color:var(--dark-500);margin-top:1rem;font-size:1.4rem;">- Keluarga Besar Kami -</p>
+    </div>
+  </section>
+
+  <section id="section-tenant" class="section text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container text-center">
+      <div class="brand">Let's Celebrate! 🎉</div>
+      <div>© <span id="year"></span> · All Rights Reserved · <span id="platform-name"></span></div>
+    </div>
+  </footer>
+
+  <button type="button" class="fab" id="btn-play" aria-label="Putar / jeda musik">
+    <i class="fa-solid fa-volume-xmark"></i>
+  </button>
+  <button type="button" class="fab" id="btn-to-top" aria-label="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <audio id="audio" loop preload="none">
+    <source src="" type="audio/mpeg">
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+  <script src="/_shared/var6.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

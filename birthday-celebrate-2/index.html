@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Undangan Bertema Transportasi</title>
+  <meta name="description"
+    content="Undangan digital bertema transportasi — mobil, motor, pesawat, kapal, dan kereta. Cocok untuk ulang tahun anak & event bertema travel." />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&family=Bungee&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="_assets/scss/app.css" />
+</head>
+
+<body class="no-scroll">
+
+  <section id="opening">
+    <div class="cloud-band" id="cloud-band"></div>
+
+    <div class="opening-inner">
+      <div class="hi">Halo, <span id="guest">Bapak/Ibu/Saudara/i</span></div>
+      <div class="sub">Siap-siap Berangkat ke Petualangan Seru</div>
+      <div class="title-text" id="hero-name-opening"></div>
+      <div class="save-date">🚗 ✈ 🚢 🚂 · <span id="save-the-date"></span></div>
+      <button class="btn-primary-cta" id="btn-open-opening">
+        <i class="fa-solid fa-envelope-open"></i> &nbsp; Buka Undangan
+      </button>
+    </div>
+
+    <div class="road-band">
+      <div class="road-line"></div>
+      <div class="opening-vehicle" style="animation-duration:11s">
+        <svg width="80" height="40" viewBox="0 0 80 40">
+          <rect x="8" y="10" width="60" height="18" rx="6" fill="#FBC02D" />
+          <rect x="18" y="4" width="34" height="14" rx="4" fill="#FF7043" />
+          <circle cx="22" cy="32" r="6" fill="#222" />
+          <circle cx="22" cy="32" r="2" fill="#ccc" />
+          <circle cx="58" cy="32" r="6" fill="#222" />
+          <circle cx="58" cy="32" r="2" fill="#ccc" />
+        </svg>
+      </div>
+      <div class="opening-vehicle" style="animation-duration:17s;animation-delay:-6s">
+        <svg width="60" height="40" viewBox="0 0 60 40">
+          <path d="M10 30 Q15 18 30 18 L44 18 L52 26 L54 30 Z" fill="#E53935" />
+          <rect x="26" y="20" width="12" height="8" fill="#BBDEFB" />
+          <circle cx="18" cy="32" r="5" fill="#222" />
+          <circle cx="44" cy="32" r="5" fill="#222" />
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="falling-confetti-container" id="confetti-rain"></div>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#top">
+        <i class="fa-solid fa-plane-departure"></i> Adventure Trip
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMain">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#section-1">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-2">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-3">Jadwal</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-4">Countdown</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-5">Lokasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-6">RSVP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="section-1">
+    <div class="corner tl" data-aos="fade-down-right">🚗</div>
+    <div class="corner tr" data-aos="fade-down-left">✈️</div>
+    <div class="corner bl" data-aos="fade-up-right">🚂</div>
+    <div class="corner br" data-aos="fade-up-left">🚢</div>
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Petualangan Baru Dimulai</h2>
+      <p class="section-sub" data-aos="fade-up">Dengan penuh semangat, kami mengumumkan hari istimewa ini. All aboard!
+      </p>
+
+      <div class="profile-wrap" data-aos="zoom-in">
+        <div class="profile-photo-wrap">
+          <div class="pilot-cap">
+            <svg viewBox="0 0 70 50" width="70" height="50">
+              <path d="M5 32 Q35 5 65 32 L60 38 L10 38 Z" fill="#1E88E5" />
+              <rect x="8" y="35" width="54" height="8" rx="2" fill="#0D2A4A" />
+              <circle cx="35" cy="24" r="6" fill="#FBC02D" />
+              <path d="M35 20 L35 28 M31 24 L39 24" stroke="#1A2740" stroke-width="1.5" />
+            </svg>
+          </div>
+          <img id="hero-photo" class="profile-photo" src="" alt="Photo" />
+        </div>
+        <div class="hero-name-h" id="hero-name"></div>
+        <p data-aos="fade-up">Buah hati dari:</p>
+        <div class="profile-parents" id="hero-parents"></div>
+      </div>
+
+      <div class="info-grid" data-aos="fade-up" data-aos-delay="200">
+        <div class="info-tile">
+          <div class="lbl"><i class="fa-solid fa-calendar"></i> Tanggal Lahir</div>
+          <div class="val" id="birth-date"></div>
+        </div>
+        <div class="info-tile">
+          <div class="lbl"><i class="fa-solid fa-quote-left"></i> Doa &amp; Harapan</div>
+          <div class="val" id="hero-quote"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-2">
+    <div class="container">
+      <h2 class="section-title on-dark" data-aos="fade-down">Galeri Perjalanan</h2>
+      <p class="section-sub on-dark" data-aos="fade-up" id="gallery-desc"></p>
+      <div class="gallery-grid" id="row-lightgallery">
+        <div class="gallery-row">
+          <div class="gallery-col g1" data-aos="zoom-in">
+            <a id="gallery-item-1" class="gallery-item d-block" data-src=""><img id="gallery-img-1" alt="" /></a>
+          </div>
+          <div class="gallery-col g2" data-aos="zoom-in" data-aos-delay="80">
+            <a id="gallery-item-2" class="gallery-item d-block" data-src=""><img id="gallery-img-2" alt="" /></a>
+          </div>
+        </div>
+        <div class="gallery-row">
+          <div class="gallery-col g3" data-aos="zoom-in" data-aos-delay="160">
+            <a id="gallery-item-3" class="gallery-item d-block" data-src=""><img id="gallery-img-3" alt="" /></a>
+          </div>
+          <div class="gallery-col g4" data-aos="zoom-in" data-aos-delay="240">
+            <a id="gallery-item-4" class="gallery-item d-block" data-src=""><img id="gallery-img-4" alt="" /></a>
+          </div>
+          <div class="gallery-col g5" data-aos="zoom-in" data-aos-delay="320">
+            <a id="gallery-item-5" class="gallery-item d-block" data-src=""><img id="gallery-img-5" alt="" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-3">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Jadwal Keberangkatan</h2>
+      <p class="section-sub" data-aos="fade-up">Jangan sampai ketinggalan kereta, catat waktunya!</p>
+      <div class="sched-grid">
+        <div class="sched-card" data-aos="flip-left" data-aos-duration="1200">
+          <h3>🚉 Acara Utama</h3>
+          <p class="sched-desc" id="event-desc"></p>
+          <div class="sched-row">
+            <i class="fa-solid fa-calendar-days"></i>
+            <div>
+              <div class="k">Hari, Tanggal</div>
+              <div class="v" id="event-date"></div>
+            </div>
+          </div>
+          <div class="sched-row">
+            <i class="fa-solid fa-clock"></i>
+            <div>
+              <div class="k">Waktu</div>
+              <div class="v" id="event-time"></div>
+            </div>
+          </div>
+          <div class="sched-row">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <div class="k">Tempat</div>
+              <div class="v" id="event-venue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-4">
+    <div class="container">
+      <h2 class="section-title on-dark" data-aos="fade-down">Countdown Keberangkatan</h2>
+      <p class="section-sub on-dark" data-aos="fade-up">Semua penumpang, bersiap-siap!</p>
+      <div class="countdown-row" id="countdown-row">
+        <div class="cd-card" data-aos="fade-up">
+          <div class="cd-num" id="cd-d">00</div>
+          <div class="cd-lbl">Hari</div>
+        </div>
+        <div class="cd-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="cd-num" id="cd-h">00</div>
+          <div class="cd-lbl">Jam</div>
+        </div>
+        <div class="cd-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="cd-num" id="cd-m">00</div>
+          <div class="cd-lbl">Menit</div>
+        </div>
+        <div class="cd-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="cd-num" id="cd-s">00</div>
+          <div class="cd-lbl">Detik</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-5">
+    <div class="corner tl" data-aos="fade-down-right">🗺️</div>
+    <div class="corner br" data-aos="fade-up-left">📍</div>
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Rute &amp; Lokasi</h2>
+      <p class="section-sub" data-aos="fade-up">Ikuti peta di bawah untuk sampai ke titik keberangkatan.</p>
+      <div class="map-card" data-aos="zoom-in">
+        <iframe id="gmap_canvas" src="" allowfullscreen loading="lazy"></iframe>
+        <div class="addr-line" id="event-address"></div>
+        <div style="text-align:center;">
+          <a class="btn-map" href="#" id="btn-open-maps" target="_blank" rel="noopener">
+            <i class="fa-solid fa-map-location-dot"></i> Buka di Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-6">
+    <div class="container">
+      <h2 class="section-title on-dark" data-aos="fade-down">Konfirmasi</h2>
+      <p class="section-sub on-dark" data-aos="fade-up">Konfirmasi & kirimkan ucapan spesial Anda.</p>
+      <div class="rsvp-wrap" data-aos="zoom-in">
+        <div class="rsvp-grid">
+          <form id="rsvp-form">
+            <div class="mb-3">
+              <label class="form-label">Nama Penumpang</label>
+              <input class="form-control" name="name" type="text" placeholder="Nama lengkap" required />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Nomor WhatsApp</label>
+              <input class="form-control" name="phone" type="tel" placeholder="08xxxxxxxx" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Konfirmasi Kehadiran</label>
+              <div class="attendance-row">
+                <label class="att-opt selected">
+                  <input type="radio" name="attendance" value="Hadir" checked /> 🚗 Ya, ikut berangkat
+                </label>
+                <label class="att-opt">
+                  <input type="radio" name="attendance" value="Tidak" /> 😔 Tidak bisa ikut
+                </label>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Ucapan &amp; Doa</label>
+              <textarea class="form-control" name="message" rows="3" placeholder="Tuliskan ucapan Anda..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn-send">
+              <i class="fa-solid fa-paper-plane"></i> Kirim Tiket
+            </button>
+          </form>
+          <img id="rsvp-photo" class="rsvp-photo" src="" alt="RSVP" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section-7">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Ucapan &amp; Doa</h2>
+      <p class="section-sub" data-aos="fade-up">Bekal perjalanan dari sahabat &amp; keluarga.</p>
+      <div class="wishes-grid" id="wishes-list"></div>
+    </div>
+  </section>
+
+  <section id="payment-section" style="display:none;">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-down">Hadiah Digital</h2>
+      <p class="section-sub" data-aos="fade-up">Bekal perjalanan Anda sangat berarti.</p>
+      <div class="payment-grid" id="payment-list"></div>
+    </div>
+  </section>
+
+  <section id="section-8">
+    <div class="container" data-aos="zoom-in">
+      <div class="closing-cake">🚗 ✈️ 🚢 🚂 🏍️</div>
+      <p class="closing-msg">Terima kasih telah menjadi bagian dari perjalanan seru ini. Sampai jumpa di stasiun
+        keberangkatan!</p>
+      <span class="closing-name" id="closing-name"></span>
+      <p class="closing-family">- Keluarga Besar Kami -</p>
+    </div>
+  </section>
+
+  <section id="section-tenant" class="text-center">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="brand">Adventure Trip 🚂</div>
+    <div>© <span id="year"></span> · All Rights Reserved · <span id="platform-name"></span></div>
+  </footer>
+
+  <button class="fab" id="btn-play" aria-label="Toggle music"><i class="fa-solid fa-volume-xmark"></i></button>
+  <button class="fab" id="btn-to-top" aria-label="Scroll to top" style="display:none;"><i
+      class="fa-solid fa-arrow-up"></i></button>
+
+  <audio id="audio" loop preload="none">
+    <source src="" type="audio/mpeg" />
+  </audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+
+  <script src="/_shared/var6.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

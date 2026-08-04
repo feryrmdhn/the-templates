@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wedding Invitation</title>
+  <meta name="description" content="Undangan pernikahan bertema laut yang elegan dan romantis." />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="_assets/img/favicon/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="_assets/img/favicon/favicon-16.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&family=Dancing+Script:wght@500;700&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css" />
+
+  <link rel="stylesheet" href="_assets/scss/app.css" />
+</head>
+
+<body class="opening-show">
+
+  <div id="notif" class="notif"></div>
+
+  <section id="openingSection" class="opening-section"
+    style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80')">
+
+    <svg class="shell-deco left" viewBox="0 0 64 64" fill="none" stroke="#90E0EF" stroke-width="1.5">
+      <path d="M32 4C18 12 8 28 8 44c0 8 6 16 24 16s24-8 24-16C56 28 46 12 32 4Z" />
+      <path d="M32 4v56M20 12c-4 12-4 28 0 48M44 12c4 12 4 28 0 48" />
+    </svg>
+    <svg class="shell-deco right" viewBox="0 0 64 64" fill="none" stroke="#90E0EF" stroke-width="1.5">
+      <path d="M32 4C18 12 8 28 8 44c0 8 6 16 24 16s24-8 24-16C56 28 46 12 32 4Z" />
+      <path d="M32 4v56M20 12c-4 12-4 28 0 48M44 12c4 12 4 28 0 48" />
+    </svg>
+
+    <p class="guest-label">Kepada Yth.</p>
+    <p class="guest-name" id="openingGuest">&nbsp;</p>
+    <div class="couple-name-block" id="openingCouple">
+      <span class="cn-groom">&nbsp;</span>
+      <span class="cn-amp">&amp;</span>
+      <span class="cn-bride">&nbsp;</span>
+    </div>
+    <p class="opening-date" id="openingDate">&nbsp;</p>
+    <button id="openBtn" class="btn-open"><i class="fa-solid fa-anchor"></i> Buka Undangan</button>
+
+    <div class="wave-bottom-abs">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#90E0EF" fill-opacity="0.6"
+          d="M0,64 C240,120 480,0 720,40 C960,80 1200,120 1440,64 L1440,120 L0,120 Z" />
+        <path fill="#90E0EF" fill-opacity="0.6"
+          d="M1440,64 C1680,120 1920,0 2160,40 C2400,80 2640,120 2880,64 L2880,120 L1440,120 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-ocean fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#hero"><span id="brandCouple">&nbsp;</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#couple">Mempelai</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#schedule">Jadwal</a></li>
+          <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero-section"
+    style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80')">
+    <div class="container text-center" style="position:relative;z-index:2">
+      <div class="couple-name-block" id="heroCouple" data-aos="zoom-in" data-aos-duration="1000">
+        <span class="cn-groom">&nbsp;</span>
+        <span class="cn-amp">&amp;</span>
+        <span class="cn-bride">&nbsp;</span>
+      </div>
+      <p class="hero-date" id="heroDate">&nbsp;</p>
+    </div>
+    <div class="wave-bottom-abs">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#F8FBFF" d="M0,64 C240,120 480,0 720,40 C960,80 1200,120 1440,64 L1440,120 L0,120 Z" />
+      </svg>
+    </div>
+  </section>
+
+  <section id="couple" class="invite-section bg-accent">
+    <div class="wave-divider">
+      <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#0077B6" fill-opacity="0.18"
+          d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 C1680,160 1920,0 2160,80 C2400,160 2640,0 2880,80 C2880,80 2880,160 2880,160 C2640,80 2400,160 2160,80 C1920,0 1680,80 1440,0 C1200,80 960,0 720,80 C480,160 240,80 0,160 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <svg class="section-anchor" viewBox="0 0 64 64" fill="none" stroke="#03045E" stroke-width="2">
+        <circle cx="32" cy="14" r="6" />
+        <line x1="32" y1="20" x2="32" y2="56" />
+        <path d="M14 44 C14 54 26 58 32 56 C38 58 50 54 50 44" />
+        <line x1="22" y1="28" x2="42" y2="28" />
+      </svg>
+      <h2 class="section-title">Mempelai</h2>
+
+      <div class="couple-grid">
+        <div class="couple-card" data-aos="fade-right" data-aos-duration="1000">
+          <div class="couple-photo-wrap"><img id="groomPhoto" src="" alt="Pengantin Pria" /></div>
+          <h3 class="couple-name-big" id="groomName">&nbsp;</h3>
+          <p class="couple-role" id="groomRole">&nbsp;</p>
+          <p class="couple-parents" id="groomParents">&nbsp;</p>
+          <div class="couple-socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="amp">&amp;</div>
+        <div class="couple-card" data-aos="fade-left" data-aos-duration="1000">
+          <div class="couple-photo-wrap"><img id="bridePhoto" src="" alt="Pengantin Wanita" /></div>
+          <h3 class="couple-name-big" id="brideName">&nbsp;</h3>
+          <p class="couple-role" id="brideRole">&nbsp;</p>
+          <p class="couple-parents" id="brideParents">&nbsp;</p>
+          <div class="couple-socials">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="invite-section bg-light-blue" style="position:relative">
+    <div class="wave-divider" data-aos="fade-in">
+      <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#0077B6" fill-opacity="0.18"
+          d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 C1680,160 1920,0 2160,80 C2400,160 2640,0 2880,80 C2880,80 2880,160 2880,160 C2640,80 2400,160 2160,80 C1920,0 1680,80 1440,0 C1200,80 960,0 720,80 C480,160 240,80 0,160 Z" />
+      </svg>
+    </div>
+    <div class="container" style="position:relative">
+      <svg class="shell-side left" viewBox="0 0 64 64" fill="none" stroke="#0077B6" stroke-width="1.5">
+        <path d="M32 4C18 12 8 28 8 44c0 8 6 16 24 16s24-8 24-16C56 28 46 12 32 4Z" />
+        <path d="M32 4v56M20 12c-4 12-4 28 0 48M44 12c4 12 4 28 0 48" />
+      </svg>
+      <svg class="shell-side right" viewBox="0 0 64 64" fill="none" stroke="#0077B6" stroke-width="1.5">
+        <path d="M32 4C18 12 8 28 8 44c0 8 6 16 24 16s24-8 24-16C56 28 46 12 32 4Z" />
+        <path d="M32 4v56M20 12c-4 12-4 28 0 48M44 12c4 12 4 28 0 48" />
+      </svg>
+      <h2 class="section-title">Galeri</h2>
+      <p class="section-subtitle" id="galleryDesc">&nbsp;</p>
+      <div id="galleryGrid" class="gallery-grid"></div>
+    </div>
+  </section>
+
+  <section id="story" class="invite-section bg-accent">
+    <div class="wave-divider">
+      <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#0077B6" fill-opacity="0.18"
+          d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 C1680,160 1920,0 2160,80 C2400,160 2640,0 2880,80 C2880,80 2880,160 2880,160 C2640,80 2400,160 2160,80 C1920,0 1680,80 1440,0 C1200,80 960,0 720,80 C480,160 240,80 0,160 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <h2 class="section-title">Kisah Cinta</h2>
+      <p class="section-subtitle">Perjalanan kami menuju pelaminan</p>
+      <div id="storyWrap" class="story-wrap story-desktop"></div>
+      <div id="storyWrapMobile" class="story-mobile"></div>
+    </div>
+  </section>
+
+  <section id="schedule" class="invite-section schedule-section"
+    style="background-image:url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1920&q=80')">
+    <div class="wave-divider">
+      <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#0077B6" fill-opacity="0.18"
+          d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 C1680,160 1920,0 2160,80 C2400,160 2640,0 2880,80 C2880,80 2880,160 2880,160 C2640,80 2400,160 2160,80 C1920,0 1680,80 1440,0 C1200,80 960,0 720,80 C480,160 240,80 0,160 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <h2 class="section-title">Jadwal Pernikahan</h2>
+      <p class="section-subtitle">Kami mengundang Anda untuk hadir</p>
+      <div class="schedule-grid">
+        <div class="schedule-card" data-aos="flip-left" data-aos-duration="1000">
+          <div class="ico"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3>Akad Nikah</h3>
+          <p class="date" id="akadDate">&nbsp;</p>
+          <p class="date"><i class="fa-solid fa-clock"></i> <span id="akadTime">&nbsp;</span></p>
+          <p class="venue" id="akadVenue">&nbsp;</p>
+          <p class="desc" id="akadDesc">&nbsp;</p>
+        </div>
+        <div class="schedule-card" data-aos="flip-right" data-aos-duration="1000">
+          <div class="ico"><i class="fa-solid fa-calendar-days"></i></div>
+          <h3>Resepsi</h3>
+          <p class="date" id="receptionDate">&nbsp;</p>
+          <p class="date"><i class="fa-solid fa-clock"></i> <span id="receptionTime">&nbsp;</span></p>
+          <p class="venue" id="receptionVenue">&nbsp;</p>
+          <p class="desc" id="receptionDesc">&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="countdown" class="invite-section countdown-section"
+    style="background-image:url('https://images.unsplash.com/photo-1505459668311-8dfac7952bf0?w=1920&q=80')">
+    <div class="container">
+      <h2 class="section-title">Menghitung Hari</h2>
+      <p class="section-subtitle" style="color:#CAF0F8">Menanti hari bahagia</p>
+      <div id="timer" class="countdown-grid" data-days="0" data-hours="0" data-minutes="0" data-seconds="0"></div>
+    </div>
+  </section>
+
+  <section id="maps" class="invite-section bg-light-blue">
+    <div class="wave-divider">
+      <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#0077B6" fill-opacity="0.18"
+          d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 C1680,160 1920,0 2160,80 C2400,160 2640,0 2880,80 C2880,80 2880,160 2880,160 C2640,80 2400,160 2160,80 C1920,0 1680,80 1440,0 C1200,80 960,0 720,80 C480,160 240,80 0,160 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <h2 class="section-title">Lokasi Acara</h2>
+      <p class="section-subtitle">Temukan kami di sini</p>
+      <div class="maps-card" data-aos="fade-up" data-aos-duration="1000">
+        <iframe id="mapsFrame" src="" loading="lazy" allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="rsvp" class="invite-section rsvp-section wave-bg-subtle">
+    <div class="wave-divider">
+      <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#0077B6" fill-opacity="0.18"
+          d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 C1680,160 1920,0 2160,80 C2400,160 2640,0 2880,80 C2880,80 2880,160 2880,160 C2640,80 2400,160 2160,80 C1920,0 1680,80 1440,0 C1200,80 960,0 720,80 C480,160 240,80 0,160 Z" />
+      </svg>
+    </div>
+    <div class="container">
+      <h2 class="section-title">RSVP &amp; Ucapan</h2>
+      <p class="section-subtitle">Konfirmasi kehadiran dan kirim doa terbaik</p>
+      <div class="rsvp-grid" data-aos="fade-up" data-aos-duration="800">
+        <img id="rsvpPhoto" class="rsvp-photo" src="" alt="RSVP" />
+        <div class="rsvp-card">
+          <form id="rsvpForm" class="rsvp-form">
+            <div class="form-group">
+              <label for="rsvpName">Nama</label>
+              <input id="rsvpName" type="text" required />
+            </div>
+            <div class="form-group">
+              <label for="rsvpPhone">No. HP</label>
+              <input id="rsvpPhone" type="tel" />
+            </div>
+            <div class="form-group">
+              <label>Kehadiran</label>
+              <div class="radio-group">
+                <label><input type="radio" name="attend" value="yes" checked /> Hadir</label>
+                <label><input type="radio" name="attend" value="no" /> Tidak Hadir</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="rsvpMessage">Pesan / Doa</label>
+              <textarea id="rsvpMessage" required></textarea>
+            </div>
+            <button type="submit" class="btn-rsvp"><i class="fa-solid fa-paper-plane"></i> Kirim Ucapan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="wishes" class="invite-section wishes-section"
+    style="background-image:url('https://images.unsplash.com/photo-1505459668311-8dfac7952bf0?w=1920&q=80')">
+    <div class="container">
+      <h2 class="section-title">Ucapan &amp; Doa</h2>
+      <p class="section-subtitle">Pesan dari sahabat dan keluarga</p>
+      <div id="wishesGrid" class="wishes-grid"></div>
+    </div>
+  </section>
+
+  <section id="paymentSection" class="invite-section payment-section">
+    <div class="container">
+      <h2 class="section-title">Amplop Digital</h2>
+      <p class="section-subtitle">Doa restu Anda adalah hadiah terindah</p>
+      <div id="paymentFlex" class="payment-flex"></div>
+    </div>
+  </section>
+
+  <section id="closing" class="closing-section">
+    <div class="wave-divider" style="position:absolute;top:0;left:0;right:0">
+      <svg viewBox="0 0 2880 160" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#90E0EF" fill-opacity="0.35"
+          d="M0,80 C240,160 480,0 720,80 C960,160 1200,0 1440,80 C1680,160 1920,0 2160,80 C2400,160 2640,0 2880,80 C2880,80 2880,0 2880,0 C2640,80 2400,0 2160,80 C1920,160 1680,80 1440,160 C1200,80 960,160 720,80 C480,0 240,80 0,0 Z" />
+      </svg>
+    </div>
+    <svg class="anchor-deco" viewBox="0 0 64 64" fill="none" stroke="#90E0EF" stroke-width="2.5" data-aos="fade-up">
+      <circle cx="32" cy="14" r="6" />
+      <line x1="32" y1="20" x2="32" y2="56" />
+      <path d="M14 44 C14 54 26 58 32 56 C38 58 50 54 50 44" />
+      <line x1="22" y1="28" x2="42" y2="28" />
+    </svg>
+    <p class="closing-text" data-aos="fade-up" data-aos-duration="1200">
+      Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir
+      dan memberikan doa restu kepada kami. Atas kehadiran dan doa restunya, kami ucapkan terima kasih.
+    </p>
+    <p data-aos="fade-up">Kami yang berbahagia,</p>
+    <h3 class="closing-couple" id="closingCouple">&nbsp;</h3>
+  </section>
+
+  <section id="section-tenant" class="section-tenant">
+    <div class="container">
+      <p class="tenant-label">Digital Invitation by</p>
+      <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+      <div id="tenant-social" class="tenant-social"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>
+      <i class="fa-solid fa-anchor"></i>
+      <span id="footerCouple">&nbsp;</span>
+      <i class="fa-solid fa-anchor"></i>
+    </p>
+    <p>&copy; <span id="footerYear"></span> Powered by <span id="platformName">Your Platform</span></p>
+  </footer>
+
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top"><i
+      class="fa-solid fa-chevron-up"></i></button>
+  <button id="audioBtn" class="audio-btn" aria-label="Toggle music"><i class="fa-solid fa-volume-xmark"></i></button>
+  <audio id="bgAudio" loop preload="none"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.4.0/dist/js/lightgallery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/timezz@6.1.0/dist/timezz.min.js"></script>
+
+  <script src="/_shared/var3.js"></script>
+  <script src="/_shared/api.js"></script>
+
+  <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

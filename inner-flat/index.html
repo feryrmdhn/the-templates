@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Website Templates</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"
+        integrity="sha512-kwJUhJJaTDzGp6VTPBbMQWBFUof6+pv0SM3s8fo+E6XnPmVmtfwENK0vHYup3tsYnqHgRDoBDTJWoq7rnQw2+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playfair+Display&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="_assets/scss/app.css">
+</head>
+
+<body id="index" class="opening-show" style="cursor: default !important;">
+
+    <div class="snow-overlay" id="snowOverlay"></div>
+
+    <section id="opening">
+        <div class="container text-white text-center">
+            <h5 class="mb-2">Kepada, <span id="guest"></span></h5>
+            <h5 class="mb-7">Kami mengundang Anda ke Acara Pernikahan kami</h5>
+            <h1 class="font-type-secondary my-4">
+                <span class="spouse-text" id="groom-name-opening"></span>
+                <span class="mx-2">&</span>
+                <span class="spouse-text" id="bride-name-opening"></span>
+            </h1>
+            <h5 class="mb-16" id="save-the-date"></h5>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <button id="btn-open-opening" class="btn btn-primary page-scroll mt-2">Buka Undangan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-lg" id="navbar">
+        <div class="container">
+            <a href="#index" class="navbar-brand page-scroll">
+                <span id="navbar-couple">Our Invitation</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <h6 class="mb-0"><i class="fa-solid fa-bars"></i></h6>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-1">Undangan</a></li>
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-2">Mempelai</a></li>
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-3">Galeri</a></li>
+                    <li class="nav-item"><a class="nav-link page-scroll" href="#section-4">RSVP</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="header">
+        <div class="container text-white text-center">
+            <h5 class="mb-4">Save the Date</h5>
+            <h1 class="font-type-secondary mb-4" id="header-couple"></h1>
+            <h5 id="header-date" data-aos="wave" data-aos-once="true"></h5>
+        </div>
+    </header>
+
+    <section id="section-1" class="section-padding">
+        <div class="container">
+            <div class="section-title-wrap text-center mb-10">
+                <h2 class="section-title">Waktu & Tempat</h2>
+                <div class="section-title-bottom">
+                    <span class="section-title-line"></span>
+                    <i class="section-title-icon fa-solid fa-heart"></i>
+                    <span class="section-title-line"></span>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-duration="1200">
+                    <p class="mb-8" id="quote"></p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-10">
+                <div class="col-lg-9">
+                    <div class="row gx-4 align-items-center mb-8 overflow-hidden">
+                        <div class="col-md mb-6 mb-md-0" data-aos="fade-right" data-aos-duration="1200">
+                            <h4 class="font-type-secondary mb-2">Akad Nikah</h4>
+                            <div class="mb-1" id="akad-date"></div>
+                            <div class="mb-1" id="akad-time"></div>
+                            <div><i class="fa-solid fa-location-dot me-2"></i><span id="akad-venue"></span></div>
+                        </div>
+                        <div class="col-md" data-aos="fade-left" data-aos-duration="1200">
+                            <h4 class="font-type-secondary mb-2">Resepsi</h4>
+                            <div class="mb-1" id="reception-date"></div>
+                            <div class="mb-1" id="reception-time"></div>
+                            <div><i class="fa-solid fa-location-dot me-2"></i><span id="reception-venue"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="mapouter" data-aos="fade-up" data-aos-duration="1400">
+                        <div class="gmap_canvas w-100" style="height:300px;">
+                            <iframe id="gmap_canvas" src="" width="100%" height="300" frameborder="0" scrolling="no"
+                                style="border-radius:8px;"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-2" class="section-padding section-bg">
+        <div class="container">
+            <div class="section-title-wrap text-center mb-10">
+                <h2 class="section-title">Mempelai</h2>
+                <div class="section-title-bottom">
+                    <span class="section-title-line"></span>
+                    <i class="section-title-icon fa-solid fa-heart"></i>
+                    <span class="section-title-line"></span>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-5 col-lg-4 d-flex flex-column align-items-center text-center mb-8 mb-md-0"
+                    data-aos="fade-right" data-aos-duration="1200">
+                    <div class="img-wrapper-spouse mb-4">
+                        <div class="img-wrapper">
+                            <img id="groom-photo" src="" alt="">
+                        </div>
+                    </div>
+                    <h4 class="font-type-secondary mb-1" id="groom-name"></h4>
+                    <div class="text-muted mb-1" id="groom-role"></div>
+                    <div class="text-muted" id="father-groom"></div>
+                </div>
+
+                <div class="col-auto align-self-center d-none d-md-flex">
+                    <h1 class="font-type-secondary">&</h1>
+                </div>
+
+                <div class="col-md-5 col-lg-4 d-flex flex-column align-items-center text-center" data-aos="fade-left"
+                    data-aos-duration="1200">
+                    <div class="img-wrapper-spouse mb-4">
+                        <div class="img-wrapper">
+                            <img id="bride-photo" src="" alt="">
+                        </div>
+                    </div>
+                    <h4 class="font-type-secondary mb-1" id="bride-name"></h4>
+                    <div class="text-muted mb-1" id="bride-role"></div>
+                    <div class="text-muted" id="father-bride"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-countdown" class="section-padding section-countdown-bg">
+        <div class="container text-center">
+            <h3 class="text-white mb-2">Hitung Mundur Menuju Hari Bahagia</h3>
+            <div id="countdown-row" class="row gx-2 gx-sm-4 align-items-center justify-content-center mt-6">
+                <div class="col-auto" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="0">
+                    <div class="card card-countdown">
+                        <div class="card-body">
+                            <h1 data-days>0</h1>
+                            <h5>HARI</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto px-1 d-none d-sm-block">
+                    <div class="countdown-divider">:</div>
+                </div>
+                <div class="col-auto" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <div class="card card-countdown">
+                        <div class="card-body">
+                            <h1 data-hours>0</h1>
+                            <h5>JAM</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto px-1 d-none d-sm-block">
+                    <div class="countdown-divider">:</div>
+                </div>
+                <div class="col-auto" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <div class="card card-countdown">
+                        <div class="card-body">
+                            <h1 data-minutes>0</h1>
+                            <h5>MENIT</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto px-1 d-none d-sm-block">
+                    <div class="countdown-divider">:</div>
+                </div>
+                <div class="col-auto" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                    <div class="card card-countdown">
+                        <div class="card-body">
+                            <h1 data-seconds>0</h1>
+                            <h5>DETIK</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-3" class="section-padding">
+        <div class="container">
+            <div class="section-title-wrap text-center mb-10">
+                <h2 class="section-title">Galeri</h2>
+                <div class="section-title-bottom">
+                    <span class="section-title-line"></span>
+                    <i class="section-title-icon fa-solid fa-heart"></i>
+                    <span class="section-title-line"></span>
+                </div>
+            </div>
+
+            <div id="row-lightgallery" class="row gx-3 gy-3" data-aos="fade-up" data-aos-duration="1200">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="section-4" class="section-padding section-bg">
+        <div class="container">
+            <div class="section-title-wrap text-center mb-10">
+                <h2 class="section-title">RSVP</h2>
+                <div class="section-title-bottom">
+                    <span class="section-title-line"></span>
+                    <i class="section-title-icon fa-solid fa-heart"></i>
+                    <span class="section-title-line"></span>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7 mb-8">
+                    <div class="rsvp-form-wrap" data-aos="fade-up" data-aos-duration="1200">
+                        <form id="comment-form">
+                            <div class="mb-4">
+                                <label class="form-label">Nama Anda</label>
+                                <input type="text" name="name" class="form-control" placeholder="Nama lengkap" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Whatsapp / HP</label>
+                                <input type="text" name="phone" class="form-control"
+                                    placeholder="Nomor HP atau Whatsapp">
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Bersedia hadir?</label>
+                                <select name="attendance" class="form-select">
+                                    <option selected disabled>Pilih salah satu</option>
+                                    <option value="yes">Ya, saya akan hadir</option>
+                                    <option value="no">Tidak, saya tidak bisa hadir</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label">Ucapan dan Doa</label>
+                                <textarea name="message" class="form-control" rows="4"
+                                    placeholder="Tulis ucapan dan doa untuk mempelai" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Ucapan</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div id="wishes-list"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="payment-section" style="display:none;" class="section-padding">
+        <div class="container text-center">
+            <h4 class="font-type-secondary mb-6">Amplop Digital</h4>
+            <div id="payment-list" class="d-flex justify-content-center flex-wrap gap-4"></div>
+        </div>
+    </section>
+
+    <section id="section-tenant" class="text-center">
+        <div class="container">
+            <p class="tenant-label">Digital Invitation by</p>
+            <img id="tenant-logo" src="/placeholder-image.png" alt="Tenant Logo" class="tenant-logo" />
+            <div id="tenant-social" class="tenant-social"></div>
+        </div>
+    </section>
+
+    <footer id="footer" class="site-footer">
+        <div class="container text-center">
+            <h3 class="font-type-secondary text-white mb-2" id="footer-couple"></h3>
+            <p class="text-white-50 mb-1">&copy; Copyright - All Rights Reserved</p>
+            <p class="text-white-50 mb-0" id="platform-name"></p>
+        </div>
+    </footer>
+
+    <button id="btn-play" class="btn btn-light btn-icon-page">
+        <i class="fa-solid fa-volume-high"></i>
+    </button>
+    <a href="#index" id="btn-to-top" class="btn btn-light btn-icon-page page-scroll">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <audio controls id="audio" class="d-none">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/timezz@6.1.0/dist/timezz.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"
+        integrity="sha512-b4rL1m5b76KrUhDkj2Vf14Y0l1NtbiNXwV+SzOzLGv6Tz1roJHa70yr8RmTUswrauu2Wgb/xBJPR8v80pQYKtQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="/_shared/var3.js"></script>
+    <script src="/_shared/api.js"></script>
+
+    <script src="_assets/js/app.js"></script>
+</body>
+
+</html>

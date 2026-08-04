@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 64">
+<rect x="10" y="4" width="28" height="8" rx="2" fill="#E74C3C" stroke="#C0392B" stroke-width="1"/>
+<path d="M10 12 L10 58 Q10 62 14 62 L34 62 Q38 62 38 58 L38 12 Z" fill="#FFF8F0" stroke="#C9B8B8" stroke-width="1.2"/>
+<path d="M12 22 L12 58 Q12 60 14 60 L34 60 Q36 60 36 58 L36 22 Z" fill="#FF6B6B" opacity="0.85"/>
+<rect x="16" y="34" width="16" height="14" rx="2" fill="#FFF8F0" stroke="#E74C3C" stroke-width="0.8"/>
+<text x="24" y="44" text-anchor="middle" font-family="serif" font-size="6" fill="#C0392B">JAM</text>
+<ellipse cx="18" cy="26" rx="2" ry="1" fill="#ffffff" opacity="0.4"/>
+</svg>
