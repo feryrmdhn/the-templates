@@ -21,4 +21,4 @@ jobs:
         run: npm install --no-package-lock
 
       - name: Deploy to Vercel
-        run: npx vercel --token ${{ secrets.VERCEL_TOKEN_NEW }} --prod --yes
+        run: npx vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --yes
