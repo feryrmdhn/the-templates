@@ -133,7 +133,7 @@ header p {
 
 .card-thumb {
     position: relative;
-    height: 170px;
+    aspect-ratio: 4 / 3;
     background: var(--bg);
     overflow: hidden;
 }
@@ -235,10 +235,6 @@ header p {
     .grid {
         grid-template-columns: 1fr 1fr;
         gap: 12px;
-    }
-
-    .card-thumb {
-        height: 120px;
     }
 }
 
