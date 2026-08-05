@@ -182,7 +182,7 @@ bca · mandiri · bni · bri · gopay · dana · ovo · shopeepay · qris
 
 ---
 
-## Method 2 — API Integration
+## Method 2 — API Integration (If you Have)
 
 Templates receive data from your platform via `postMessage`. This is how a dashboard or backend injects live data without touching the source files.
 
@@ -274,15 +274,3 @@ FALLBACK_DATA       ──► used when API value is null / empty / missing
 ```
 
 ---
-
-## Deployment
-
-Before deploying, run the obfuscator to protect JS source files:
-
-```bash
-node obfuscate.js
-```
-
-This generates a `dist/` folder with obfuscated JS and all other files copied as-is. Upload the contents of `dist/` to your hosting — not the root folder.
-
-The GitHub Actions workflow (`deployment.yml`) runs this automatically on every push to `main`.
