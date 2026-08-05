@@ -273,4 +273,3 @@ API response        ──► overrides fallback for all fields
 FALLBACK_DATA       ──► used when API value is null / empty / missing
 ```
 
----
